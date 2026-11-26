@@ -1,0 +1,3283 @@
+{
+  "guide_reference_counts": {
+    "guide_only_exercises": 59,
+    "paths": 105
+  },
+  "legacy_exercises": {
+    "array-intersection": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/easy/intersection_of_two_arrays.py"
+      ]
+    },
+    "baseball-game": {
+      "pattern": "stack",
+      "source_paths": [
+        "Chapter7/easy/baseball_game.py"
+      ]
+    },
+    "binary-search": {
+      "pattern": "search",
+      "source_paths": [
+        "Chapter6/easy/binary_search.py"
+      ]
+    },
+    "character-replacement": {
+      "pattern": "window",
+      "source_paths": [
+        "data structures/strings/sliding_window/medium_character_replacement.py"
+      ]
+    },
+    "concatenated-words": {
+      "pattern": "window",
+      "source_paths": [
+        "Chapter1/hard/substring_with_concatenation_of_words.py"
+      ]
+    },
+    "contains-duplicate": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/easy/contains_duplicate.py"
+      ]
+    },
+    "dedupe-sorted-array": {
+      "pattern": "pointers",
+      "source_paths": [
+        "Chapter1/easy/remove_duplicates_sorted_array.py"
+      ]
+    },
+    "dedupe-sorted-linked-list": {
+      "pattern": "linked",
+      "source_paths": [
+        "Chapter3/easy/remove_duplicates_sorted_list.py"
+      ]
+    },
+    "design-hashmap": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/medium/design_hashmap.py"
+      ]
+    },
+    "first-unique-character": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/easy/first_unique_character.py",
+        "data structures/strings/hashmap/easy_first_non_repeating_character.py"
+      ]
+    },
+    "four-sum": {
+      "pattern": "pointers",
+      "source_paths": [
+        "Chapter1/hard/four_sum.py"
+      ]
+    },
+    "four-sum-count": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/medium/four_sum_ii.py"
+      ]
+    },
+    "generate-parentheses": {
+      "pattern": "backtracking",
+      "source_paths": [
+        "data structures/strings/back_tracking/medium_generate_parenthesis.py"
+      ]
+    },
+    "group-anagrams": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/medium/group_anagrams.py"
+      ]
+    },
+    "happy-number": {
+      "pattern": "cycle",
+      "source_paths": [
+        "Chapter2/easy/happy_number.py",
+        "Chapter4/easy/happy_number.py"
+      ]
+    },
+    "isomorphic-strings": {
+      "pattern": "hash",
+      "source_paths": [
+        "data structures/strings/hashmap/medium_isomorphic_strings.py"
+      ]
+    },
+    "jewels-and-stones": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/easy/jewel_and_stone.py"
+      ]
+    },
+    "lfu-cache": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/hard/lfu_cache.py"
+      ]
+    },
+    "linked-cycle": {
+      "pattern": "cycle",
+      "source_paths": [
+        "Chapter3/easy/linked_list_cycle.py",
+        "Chapter4/easy/linked_list_cycle.py"
+      ]
+    },
+    "linked-intersection": {
+      "pattern": "linked",
+      "source_paths": [
+        "Chapter3/easy/intersection_of_two_linked_lists.py"
+      ]
+    },
+    "longest-common-subsequence": {
+      "pattern": "dp",
+      "source_paths": [
+        "data structures/strings/dynamic_programmings/medium_longest_common_subsequence.py"
+      ]
+    },
+    "longest-consecutive": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/medium/longest_consecutive_sequence.py"
+      ]
+    },
+    "longest-duplicate-substring": {
+      "pattern": "matching",
+      "source_paths": [
+        "Chapter2/hard/longest_duplicate_substring.py"
+      ]
+    },
+    "longest-k-distinct": {
+      "pattern": "window",
+      "source_paths": [
+        "data structures/strings/sliding_window/medium_longest_k_distinct.py"
+      ]
+    },
+    "longest-palindromic-substring": {
+      "pattern": "dp",
+      "source_paths": [
+        "data structures/strings/dynamic_programmings/medium_longest_palindromic_substring.py"
+      ]
+    },
+    "longest-unique-substring": {
+      "pattern": "window",
+      "source_paths": [
+        "Chapter2/medium/longest_substring_without_repeating.py"
+      ]
+    },
+    "max-average-window": {
+      "pattern": "window",
+      "source_paths": [
+        "Chapter5/easy/max_average_subarray.py"
+      ]
+    },
+    "max-vowels-window": {
+      "pattern": "window",
+      "source_paths": [
+        "Chapter5/easy/max_vowels_in_substring.py",
+        "data structures/strings/sliding_window/easy_max_vowels_fixed_window.py"
+      ]
+    },
+    "max-water-container": {
+      "pattern": "pointers",
+      "source_paths": [
+        "Chapter1/medium/container_with_most_water.py"
+      ]
+    },
+    "merge-sorted-linked-lists": {
+      "pattern": "linked",
+      "source_paths": [
+        "Chapter3/easy/merge_two_sorted_lists.py"
+      ]
+    },
+    "middle-linked-list": {
+      "pattern": "cycle",
+      "source_paths": [
+        "Chapter3/easy/middle_of_linked_list.py",
+        "Chapter4/easy/middle_of_linked_list.py"
+      ]
+    },
+    "minimum-score-spread": {
+      "pattern": "sorting",
+      "source_paths": [
+        "Chapter5/easy/min_difference_k_scores.py"
+      ]
+    },
+    "minimum-window": {
+      "pattern": "window",
+      "source_paths": [
+        "Chapter1/hard/minimum_window_substring.py",
+        "data structures/strings/sliding_window/medium_minimum_window_substring.py"
+      ]
+    },
+    "move-zeroes": {
+      "pattern": "pointers",
+      "source_paths": [
+        "Chapter1/easy/move_zeroes.py"
+      ]
+    },
+    "nearby-duplicate": {
+      "pattern": "window",
+      "source_paths": [
+        "Chapter5/easy/contains_nearby_duplicate.py"
+      ]
+    },
+    "next-greater-element": {
+      "pattern": "stack",
+      "source_paths": [
+        "Chapter7/easy/next_greater_element.py"
+      ]
+    },
+    "palindrome-buildable": {
+      "pattern": "greedy",
+      "source_paths": [
+        "data structures/strings/greedy/easy_longest_palindrome_buildable.py"
+      ]
+    },
+    "palindrome-linked-list": {
+      "pattern": "cycle",
+      "source_paths": [
+        "Chapter3/easy/palindrome_linked_list.py",
+        "Chapter4/easy/palindrome_linked_list.py"
+      ]
+    },
+    "partition-labels": {
+      "pattern": "greedy",
+      "source_paths": [
+        "Chapter1/medium/partition_labels.py"
+      ]
+    },
+    "phone-letter-combinations": {
+      "pattern": "backtracking",
+      "source_paths": [
+        "data structures/strings/back_tracking/medium_letter_combination_phone.py"
+      ]
+    },
+    "remove-linked-values": {
+      "pattern": "linked",
+      "source_paths": [
+        "Chapter3/easy/remove_linked_list_elements.py"
+      ]
+    },
+    "repeated-substring": {
+      "pattern": "matching",
+      "source_paths": [
+        "data structures/strings/prefix_suffix/medium_repeated_substring_pattern.py"
+      ]
+    },
+    "reverse-linked-list": {
+      "pattern": "linked",
+      "source_paths": [
+        "Chapter3/easy/reverse_linked_list.py"
+      ]
+    },
+    "reverse-string": {
+      "pattern": "pointers",
+      "source_paths": [
+        "Chapter1/easy/reverse_string.py"
+      ]
+    },
+    "search-insert-position": {
+      "pattern": "search",
+      "source_paths": [
+        "Chapter6/easy/search_insert_position.py"
+      ]
+    },
+    "short-url-codec": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/medium/encode_decode_tinyurl.py"
+      ]
+    },
+    "simplify-path": {
+      "pattern": "stack",
+      "source_paths": [
+        "data structures/strings/stack/medium_simplify_unix_path.py"
+      ]
+    },
+    "sort-colors": {
+      "pattern": "sorting",
+      "source_paths": [
+        "Chapter1/medium/sort_colors.py"
+      ]
+    },
+    "sorted-squares": {
+      "pattern": "pointers",
+      "source_paths": [
+        "Chapter1/medium/squares_of_sorted_array.py"
+      ]
+    },
+    "sorted-two-sum": {
+      "pattern": "pointers",
+      "source_paths": [
+        "Chapter1/easy/two_sum.py"
+      ]
+    },
+    "string-list-codec": {
+      "pattern": "matching",
+      "source_paths": [
+        "data structures/strings/prefix_suffix/medium_encode_decode_strings.py"
+      ]
+    },
+    "subarray-sum": {
+      "pattern": "prefix",
+      "source_paths": [
+        "Chapter2/medium/subarray_sum_equals_k.py"
+      ]
+    },
+    "substring-search": {
+      "pattern": "matching",
+      "source_paths": [
+        "data structures/strings/pattern_matching/easy_strstr_first_occurrence.py",
+        "data structures/strings/pattern_matching/medium_kmp_search.py"
+      ]
+    },
+    "three-sum": {
+      "pattern": "pointers",
+      "source_paths": [
+        "Chapter1/medium/three_sum.py"
+      ]
+    },
+    "top-k-frequent": {
+      "pattern": "heap",
+      "source_paths": [
+        "Chapter2/medium/top_k_frequent_elements.py"
+      ]
+    },
+    "trapping-rain": {
+      "pattern": "pointers",
+      "source_paths": [
+        "Chapter1/hard/trapping_rain_water.py"
+      ]
+    },
+    "valid-anagram": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/easy/valid_anagram.py",
+        "data structures/strings/hashmap/easy_is_anagram.py"
+      ]
+    },
+    "valid-palindrome": {
+      "pattern": "pointers",
+      "source_paths": [
+        "Chapter1/easy/valid_palindrome.py"
+      ]
+    },
+    "valid-parentheses": {
+      "pattern": "stack",
+      "source_paths": [
+        "Chapter7/easy/valid_parenthesis.py",
+        "data structures/strings/stack/easy_valid_parenthesis.py"
+      ]
+    },
+    "word-pattern": {
+      "pattern": "hash",
+      "source_paths": [
+        "Chapter2/easy/word_pattern.py",
+        "data structures/strings/hashmap/medium_word_pattern.py"
+      ]
+    }
+  },
+  "lessons": {
+    "array-intersection": {
+      "approaches": [
+        [
+          "Baseline",
+          "Scan for matches",
+          "Test membership in the second list and suppress repeats using the result list.",
+          "O(a(1+b)) worst case",
+          "O(1) besides output"
+        ],
+        [
+          "Python convenience",
+          "Intersect two sets",
+          "Construct both membership sets, intersect them, and return a list.",
+          "O(a+b) expected",
+          "O(u+v) for distinct counts u and v, besides output"
+        ],
+        [
+          "Optimized",
+          "Hash the shorter list only",
+          "Remove an entry from the lookup set when emitted; stop when nothing remains.",
+          "O(a+b) expected",
+          "O(min(a,b)) besides output"
+        ]
+      ],
+      "code_path": "worked_examples/hash/array-intersection.py",
+      "cue": "A common value should be emitted once, not once for every matching position.",
+      "examples": [
+        "`[9, 3, 3]` and `[5, 3, 9, 9]` \u2192 `[3, 9]` in any order",
+        "`[]` and `[2]` \u2192 `[]`"
+      ],
+      "explanation": [
+        "Let a and b be the lengths. The optional sorted-input variant uses two indices in O(a+b) time and O(1) space besides output; it requires both lists to be sorted."
+      ],
+      "prompt": "Return the distinct integers present in both input lists, in any order."
+    },
+    "binary-search": {
+      "approaches": [
+        [
+          "Baseline",
+          "Scan the list",
+          "Return the first index whose value equals the target.",
+          "O(n)",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Use list.index",
+          "The method searches linearly; translate its missing-value exception to -1.",
+          "O(n)",
+          "O(1)"
+        ],
+        [
+          "Optimized",
+          "Halve a search interval",
+          "Maintain a half-open interval and discard the half that cannot contain the target.",
+          "O(log(n + 1))",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/search/binary-search.py",
+      "cue": "Sorted and indexed input lets one midpoint comparison discard half the remaining positions.",
+      "examples": [
+        "`[-4, 0, 7, 11]`, target `7` returns `2`.",
+        "`[]`, target `1` returns `-1`."
+      ],
+      "prompt": "Find the zero-based index of a target in a strictly increasing integer list, or return -1 if it is absent."
+    },
+    "character-replacement": {
+      "approaches": [
+        [
+          "Baseline",
+          "Restart from every left edge",
+          "Grow one candidate at a time until its true replacement cost exceeds the budget.",
+          "Expected O(n^2)",
+          "O(d)"
+        ],
+        [
+          "Python",
+          "Ask Counter for the live mode",
+          "Use most_common(1) in the shrink test, making the current window's validity explicit.",
+          "Expected O(n*d)",
+          "O(d)"
+        ],
+        [
+          "Optimized",
+          "Track a historical peak",
+          "Avoid a frequency-map scan when the left endpoint leaves; only the best feasible length is required.",
+          "Expected O(n)",
+          "O(d)"
+        ]
+      ],
+      "code_path": "worked_examples/window/character-replacement.py",
+      "cue": "Replacing everything except the most frequent character costs the window width minus its highest count.",
+      "examples": [
+        "`\"AAAABXYZ\"`, `k=1` -> `5`.",
+        "`\"BBAABBB\"`, `k=2` -> `7`.",
+        "`\"aAa\"`, `k=0` -> `1`."
+      ],
+      "explanation": [
+        "An exact live maximum gives a valid current window. A historical maximum may become stale: once that happens the width cannot set a new record unless the peak is raised by actual counts. Use the historical version for lengths, not for returning the current window as a witness.",
+        "Here n is text length and d is the number of distinct code points. Counter and dictionary timings assume ordinary expected behavior."
+      ],
+      "prompt": "Find the longest contiguous length that can be made all one character by replacing at most k positions, for k >= 0. Keep case distinctions."
+    },
+    "concatenated-words": {
+      "approaches": [
+        [
+          "Baseline",
+          "Rebuild counts for each start",
+          "Read each candidate as B full tokens and reject on the first surplus or unknown word.",
+          "Expected O(B*w + n*B*w)",
+          "O(d*w) including token copies, excluding output"
+        ],
+        [
+          "Python",
+          "Compare sliding Counter objects",
+          "Maintain B tokens at a time in each residue class, using exact whole-counter equality for each candidate.",
+          "Expected O(B*w + n*(w+d))",
+          "O(B*w) including copies of live tokens, excluding output"
+        ],
+        [
+          "Optimized",
+          "Maintain a capped word window",
+          "Drop invalid prefixes and use the capped token count as the match test without comparing whole maps.",
+          "Expected O((n+B)*w)",
+          "O(d*w) including token copies, excluding output"
+        ]
+      ],
+      "code_path": "worked_examples/window/concatenated-words.py",
+      "cue": "Start one independent word-step scan for each possible offset modulo the word width.",
+      "examples": [
+        "`\"aaaaa\"`, `['aa', 'aa']` -> `[0, 1]` in either order.",
+        "`\"xabcdab--cdab\"`, `['ab', 'cd']` -> `[1, 3, 9]` in any order.",
+        "`\"ababcd\"`, `['ab', 'cd', 'cd']` -> `[]`."
+      ],
+      "explanation": [
+        "Unknown words reset a residue-class window, while a surplus removes words from its left until the cap holds. Once all counts are bounded, the desired number of words forces every required count to match.",
+        "Here n is text length, B is the number of words, w is their common width, and d is the number of distinct words. Token slices and their hashing cost O(w); assume ordinary expected dictionary performance. Space excludes the list of starts."
+      ],
+      "prompt": "Return all zero-based starts whose substring is formed by using every supplied word occurrence consecutively and in any order. Matches may overlap; result order is arbitrary. Words must share a positive width; an empty word list has no matches."
+    },
+    "contains-duplicate": {
+      "approaches": [
+        [
+          "Baseline",
+          "Compare each pair",
+          "Try every earlier position for each value.",
+          "O(n\u00b2) worst case",
+          "O(1)"
+        ],
+        [
+          "Python convenience",
+          "Compare set and list sizes",
+          "The set drops duplicates, but must read the entire list.",
+          "O(n) expected",
+          "O(u) for u distinct values"
+        ],
+        [
+          "Optimized",
+          "Stop on a repeat",
+          "Check membership before adding each value; return at the first repeat.",
+          "O(n) expected worst input; can stop early",
+          "O(u) worst case"
+        ]
+      ],
+      "code_path": "worked_examples/hash/contains-duplicate.py",
+      "cue": "This only asks about membership among earlier values; you do not need indices or counts.",
+      "examples": [
+        "`[7, -1, 0, -1]` \u2192 True",
+        "`[]` \u2192 False"
+      ],
+      "prompt": "Return whether two different positions in an integer list hold the same value."
+    },
+    "dedupe-sorted-array": {
+      "approaches": [
+        [
+          "Baseline",
+          "Scan the written prefix",
+          "Search all retained values before writing a new one; this ignores adjacency.",
+          "O(n^2)",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Use insertion-ordered keys",
+          "dict.fromkeys keeps each first occurrence. Copy the keys into the original prefix, relaxing the strict constant-space goal.",
+          "Expected O(n)",
+          "O(u) for the dictionary"
+        ],
+        [
+          "Optimized",
+          "Compare with the last retained value",
+          "For sorted input the most recently retained value is the only possible duplicate.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/pointers/dedupe-sorted-array.py",
+      "cue": "Sorted input puts equal values side by side.",
+      "examples": [
+        "`[-5, -5, -2, 3, 3, 9]` returns `4` and leaves `[-5, -2, 3, 9]` in the first four positions.",
+        "`[4, 4, 4]` returns `1`."
+      ],
+      "explanation": [
+        "The write position equals the number of unique entries processed. Every write is to the current or an earlier position.",
+        "Here n is input size and u is its number of distinct integers; hash costs are expected under the usual constant-cost integer model."
+      ],
+      "prompt": "Compact a nondecreasing integer list in place so its leading entries are its distinct values in order. Return the length of that prefix. An empty list returns zero, and suffix values do not matter."
+    },
+    "dedupe-sorted-linked-list": {
+      "approaches": [
+        [
+          "Baseline",
+          "Collect nodes and keep run starts",
+          "Use adjacent indices to detect value changes, then reconnect the selected node references.",
+          "O(n)",
+          "O(n) reference lists"
+        ],
+        [
+          "Python",
+          "Group consecutive values",
+          "Use itertools.groupby to yield the first node of each run, then relink while consuming the stream.",
+          "O(n)",
+          "O(1)"
+        ],
+        [
+          "Optimized",
+          "Bypass duplicate successors",
+          "Advance only on a value change, keeping links within the original chain and bypassing just the duplicates.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/linked/dedupe-sorted-linked-list.py",
+      "cue": "Sorted input puts all copies of a value next to each other. Do not remove the entire run.",
+      "examples": [
+        "`1 \u2192 1 \u2192 2 \u2192 3 \u2192 3` becomes `1 \u2192 2 \u2192 3`, keeping the first `1` and first `3`.",
+        "`7 \u2192 7 \u2192 7` becomes the original first `7` with no successor."
+      ],
+      "explanation": [
+        "The original exercise leaves survivor identity open. All three lesson approaches consistently keep the first node."
+      ],
+      "prompt": "In a sorted acyclic linked list, retain the first original node from each run of equal values. Return the resulting head."
+    },
+    "design-hashmap": {
+      "approaches": [
+        [
+          "Baseline",
+          "Scan a list of pairs",
+          "Implement updates and deletion by finding the key linearly.",
+          "O(n+1) worst case per operation",
+          "O(n) state, O(1) extra per operation"
+        ],
+        [
+          "Python convenience",
+          "Lists of tuple buckets",
+          "No allowed built-in map; use list buckets and swap a removed pair with the last pair.",
+          "O(1+n/B) average under even distribution; O(n+1) worst case after O(B) setup",
+          "O(B+n) state"
+        ],
+        [
+          "Optimized",
+          "Grow and shrink the buckets",
+          "Rehash when load crosses the thresholds. Resizing keeps average chains short for well-distributed keys.",
+          "Expected amortized O(1) with even dispersion; O(n+1) worst operation",
+          "O(n+1) state and O(n+1) temporary space during a resize"
+        ]
+      ],
+      "code_path": "worked_examples/hash/design-hashmap.py",
+      "cue": "Keys sharing a bucket are not necessarily equal; compare the actual keys.",
+      "examples": [
+        "Put (1, 0) and (105, 91), update 105 to 5, remove 1 \u2192 get(1) is -1 and get(105) is 5."
+      ],
+      "explanation": [
+        "A get miss returns -1; remove on a miss does nothing. Here n denotes stored keys and B is the bucket count. Distribution assumptions are about the keys, not a guarantee of modulo hashing."
+      ],
+      "prompt": "Build an integer-key map with put, get, and remove, without using a built-in hash table."
+    },
+    "first-unique-character": {
+      "approaches": [
+        [
+          "Baseline",
+          "Rescan for each candidate",
+          "Use str.count to see whether the current character occurs once.",
+          "O(n\u00b2) worst case",
+          "O(1)"
+        ],
+        [
+          "Python convenience",
+          "Counter then scan",
+          "Count once and examine indices in their original order.",
+          "O(n) expected",
+          "O(u)"
+        ],
+        [
+          "Optimized",
+          "Ordered first positions",
+          "Overwrite repeated characters with a marker. Dict order keeps the first-insertion order, so only u entries need a second scan.",
+          "O(n) expected",
+          "O(u)"
+        ]
+      ],
+      "code_path": "worked_examples/hash/first-unique-character.py",
+      "cue": "Count over the whole string before committing to a position.",
+      "examples": [
+        "`\"\u00e9\u00e9Aaa\"` \u2192 2",
+        "`\"abab\"` \u2192 -1"
+      ],
+      "explanation": [
+        "Characters are case-sensitive Python code points. Let n be the length and u the number of distinct characters."
+      ],
+      "prompt": "Return the index of the first character that occurs exactly once, or -1."
+    },
+    "four-sum": {
+      "approaches": [
+        [
+          "Baseline",
+          "Enumerate four positions",
+          "Check every increasing index quadruple and store matching sorted value tuples in a set.",
+          "Expected O(n^4)",
+          "O(r) for the deduplication set, excluding output"
+        ],
+        [
+          "Python",
+          "Enumerate value multisets",
+          "Counter and combinations_with_replacement avoid duplicate candidates and verify that each repeated value has enough positions.",
+          "Expected O(n + d log d + d^4)",
+          "O(d) for frequencies and the sorted key pool, excluding output"
+        ],
+        [
+          "Optimized",
+          "Sort and scan after two anchors",
+          "A pair scan removes one endpoint after each comparison, so each anchor pair costs only a single suffix pass.",
+          "O(n log n + n^3)",
+          "O(n) including the sorted copy and sorting scratch, excluding output"
+        ]
+      ],
+      "code_path": "worked_examples/pointers/four-sum.py",
+      "cue": "Fix two sorted values and solve a sorted pair problem on the suffix.",
+      "examples": [
+        "`[4, -2, 0, 5, -2, 1]`, target `1` -> `[[-2, -2, 0, 5], [-2, -2, 1, 4]]` in either order.",
+        "`[2, 2, 2, 2, 2]`, target `8` -> `[[2, 2, 2, 2]]`."
+      ],
+      "explanation": [
+        "Skip repeated anchors and matched endpoint values only within their own loop levels. This removes duplicate outputs without preventing equal values at distinct indices.",
+        "Here n is input size, d the number of distinct values, and r the number of output quadruplets. Space excludes the returned list; hash and integer operation costs use the usual bounded-key model."
+      ],
+      "prompt": "Return every unique nondecreasing quadruplet of integers that totals the target, with each entry taken from a different input position. The result order does not matter. Leave input unchanged."
+    },
+    "four-sum-count": {
+      "approaches": [
+        [
+          "Baseline",
+          "Enumerate all index choices",
+          "Check each four-way combination without removing repeated values.",
+          "O(abcd) for nonempty lists",
+          "O(1)"
+        ],
+        [
+          "Python convenience",
+          "Counter of pair sums",
+          "Use itertools.product and count the sums from the first two lists.",
+          "O(ab+cd) expected for nonempty lists",
+          "O(a+b+c+d+s) upper bound, including product pools; s is the number of stored sums"
+        ],
+        [
+          "Optimized",
+          "Weight distinct-value pairs",
+          "Count each input first; multiply multiplicities and store sums from the smaller distinct-pair side.",
+          "O(a+b+c+d+ua\u00b7ub+uc\u00b7ud) expected",
+          "O(ua+ub+uc+ud+s), including product pools; s is stored distinct sums"
+        ]
+      ],
+      "code_path": "worked_examples/hash/four-sum-count.py",
+      "cue": "Split the sum into two pairs, and look up how many ways to form the negation of the other pair's sum.",
+      "examples": [
+        "`[1, 1, 1]`, `[-1, -1]`, `[0, 0]`, `[0]` \u2192 12 index choices",
+        "If any input is empty, the answer is 0."
+      ],
+      "explanation": [
+        "The same values at different positions are different choices. In the bounds, a, b, c and d are list lengths; ua, ub, uc and ud are their distinct counts. Integer arithmetic is counted by operation."
+      ],
+      "prompt": "Count zero-sum index quadruples using one entry from each of four integer lists."
+    },
+    "generate-parentheses": {
+      "approaches": [
+        [
+          "Baseline",
+          "Try every sequence",
+          "Generate all binary choices at length 2n, then discard unbalanced strings.",
+          "O((n + 1) * 4^n)",
+          "O(n + 1), including recursion"
+        ],
+        [
+          "Python",
+          "Choose opening positions with combinations",
+          "No built-in generates balanced strings; choosing n opening positions avoids wrong counts before checking nesting.",
+          "O((n + 1) * binom(2n, n))",
+          "O(n + 1)"
+        ],
+        [
+          "Optimized",
+          "Prune invalid prefixes",
+          "Only add an opening if still available or a closing if there is an unmatched opening.",
+          "O((n + 1) * C(n))",
+          "O(n + 1), including recursion"
+        ]
+      ],
+      "code_path": "worked_examples/backtracking/generate-parentheses.py",
+      "cue": "A valid prefix never has more closing than opening parentheses.",
+      "examples": [
+        "`n = 2` returns `[\"(())\", \"()()\"]`.",
+        "`n = 0` returns `[\"\"]`."
+      ],
+      "explanation": [
+        "C(n) is the nth Catalan number, which counts the outputs. These auxiliary bounds exclude returned strings."
+      ],
+      "prompt": "For a small nonnegative integer n, list every well-formed string made from exactly n pairs of parentheses in lexicographic order."
+    },
+    "group-anagrams": {
+      "approaches": [
+        [
+          "Baseline",
+          "Search representative signatures",
+          "Compare each word's counts to the first signature in each existing group.",
+          "O(w\u00b7g\u00b7(1+L)+T) expected with hash-based count lookups",
+          "O(w+T) upper bound besides output, including representative counters and intermediate group references"
+        ],
+        [
+          "Python convenience",
+          "Group by sorted tuples",
+          "Use sorted and defaultdict to group equal character sequences.",
+          "O(w+T log(L+1)) expected overall",
+          "O(w+T) upper bound besides output, including stored keys and sort scratch"
+        ],
+        [
+          "Optimized",
+          "Hash count signatures",
+          "Use a frozenset of character/count pairs to avoid sorting without assuming a fixed alphabet.",
+          "O(w+T) expected",
+          "O(w+T) upper bound besides output, including stored count signatures"
+        ]
+      ],
+      "code_path": "worked_examples/hash/group-anagrams.py",
+      "cue": "Build one order-independent signature for each character multiset.",
+      "examples": [
+        "`[\"\u00e9a\", \"\u00e9\", \"a\u00e9\", \"\", \"\u00e9a\"]` \u2192 `[[\"\u00e9a\", \"a\u00e9\", \"\u00e9a\"], [\"\u00e9\"], [\"\"]]` in any group order."
+      ],
+      "explanation": [
+        "Let w be the number of words, L the maximum length, T the total character count, and g the number of groups."
+      ],
+      "prompt": "Group words by their case-sensitive character multiplicities. Keep duplicate words."
+    },
+    "happy-number": {
+      "approaches": [
+        [
+          "Baseline",
+          "Record visited states",
+          "Calculate each transition with divmod and detect repetition with a set.",
+          "Expected O(d + s) digit steps",
+          "O(s) integer states"
+        ],
+        [
+          "Python",
+          "Decimal characters and the 4 shortcut",
+          "No direct classifier exists. Use sum over decimal characters and stop at either 1 or 4.",
+          "O(d + s) digit steps",
+          "O(d) for the decimal string"
+        ],
+        [
+          "Optimized",
+          "Floyd cycle detection",
+          "Run two walkers at different speeds; the meeting state is 1 exactly when the orbit is happy.",
+          "O(d + s) digit steps",
+          "O(1) bounded integers"
+        ]
+      ],
+      "code_path": "worked_examples/cycle/happy-number.py",
+      "cue": "Each number determines exactly one successor, like a next pointer you can compute.",
+      "examples": [
+        "`13 \u2192 10 \u2192 1` returns `True`.",
+        "`16` returns `False`: its orbit returns to `16` without seeing `1`."
+      ],
+      "explanation": [
+        "Let d be the starting digit count and s the number of distinct orbit states. After the first step, every state is at most 810, so later steps inspect at most three digits.",
+        "For this base-10 rule, every nonhappy orbit reaches 4. Checking the finite range 1 through 810 suffices for the stated input bound; Floyd needs no such rule."
+      ],
+      "prompt": "Starting with a positive signed 32-bit integer, keep replacing it with the sum of its squared decimal digits. Return whether the sequence reaches 1."
+    },
+    "isomorphic-strings": {
+      "approaches": [
+        [
+          "Baseline",
+          "Compare pairwise equality",
+          "Inspect both strings at every pair of positions for matching equality relationships.",
+          "O(n\u00b2) worst case",
+          "O(1)"
+        ],
+        [
+          "Python convenience",
+          "Compare canonical IDs",
+          "No direct built-in; dict.setdefault assigns IDs in first-occurrence order.",
+          "O(n) expected",
+          "O(n) for signatures and lookup tables"
+        ],
+        [
+          "Optimized",
+          "Compare last-seen indices",
+          "At each pair of characters their previous indices must be identical, including when both are new.",
+          "O(n) expected",
+          "O(u)"
+        ]
+      ],
+      "code_path": "worked_examples/hash/isomorphic-strings.py",
+      "cue": "Two equal positions in one string have to be equal in the other, and vice versa.",
+      "examples": [
+        "`\"\u00e5\u00e5b\"` and `\"\u96ea\u96eas\"` \u2192 True",
+        "`\"ab\"` and `\"abb\"` \u2192 False",
+        "`\"ab\"` and `\"aa\"` \u2192 False"
+      ],
+      "explanation": [
+        "Check length before relying on zip. Let n be the combined length and u the combined distinct character count."
+      ],
+      "prompt": "Check whether a bijective renaming of characters transforms the first string into the second."
+    },
+    "jewels-and-stones": {
+      "approaches": [
+        [
+          "Baseline",
+          "Search the jewel string",
+          "Check each stone with string membership.",
+          "O(s(1+j)) worst case",
+          "O(1)"
+        ],
+        [
+          "Python convenience",
+          "Set plus generator",
+          "Build one set of jewel types, then sum the membership checks.",
+          "O(j+s) expected",
+          "O(u) for u distinct jewels"
+        ],
+        [
+          "Optimized",
+          "Use a bounded membership mask",
+          "A fixed-width integer handles ASCII letters without a hash table; use the set when a jewel is outside that alphabet.",
+          "O(j+s) for ASCII jewels; expected O(j+s) otherwise",
+          "O(1) for ASCII jewels; O(u) otherwise"
+        ]
+      ],
+      "code_path": "worked_examples/hash/jewels-and-stones.py",
+      "cue": "Repeated stones count separately; repeated jewel declarations change nothing.",
+      "examples": [
+        "`\"aAz\"` and `\"aAAZZzz\"` \u2192 5",
+        "`\"\u00e9\u00e9\ud83d\ude42\"` and `\"\u00e9\ud83d\ude42e\u00e9\"` \u2192 3"
+      ],
+      "explanation": [
+        "Let j and s be the string lengths. The bit mask applies when all jewels are ASCII letters; the fallback accepts arbitrary characters."
+      ],
+      "prompt": "Count stone occurrences whose case-sensitive character appears in the jewel string."
+    },
+    "lfu-cache": {
+      "approaches": [
+        [
+          "Baseline",
+          "Frequency and timestamp scan",
+          "Store both eviction priorities with each key and scan for the minimum only when full.",
+          "Get expected O(1); eviction O(C) with expected constant lookups",
+          "O(C) cache state; O(1) extra per operation"
+        ],
+        [
+          "Python convenience",
+          "OrderedDict per frequency",
+          "No built-in LFU cache; use OrderedDict to drop the oldest entry in the minimum bucket.",
+          "Expected amortized O(1) per operation",
+          "O(C) cache state; O(1) explicit temporary state"
+        ],
+        [
+          "Optimized",
+          "Doubly linked frequency queues",
+          "Map keys directly to nodes and splice them between buckets; this matches the OrderedDict approach asymptotically.",
+          "Expected amortized O(1) per operation",
+          "O(C) cache state; O(1) explicit temporary state"
+        ]
+      ],
+      "code_path": "worked_examples/hash/lfu-cache.py",
+      "cue": "Track recency within each frequency, not globally.",
+      "examples": [
+        "Capacity 0: put(1, 10), then get(1) \u2192 -1",
+        "Capacity 2: put(2, 20), put(1, 10), get(1), put(2, 22), put(3, 30) \u2192 key 1 is evicted."
+      ],
+      "explanation": [
+        "A successful get and a put that overwrites both increment frequency; new keys start at one. A miss returns -1 without changing recency.",
+        "If a promotion empties the minimum bucket, the new minimum is exactly one higher. Insertion resets it to one.",
+        "Let C be capacity; the bounds treat key hashes and frequency/timestamp arithmetic as unit-cost."
+      ],
+      "prompt": "Build a bounded cache with get and put. Evict by lowest frequency, breaking ties by oldest access."
+    },
+    "linked-cycle": {
+      "approaches": [
+        [
+          "Baseline",
+          "Scan the visit log",
+          "Check the current node against each prior node by identity before appending it.",
+          "O(n\u00b2) worst case",
+          "O(n)"
+        ],
+        [
+          "Python",
+          "Set of node identities",
+          "No direct linked-list cycle check exists. Use a set of id keys for expected constant-time lookups.",
+          "Expected O(n)",
+          "O(n)"
+        ],
+        [
+          "Optimized",
+          "Floyd cycle detection",
+          "Advance by one and two steps. The walkers either meet after advancing or the quick walker reaches the end.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/cycle/linked-cycle.py",
+      "cue": "The condition is repeated identity, even when many nodes store identical values.",
+      "examples": [
+        "`A \u2192 B \u2192 C`, with `C.next` equal to `B`, returns `True`.",
+        "Two distinct nodes both storing `7`, followed by `None`, return `False`."
+      ],
+      "explanation": [
+        "Let n be the number of reachable nodes. Inside a cycle the quick walker gains one step each round until it catches the slow walker."
+      ],
+      "prompt": "Return whether following next links from the head ever reaches the same node object twice. Leave all links unchanged."
+    },
+    "linked-intersection": {
+      "approaches": [
+        [
+          "Baseline",
+          "Compare node pairs",
+          "Visit left candidates in order and search the right chain for each candidate by identity.",
+          "O(mn) worst case for nonempty lists",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Set of left identities",
+          "No direct linked-list intersection exists. Collect id keys from the left and use next to find the first matching node on the right.",
+          "Expected O(m + n)",
+          "O(m)"
+        ],
+        [
+          "Optimized",
+          "Switch heads at the end",
+          "Walk both chains, restarting each walker at the opposite head. The walkers meet at the shared node or at None.",
+          "O(m + n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/linked/linked-intersection.py",
+      "cue": "Compare nodes with is, not their values. If the lists join, the rest of the tail is shared.",
+      "examples": [
+        "`7 \u2192 X \u2192 4` and `8 \u2192 9 \u2192 X \u2192 4` share the same node `X`; return `X`.",
+        "Two separately allocated chains both containing `1 \u2192 2` have no intersection."
+      ],
+      "explanation": [
+        "Let m and n be the left and right lengths. Switching heads gives both walkers the same combined distance, regardless of which prefix was longer."
+      ],
+      "prompt": "Given two acyclic linked lists, return their first shared node object or None. Do not modify either list."
+    },
+    "longest-common-subsequence": {
+      "approaches": [
+        [
+          "Baseline",
+          "Try subsequences longest first",
+          "Enumerate position choices in the shorter string and test each against an iterator over the longer string.",
+          "O((s + l + 1) * 2^s)",
+          "O(s + 1)"
+        ],
+        [
+          "Python",
+          "Build a prefix-length table",
+          "No direct built-in; an explicit table keeps every subproblem visible.",
+          "O((m + 1)(n + 1))",
+          "O((m + 1)(n + 1))"
+        ],
+        [
+          "Optimized",
+          "Overwrite one row",
+          "Keep the previous diagonal in a variable and place the shorter input on the row axis.",
+          "O(mn) for nonempty inputs; O(1) if either is empty",
+          "O(s + 1)"
+        ]
+      ],
+      "code_path": "worked_examples/dp/longest-common-subsequence.py",
+      "cue": "If two prefix-ending characters match, extend a shorter common subsequence; otherwise try skipping one end.",
+      "examples": [
+        "`axbycx` and `abc` return `3`.",
+        "`acb` and `abc` return `2`."
+      ],
+      "explanation": [
+        "Let s and l be the shorter and longer input lengths; m and n are the two input lengths in their original order."
+      ],
+      "prompt": "Return the length of the longest subsequence shared by two strings. Keep relative character order but allow gaps."
+    },
+    "longest-consecutive": {
+      "approaches": [
+        [
+          "Baseline",
+          "Scan the list for neighbors",
+          "For each candidate run start, check predecessors and successors by list membership. A duplicate start can repeat a walk.",
+          "O(n\u00b3) worst case",
+          "O(1)"
+        ],
+        [
+          "Python convenience",
+          "Sort distinct values",
+          "Set removes duplicates; adjacent sorted values reveal gaps.",
+          "O(n+u log(u+1)) with expected set construction",
+          "O(u) including sort scratch"
+        ],
+        [
+          "Optimized",
+          "Walk from set run starts",
+          "Only the first value starts a walk, so each distinct value is visited a constant number of times.",
+          "O(n) expected",
+          "O(u)"
+        ]
+      ],
+      "code_path": "worked_examples/hash/longest-consecutive.py",
+      "cue": "The beginning of a run has no predecessor in the collection.",
+      "examples": [
+        "`[-1, 2, -3, 0, -1, -2]` \u2192 4 for the run from -3 to 0",
+        "`[]` \u2192 0"
+      ],
+      "explanation": [
+        "Let n be the input length and u the number of distinct values. The hash bounds assume constant-cost integer keys."
+      ],
+      "prompt": "Find the longest run of consecutive integer values in unsorted input. Duplicates do not extend a run."
+    },
+    "longest-duplicate-substring": {
+      "approaches": [
+        [
+          "Baseline",
+          "Compare every pair of suffix starts",
+          "Walk the common prefix for every pair, without slicing each candidate.",
+          "O(n\u00b3) worst case",
+          "O(1) besides the returned slice"
+        ],
+        [
+          "Python convenience",
+          "Sort suffix strings",
+          "No built-in repeated-substring search; sort full suffixes and compare neighboring pairs.",
+          "O(n\u00b2 log(n+1)) worst-case upper bound",
+          "O(n\u00b2) for copied suffixes"
+        ],
+        [
+          "Optimized",
+          "Rank doubling and adjacent LCP",
+          "Sort fixed-size rank pairs instead of strings, then reuse common-prefix lengths in a linear scan.",
+          "O(n log\u00b2(n+1)) worst case",
+          "O(n) including sort keys and scratch"
+        ]
+      ],
+      "code_path": "worked_examples/matching/longest-duplicate-substring.py",
+      "cue": "Suffixes with a shared prefix form a consecutive block in sorted suffix order.",
+      "examples": [
+        "`\"tanana\"` \u2192 `\"ana\"` at positions 1 and 3",
+        "`\"aaaa\"` \u2192 `\"aaa\"`",
+        "`\"abcd\"` \u2192 `\"\"`"
+      ],
+      "explanation": [
+        "The optimized variant sorts suffix indices by pairs of prefix ranks, doubling the ranked length each round, then computes adjacent common prefixes by carrying forward all but one previously matched character."
+      ],
+      "prompt": "Find any longest substring appearing at two distinct starting positions. Overlaps count."
+    },
+    "longest-k-distinct": {
+      "approaches": [
+        [
+          "Baseline",
+          "Restart the set at every left edge",
+          "Check all starts and stop a candidate as soon as its distinct-value limit is exceeded.",
+          "Expected O(n^2)",
+          "O(1 + min(d,k+1)) for k > 0"
+        ],
+        [
+          "Python",
+          "Evict the least recent last occurrence",
+          "Use OrderedDict to update recency and jump past the least recently seen character on overflow.",
+          "Expected O(n)",
+          "O(1 + min(d,k+1)) for k > 0"
+        ],
+        [
+          "Optimized",
+          "Shrink a frequency window",
+          "Update counts in place and delete an outgoing key when its last live occurrence leaves.",
+          "Expected O(n)",
+          "O(1 + min(d,k+1)) for k > 0"
+        ]
+      ],
+      "code_path": "worked_examples/window/longest-k-distinct.py",
+      "cue": "When one character type too many arrives, advance until an entire type is gone.",
+      "examples": [
+        "`\"aabaacc\"`, `k=2` -> `5`.",
+        "`\"abcbbba\"`, `k=2` -> `5`.",
+        "`\"abc\"`, `k=0` -> `0`."
+      ],
+      "explanation": [
+        "In the counting window, a zero count is not a live key. In the recency variant, jumping after the least recent last occurrence removes exactly that character type.",
+        "Here n is text length and d is its number of distinct code points. For k > 0 each implementation holds at most k+1 live keys; nonpositive k exits immediately."
+      ],
+      "prompt": "Return the longest contiguous substring length using at most k distinct code points. Empty text and nonpositive k both return zero."
+    },
+    "longest-palindromic-substring": {
+      "approaches": [
+        [
+          "Baseline",
+          "Check substring intervals",
+          "Inspect candidates with two inward pointers without creating substring copies.",
+          "O(n^3) upper bound",
+          "O(1) excluding the result"
+        ],
+        [
+          "Python",
+          "Compare slices against their reverse",
+          "No direct built-in; try lengths from longest to shortest and compare each candidate with a reversed copy.",
+          "O(n^3) upper bound",
+          "O(n)"
+        ],
+        [
+          "Optimized",
+          "Expand around odd and even centers",
+          "Stop expanding at the first mismatch or boundary. This simple approach is quadratic, not Manacher's linear-time algorithm.",
+          "O(n^2)",
+          "O(1) excluding the result"
+        ]
+      ],
+      "code_path": "worked_examples/dp/longest-palindromic-substring.py",
+      "cue": "Every palindrome has an odd or even center; examine those centers instead of every interval.",
+      "examples": [
+        "`cabbad` returns `abba`.",
+        "`abacdc` returns `aba`."
+      ],
+      "prompt": "Find the longest contiguous palindrome in a string. Return the leftmost one if several have the same maximum length."
+    },
+    "longest-unique-substring": {
+      "approaches": [
+        [
+          "Baseline",
+          "Search the growing substring",
+          "For each start, inspect whether the next character already appears in the current slice.",
+          "O(n^3) worst-case upper bound",
+          "O(n) peak slice space"
+        ],
+        [
+          "Python",
+          "Use set membership for each start",
+          "There is no direct built-in for the longest window; a fresh set avoids copying or rescanning each prefix.",
+          "Expected O(n^2)",
+          "O(d)"
+        ],
+        [
+          "Optimized",
+          "Jump using last positions",
+          "Process each right endpoint once and advance left only when the previous copy lies inside the window.",
+          "Expected O(n)",
+          "O(d)"
+        ]
+      ],
+      "code_path": "worked_examples/window/longest-unique-substring.py",
+      "cue": "After seeing a duplicate inside the window, jump just past its previous position.",
+      "examples": [
+        "`\"abba\"` -> `2`.",
+        "`\"\u00e5 \u03b2\u00e5!\"` -> `4`.",
+        "`\"a b c a\"` -> `3`."
+      ],
+      "explanation": [
+        "A last-seen position that is already left of the window must not move the boundary backward. Here n is text length and d is the number of distinct code points."
+      ],
+      "prompt": "Return the length of the longest contiguous portion of a string with no repeated Python code point. Spaces count and empty text returns zero."
+    },
+    "max-average-window": {
+      "approaches": [
+        [
+          "Baseline",
+          "Sum each full window",
+          "Recompute each exact-width sum without allocating a slice.",
+          "O((n-k+1)*k)",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Build prefix totals",
+          "Use itertools.accumulate, then subtract prefix totals at opposite boundaries.",
+          "O(n)",
+          "O(n) for prefix totals"
+        ],
+        [
+          "Optimized",
+          "Roll one sum",
+          "Add the incoming integer and subtract the outgoing integer; divide only the best sum.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/window/max-average-window.py",
+      "cue": "All candidates have the same denominator, so maximize the sum first.",
+      "examples": [
+        "`[6, -8, 11, 0, 9]`, `k=3` -> `20/3`.",
+        "`[-4, -7, -3, -2]`, `k=2` -> `-2.5`."
+      ],
+      "explanation": [
+        "Starting the best sum at zero is wrong for all-negative windows. Here n is input length; indexed initialization in the optimized method avoids a length-k copy."
+      ],
+      "prompt": "Find the largest average of a contiguous segment of exactly k integer entries. Require 1 <= k <= len(nums), and allow negatives."
+    },
+    "max-vowels-window": {
+      "approaches": [
+        [
+          "Baseline",
+          "Count each window separately",
+          "Use indices rather than allocating a substring for every candidate.",
+          "O((n-k+1)*k) for k > 0",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Accumulate vowel indicators",
+          "A prefix count gives any window's vowel total with one subtraction.",
+          "O(n)",
+          "O(n) for prefix counts"
+        ],
+        [
+          "Optimized",
+          "Roll one count",
+          "Adjust for the two changed characters and stop early if the count reaches the width.",
+          "O(n) worst case",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/window/max-vowels-window.py",
+      "cue": "The count changes only at the entering and leaving positions.",
+      "examples": [
+        "`\"bxAIox\"`, `k=3` -> `3`.",
+        "`\"\u00e0bE\u00e9\"`, `k=4` -> `1`.",
+        "`\"yxYz\"`, `k=2` -> `0`."
+      ],
+      "explanation": [
+        "No length-k substring can contain more than k vowels, so reaching k is a sound early exit. Here n is text length; accented characters are not part of the fixed ASCII vowel set."
+      ],
+      "prompt": "Find the largest number of case-insensitive ASCII vowels (a, e, i, o, u) in an exact-width substring. Require 0 <= k <= len(text); k=0 returns zero."
+    },
+    "max-water-container": {
+      "approaches": [
+        [
+          "Baseline",
+          "Compare every pair",
+          "Compute each pair's width and limiting height directly.",
+          "O(n^2)",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Sort indices by height threshold",
+          "Activate taller lines first. At each height the leftmost and rightmost active lines give the greatest eligible width.",
+          "O(n log n)",
+          "O(n) for indices, sort keys, and scratch"
+        ],
+        [
+          "Optimized",
+          "Move the shorter line",
+          "After scoring a pair, discard the shorter endpoint because its remaining pairs are narrower.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/pointers/max-water-container.py",
+      "cue": "A narrower pair using the current shorter line cannot beat the current area.",
+      "examples": [
+        "`[1, 9, 2, 7, 1]` -> `14`, using indices `1` and `3`.",
+        "`[4, 0, 0, 4]` -> `12`.",
+        "`[0, 5, 0]` -> `0`."
+      ],
+      "explanation": [
+        "Only endpoints govern a container's capacity, unlike rain water above a terrain profile. Here n is the number of lines."
+      ],
+      "prompt": "Pick two nonnegative line heights at different indices. Maximize their separation multiplied by the shorter height. Return zero if no pair exists."
+    },
+    "merge-sorted-linked-lists": {
+      "approaches": [
+        [
+          "Baseline",
+          "Materialize and stable-sort",
+          "Sort the combined references by value, then link the nodes in their resulting order.",
+          "O(N log N) generic bound; O(N) for two sorted runs with CPython's adaptive sort",
+          "O(N) references and sort workspace"
+        ],
+        [
+          "Python",
+          "Merge sorted iterators",
+          "heapq.merge streams sorted references; a relinking helper builds the chain and preserves left-first ties.",
+          "O(N) for two inputs",
+          "O(1) for two inputs"
+        ],
+        [
+          "Optimized",
+          "Splice with two cursors",
+          "Compare current heads directly and attach the entire remaining tail once one input is exhausted.",
+          "O(N) worst case",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/linked/merge-sorted-linked-lists.py",
+      "cue": "The smaller current head can be appended without looking farther down either chain.",
+      "examples": [
+        "`1 \u2192 2` merged with `2 \u2192 6` becomes `1 \u2192 2 \u2192 2 \u2192 6`, with the left `2` first.",
+        "Merging `None` and `4 \u2192 5` returns the existing node that stores `4`."
+      ],
+      "explanation": [
+        "Let N be the total number of nodes. With a lazy traversal, save the next link before yielding a node for the caller to rewire."
+      ],
+      "prompt": "Splice two disjoint, acyclic, nondecreasing chains into one sorted chain. Reuse the original nodes and take left nodes first on equal values."
+    },
+    "middle-linked-list": {
+      "approaches": [
+        [
+          "Baseline",
+          "Count then walk",
+          "Count nodes, compute the chosen middle index, then walk to it.",
+          "O(n)",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Index a list of nodes",
+          "No direct linked-list indexing exists. Materialize node references in a Python list and index it.",
+          "O(n)",
+          "O(n)"
+        ],
+        [
+          "Optimized",
+          "Walk at two speeds",
+          "When the fast pointer stops, the slow pointer is at the middle. Start fast one node ahead to choose the first middle.",
+          "O(n), one traversal",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/cycle/middle-linked-list.py",
+      "cue": "For an even length there are two valid conventions. Make the tie rule explicit.",
+      "examples": [
+        "`1 \u2192 2 \u2192 3 \u2192 4` returns the node holding `3` by default, or `2` when choosing the first middle.",
+        "`8 \u2192 9 \u2192 10` returns the node holding `9` under either convention."
+      ],
+      "explanation": [
+        "For length n, the zero-based indices are n // 2 for the second middle and (n - 1) // 2 for the first."
+      ],
+      "prompt": "Return the original middle node of an acyclic chain, using the second middle by default. Allow callers to choose the first middle instead, and return None for an empty list."
+    },
+    "minimum-score-spread": {
+      "approaches": [
+        [
+          "Baseline",
+          "Try every k-element group",
+          "Enumerate all position subsets and measure each range.",
+          "O(n + k * C(n, k))",
+          "O(n + k)"
+        ],
+        [
+          "Python",
+          "Zip sorted endpoints",
+          "Sort once, shift a copy by k - 1, and pair the low and high endpoints.",
+          "O(n log n)",
+          "O(n), including the sorted list and slice"
+        ],
+        [
+          "Optimized",
+          "Scan endpoints by index",
+          "Keep the same sorting bound, but avoid the second slice and return immediately when k is one.",
+          "O(n log n)",
+          "O(n), including the sorted copy"
+        ]
+      ],
+      "code_path": "worked_examples/sorting/minimum-score-spread.py",
+      "cue": "After sorting, any chosen k scores span at least as wide a range as some contiguous k-score group.",
+      "examples": [
+        "`[8, 2, 5, 2]`, `k = 2` returns `0`.",
+        "The same scores with `k = 3` return `3`."
+      ],
+      "prompt": "Pick exactly k positions in a list of scores to minimize their maximum minus minimum. Assume 1 <= k <= the list length and leave the input unchanged."
+    },
+    "minimum-window": {
+      "approaches": [
+        [
+          "Baseline",
+          "Recheck counts as each start grows",
+          "Starting over is easy to reason about; the first valid window per start is that start's shortest.",
+          "Expected O(m + n^2*d) for nonempty target",
+          "O(d) excluding output"
+        ],
+        [
+          "Python",
+          "Check coverage by Counter subtraction",
+          "A nonempty positive difference means some required occurrences are still missing.",
+          "Expected O(m + n*d) for nonempty target",
+          "O(d) including the temporary difference, excluding output"
+        ],
+        [
+          "Optimized",
+          "Track the number of missing occurrences",
+          "Update the deficit for one changed character and avoid rescanning the frequency map.",
+          "Expected O(n + m)",
+          "O(d) excluding output"
+        ]
+      ],
+      "code_path": "worked_examples/window/minimum-window.py",
+      "cue": "Once all required occurrences are present, advance left until one becomes missing.",
+      "examples": [
+        "`\"xcaabyybaca\"`, target `\"aac\"` -> `\"caa\"`.",
+        "`\"abxxba\"`, target `\"ab\"` -> `\"ab\"`.",
+        "`\"xay\"`, target `\"aa\"` -> `\"\"`."
+      ],
+      "explanation": [
+        "For each right bound, every valid shrink may improve the answer. Save only the best bounds; repeated slicing of successively shorter candidates can be quadratic.",
+        "Here n is source length, m is target length, and d is the number of distinct target code points. Space excludes the final substring copy; dictionary costs are expected."
+      ],
+      "prompt": "Return the shortest contiguous part of a source that covers all target characters, including repetitions, with case-sensitive matching. Break ties by earliest start. Return an empty string when the target is empty or no window covers it."
+    },
+    "move-zeroes": {
+      "approaches": [
+        [
+          "Baseline",
+          "Remove and append",
+          "Each encountered zero is moved to the end; deleting inside a list shifts its unprocessed suffix.",
+          "O(n^2)",
+          "O(1) algorithmic auxiliary space"
+        ],
+        [
+          "Python",
+          "Stable sort by zero status",
+          "Sorting by a Boolean keeps each group stable. The sort scratch relaxes the strict space bound.",
+          "O(n log n) worst case",
+          "O(n), including sort keys and scratch"
+        ],
+        [
+          "Optimized",
+          "Compact and fill",
+          "Write nonzero values once, then fill the unclaimed suffix with zeroes.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/pointers/move-zeroes.py",
+      "cue": "The number of nonzero entries read is the next position to fill.",
+      "examples": [
+        "`[0, 4, 0, -2, 4, 0, 1]` becomes `[4, -2, 4, 1, 0, 0, 0]`.",
+        "`[0, 0]` and `[]` are unchanged."
+      ],
+      "explanation": [
+        "A write index never gets ahead of the read index, so compaction cannot overwrite an unread value.",
+        "Here n is the original list length. All three methods mutate the original list; only the sort needs linear scratch."
+      ],
+      "prompt": "Modify an integer list so all zeroes are at the end and all other entries keep their original relative order. Return None. The strict solution uses constant auxiliary space."
+    },
+    "nearby-duplicate": {
+      "approaches": [
+        [
+          "Baseline",
+          "Check eligible pairs",
+          "Examine every earlier position within distance k of each index.",
+          "O(n*(1 + min(n,k)))",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Remember each value's latest index",
+          "Only the closest previous occurrence can improve on the distance bound.",
+          "Expected O(n)",
+          "O(d)"
+        ],
+        [
+          "Optimized",
+          "Evict out-of-range values",
+          "Maintain a membership set bounded by the current distance limit.",
+          "Expected O(n), or O(1) for k=0",
+          "O(1 + min(n,k))"
+        ]
+      ],
+      "code_path": "worked_examples/window/nearby-duplicate.py",
+      "cue": "Before checking index i, only the preceding k positions are eligible.",
+      "examples": [
+        "`[7, -1, 2, 7]`, `k=3` -> `True`; `k=2` -> `False`.",
+        "`[7, 7]`, `k=0` -> `False`."
+      ],
+      "explanation": [
+        "The active set cannot contain two equal entries before the first match returns, so removing one expired value removes only its own occurrence. Here n is input size and d is the number of distinct integers."
+      ],
+      "prompt": "For an integer list and nonnegative k, decide whether two distinct positions hold the same value and are at most k indices apart."
+    },
+    "next-greater-element": {
+      "approaches": [
+        [
+          "Baseline",
+          "Locate and scan",
+          "For each query separately, find its position and scan until a larger value appears.",
+          "O(qn) worst case",
+          "O(1) excluding output"
+        ],
+        [
+          "Python",
+          "Index once and use next",
+          "Build a position dictionary, then use a generator and next with a default. This saves the repeated location searches, not the suffix scans.",
+          "O(n + qn) worst-case scanning, with expected O(1) lookups",
+          "O(n) excluding output"
+        ],
+        [
+          "Optimized",
+          "Resolve a monotone stack",
+          "Scan the reference once; a larger arrival resolves every smaller pending value at the top.",
+          "Expected O(n + q)",
+          "O(n) excluding output"
+        ]
+      ],
+      "code_path": "worked_examples/stack/next-greater-element.py",
+      "cue": "Find the first greater value, not the greatest value in the suffix.",
+      "examples": [
+        "With reference `[2, 1, 3, 5, 4]`, queries `[4, 2, 3]` return `[-1, 3, 5]`.",
+        "With reference `[8, 7, 6, 9]`, each of `8`, `7`, and `6` gets `9`."
+      ],
+      "explanation": [
+        "Let n be the reference length and q the query count. Pending values form a decreasing stack until a greater arrival resolves them."
+      ],
+      "prompt": "For each query value, find the first strictly larger value to its right in the reference list, or return -1 for that query. The reference contains distinct values and all queries occur in it."
+    },
+    "palindrome-buildable": {
+      "approaches": [
+        [
+          "Baseline",
+          "Match an unmatched list",
+          "Search a list for a mate to each character; remove its match when a pair forms.",
+          "O(nu) for u distinct characters",
+          "O(u)"
+        ],
+        [
+          "Python",
+          "Count with Counter",
+          "Every odd count leaves one unpaired character, and at most one can go in the center.",
+          "O(n) expected",
+          "O(u)"
+        ],
+        [
+          "Optimized",
+          "Track parity only",
+          "Toggle each character's presence in a set. This is also linear, but stores no exact counts.",
+          "O(n) expected",
+          "O(u) worst case"
+        ]
+      ],
+      "code_path": "worked_examples/greedy/palindrome-buildable.py",
+      "cue": "All positions except an optional center must come in matching pairs.",
+      "examples": [
+        "`abbccd` returns `5`.",
+        "`Xx` returns `1`."
+      ],
+      "prompt": "Return the length of the longest palindrome that can be assembled by rearranging any of the input characters. Uppercase and lowercase are different."
+    },
+    "palindrome-linked-list": {
+      "approaches": [
+        [
+          "Baseline",
+          "Stack for the first half",
+          "Use two speeds to push only the first half. Skip the odd-length center and match the second half against pops.",
+          "O(n)",
+          "O(n) for half the values"
+        ],
+        [
+          "Python",
+          "Compare with a reverse slice",
+          "No direct linked-list palindrome check exists. Collect values, then compare the list with its reversed slice.",
+          "O(n)",
+          "O(n) for the value list and slice"
+        ],
+        [
+          "Optimized",
+          "Reverse, compare and restore",
+          "Reverse the second half in place and undo the reversal even when the comparison stops on a mismatch.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/cycle/palindrome-linked-list.py",
+      "cue": "Compare the first half forward with the second half backward. An odd-length center has no partner.",
+      "examples": [
+        "`2 \u2192 4 \u2192 9 \u2192 4 \u2192 2` returns `True`.",
+        "`2 \u2192 4 \u2192 8 \u2192 2` returns `False` and leaves the chain unchanged."
+      ],
+      "explanation": [
+        "The constant-space method temporarily changes links and needs exclusive access. If that is not available, prefer a method that never mutates the chain."
+      ],
+      "prompt": "Return whether the values in an acyclic linked list read the same in both directions. The original links must be intact when the check returns."
+    },
+    "partition-labels": {
+      "approaches": [
+        [
+          "Baseline",
+          "Test every cut using membership scans",
+          "A cut is legal when no character from the current part appears in the suffix.",
+          "O(n^3) upper bound",
+          "O(n), including slices"
+        ],
+        [
+          "Python",
+          "Use set.isdisjoint",
+          "Hash the current part and check the suffix against the set at each candidate cut.",
+          "O(n^2) expected",
+          "O(n), including slices"
+        ],
+        [
+          "Optimized",
+          "Jump to last occurrences",
+          "Extend the required end as you discover characters; cut the instant the scan reaches that end.",
+          "O(n) expected",
+          "O(u) for u distinct characters"
+        ]
+      ],
+      "code_path": "worked_examples/greedy/partition-labels.py",
+      "cue": "A part cannot end before the last occurrence of any character already in it.",
+      "examples": [
+        "`abacdd` returns `[3, 1, 2]`.",
+        "`abcbca` returns `[6]`."
+      ],
+      "prompt": "Split a string into as many contiguous parts as possible without using any character in two different parts. Return the lengths."
+    },
+    "phone-letter-combinations": {
+      "approaches": [
+        [
+          "Baseline",
+          "Expand one prefix layer at a time",
+          "Keep the previous partial strings and append every next choice to each.",
+          "O(nP)",
+          "O(nP) for intermediate prefixes"
+        ],
+        [
+          "Python",
+          "Use itertools.product",
+          "The lazy Cartesian product yields each tuple of choices, which is then joined.",
+          "O(nP)",
+          "O(n)"
+        ],
+        [
+          "Optimized",
+          "Reuse a path buffer",
+          "Fill one character slot per depth and copy only at full length. This matches the library's asymptotic bounds.",
+          "O(nP)",
+          "O(n) including recursion"
+        ]
+      ],
+      "code_path": "worked_examples/backtracking/phone-letter-combinations.py",
+      "cue": "Each digit is an independent choice; only the full strings belong in the output.",
+      "examples": [
+        "`\"23\"` returns `[\"ad\", \"ae\", \"af\", \"bd\", \"be\", \"bf\", \"cd\", \"ce\", \"cf\"]`.",
+        "`\"\"` returns `[]`."
+      ],
+      "explanation": [
+        "For nonempty input, n is the digit count and P is the product of the keypad choice counts. Writing those P strings already costs O(nP)."
+      ],
+      "prompt": "Expand a short string of digits 2 through 9 into all strings formed by choosing one letter for each digit. Use keypad order. No digits returns an empty list."
+    },
+    "remove-linked-values": {
+      "approaches": [
+        [
+          "Baseline",
+          "Collect surviving references",
+          "Select every surviving node before changing links, then connect the retained references.",
+          "O(n)",
+          "O(n)"
+        ],
+        [
+          "Python",
+          "Lazily filter and relink",
+          "No linked-list filter exists. Feed Python's filter from an iterator that saves successors before yielding nodes.",
+          "O(n)",
+          "O(1)"
+        ],
+        [
+          "Optimized",
+          "Use a sentinel to unlink in place",
+          "The sentinel handles leading matches; bypass removed nodes without rewriting every survivor's link.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/linked/remove-linked-values.py",
+      "cue": "Removing a node does not advance the previous surviving node. The same link may need to skip a whole run.",
+      "examples": [
+        "Removing `0` from `0 \u2192 0 \u2192 4 \u2192 0 \u2192 9 \u2192 0` returns the original `4 \u2192 9` nodes.",
+        "Removing `2` from `2 \u2192 2` returns `None`."
+      ],
+      "prompt": "Unlink every node with the target value from an acyclic list, keeping original survivors in order. Return the new head or None."
+    },
+    "repeated-substring": {
+      "approaches": [
+        [
+          "Baseline",
+          "Try divisor periods",
+          "Test every viable unit length and check its alignment character by character.",
+          "O(n\u00b2) conservative worst-case bound",
+          "O(1)"
+        ],
+        [
+          "Python convenience",
+          "Search in the doubled string",
+          "Exclude the two trivial alignments using str.find start and end bounds.",
+          "O(n) copying plus one implementation-dependent search on up to 2n characters",
+          "O(n) for the doubled string; built-in scratch depends on runtime"
+        ],
+        [
+          "Optimized",
+          "Use the longest proper border",
+          "Subtract the border length to get the shortest period and check whether it divides the whole length.",
+          "O(n) worst case",
+          "O(n) for the border table"
+        ]
+      ],
+      "code_path": "worked_examples/matching/repeated-substring.py",
+      "cue": "A repeat unit must divide the length and make every character agree with its phase.",
+      "examples": [
+        "`\"\u00e9\ud83d\ude42\u00e9\ud83d\ude42\u00e9\ud83d\ude42\"` \u2192 True",
+        "`\"ababa\"` \u2192 False",
+        "`\"\"` and `\"a\"` \u2192 False"
+      ],
+      "prompt": "Decide whether a string consists of at least two copies of a shorter, nonempty string."
+    },
+    "reverse-linked-list": {
+      "approaches": [
+        [
+          "Baseline",
+          "Detach tails one at a time",
+          "Find the end of the remaining list and append it to the result. Each tail search starts over.",
+          "O(n\u00b2)",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Traverse collected nodes in reverse",
+          "No direct linked-list reversal exists. Collect references and use reversed to iterate them without making another list.",
+          "O(n)",
+          "O(n) for the reference list"
+        ],
+        [
+          "Optimized",
+          "Flip links while traversing",
+          "Remember the successor, point the current node at the reversed prefix and advance.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/linked/reverse-linked-list.py",
+      "cue": "Before overwriting a next link, keep a reference to the original successor.",
+      "examples": [
+        "`4 \u2192 8 \u2192 4` returns the old final `4` as head, then `8`, then the old first `4`.",
+        "`None` returns `None`; a singleton returns the same node."
+      ],
+      "prompt": "Reverse the links of a possibly empty acyclic singly linked list. Return the old tail without allocating any replacement data nodes."
+    },
+    "reverse-string": {
+      "approaches": [
+        [
+          "Baseline",
+          "Build then copy back",
+          "Read the input in reverse into a buffer and overwrite the original list. This relaxes the strict space requirement.",
+          "O(n)",
+          "O(n) buffer"
+        ],
+        [
+          "Python",
+          "Use list.reverse",
+          "The in-place built-in implements the same swap idea as the explicit version, with the same complexity.",
+          "O(n)",
+          "O(1)"
+        ],
+        [
+          "Optimized",
+          "Swap mirrored positions",
+          "Spell out one swap per mirrored pair without allocating a buffer.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/pointers/reverse-string.py",
+      "cue": "The position paired with index i is n minus one minus i.",
+      "examples": [
+        "`['x', '!', 'y', '?']` becomes `['?', 'y', '!', 'x']`.",
+        "`[' ', '1', 'a']` becomes `['a', '1', ' ']`."
+      ],
+      "explanation": [
+        "For n characters, only the first half initiates swaps; an odd-length center stays where it is. There is no recursion."
+      ],
+      "prompt": "Reverse a mutable list of characters without changing its identity, and return None. The strict solution must not construct a second array."
+    },
+    "search-insert-position": {
+      "approaches": [
+        [
+          "Baseline",
+          "Scan for the first qualifying value",
+          "Check entries in order until one meets the lower bound.",
+          "O(n)",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Use bisect_left",
+          "This is the standard-library version of the optimized lower-bound search.",
+          "O(log(n + 1))",
+          "O(1)"
+        ],
+        [
+          "Optimized",
+          "Implement lower-bound search",
+          "An equal midpoint belongs on the upper side so the earlier equal positions remain in play.",
+          "O(log(n + 1))",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/search/search-insert-position.py",
+      "cue": "Search for a boundary, not just for equality.",
+      "examples": [
+        "`[2, 4, 4, 8]`, target `4` returns `1`.",
+        "`[2, 4]`, target `9` returns `2`."
+      ],
+      "prompt": "Find the first index in a sorted list whose value is at least the target. Duplicates are allowed. Return the length if the target belongs after every item."
+    },
+    "short-url-codec": {
+      "approaches": [
+        [
+          "Baseline",
+          "Search a list of URLs",
+          "Use the list index as a decimal alias; validate the syntax before resolving by index.",
+          "Encode O(N\u00b7(U+1)+A) worst case; decode O(A)",
+          "O(N) references plus retained URLs; O(A) temporary"
+        ],
+        [
+          "Python convenience",
+          "Two dictionaries and decimal IDs",
+          "No built-in URL shortener; dicts enforce stable and exact lookups.",
+          "Encode expected O(U+A); decode expected O(A)",
+          "O(N) references and indexes plus retained URLs and alias strings"
+        ],
+        [
+          "Optimized",
+          "Dense indices encoded as base62",
+          "Keep a single URL-to-index dict and resolve aliases by indexing a list, without storing reverse alias strings.",
+          "Encode expected O(U+A); decode O(A)",
+          "O(N) references plus retained URLs; O(A) encode scratch and O(1) decode scratch"
+        ]
+      ],
+      "code_path": "worked_examples/hash/short-url-codec.py",
+      "cue": "Separate the reverse lookup contract from how the opaque code is generated.",
+      "examples": [
+        "Encoding `https://example.org/\u00e9` twice returns the same alias; decoding it returns the original URL.",
+        "A bare code, malformed alias, or alias unknown to this instance decodes to an empty string."
+      ],
+      "explanation": [
+        "The alias spelling can differ between implementations. This is an in-memory mapping, not a network service, and its predictable IDs are not secrets.",
+        "Let N be the number of URLs, U the input URL length, and A the alias length. Lookup bounds allow hashing the input text and treat index arithmetic as constant-cost."
+      ],
+      "prompt": "Issue stable, distinct short aliases for nonempty URLs and decode the exact issued alias within the same instance."
+    },
+    "simplify-path": {
+      "approaches": [
+        [
+          "Baseline",
+          "Split then stack",
+          "Walk the components in order, discarding empty/dot entries and popping one retained directory for each parent entry.",
+          "O(n)",
+          "O(n) for the split and stack"
+        ],
+        [
+          "Python",
+          "Adapt posixpath.normpath",
+          "Collapse leading slashes before calling normpath so it does not preserve the special exactly-two-slash prefix.",
+          "O(n)",
+          "O(n) for normalized input copies and helper workspace"
+        ],
+        [
+          "Optimized",
+          "Count parents scanning backward",
+          "Resolve parent steps against names to their left and copy only surviving name spans.",
+          "O(n)",
+          "O(r + 1), including surviving slices and the intermediate join"
+        ]
+      ],
+      "code_path": "worked_examples/stack/simplify-path.py",
+      "cue": "Only entire components named . or .. are special. Three dots and other dot-prefixed names survive.",
+      "examples": [
+        "`//srv//./share/` becomes `/srv/share`.",
+        "`/a/../../.../.hidden` becomes `/.../.hidden`."
+      ],
+      "explanation": [
+        "Let n be input length and r be result length. All three implementations reject non-absolute inputs. A lexical simplifier deliberately ignores symbolic links."
+      ],
+      "prompt": "Lexically simplify a nonempty absolute Unix path without reading the filesystem. Collapse all slash runs, ignore exact dot components, and let each exact double dot cancel one directory without going above root."
+    },
+    "sort-colors": {
+      "approaches": [
+        [
+          "Baseline",
+          "Selection sort",
+          "Scan the unsorted suffix for its smallest value, then swap it forward.",
+          "O(n^2)",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Use list.sort",
+          "General-purpose sorting mutates the list, but can use temporary storage.",
+          "O(n log n) upper bound",
+          "O(n) upper bound"
+        ],
+        [
+          "Optimized",
+          "Dutch national flag",
+          "Grow the zero and two regions around a shrinking unknown region. Recheck a value swapped from the right.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/sorting/sort-colors.py",
+      "cue": "The small, fixed value domain means a general comparison sort is unnecessary.",
+      "examples": [
+        "`[2, 0, 2, 1, 0]` becomes `[0, 0, 1, 2, 2]`."
+      ],
+      "prompt": "Sort a mutable list containing only 0, 1, and 2. Modify the original list and return None."
+    },
+    "sorted-squares": {
+      "approaches": [
+        [
+          "Baseline",
+          "Insert each square in order",
+          "Find each square's slot in the growing output and move its suffix over.",
+          "O(n^2)",
+          "O(1) excluding output storage"
+        ],
+        [
+          "Python",
+          "Sort a generator of squares",
+          "Feed squares directly into sorted instead of building two full lists.",
+          "O(n log n) worst case",
+          "O(n) worst-case sort scratch, excluding output"
+        ],
+        [
+          "Optimized",
+          "Fill from the right",
+          "Compare the absolute values at the two ends and place the larger square in the highest remaining slot.",
+          "O(n)",
+          "O(1) excluding output"
+        ]
+      ],
+      "code_path": "worked_examples/pointers/sorted-squares.py",
+      "cue": "The largest remaining square must come from an endpoint.",
+      "examples": [
+        "`[-7, -4, 0, 4, 5]` -> `[0, 16, 16, 25, 49]`.",
+        "`[-8, -2, -2]` -> `[4, 4, 64]`."
+      ],
+      "explanation": [
+        "Squaring changes the order of negatives but preserves the ordering by absolute value. Here n is input length; all space bounds exclude the new output list."
+      ],
+      "prompt": "Given nondecreasing integers, return a fresh nondecreasing list of their squares, including duplicates. Do not mutate the input."
+    },
+    "sorted-two-sum": {
+      "approaches": [
+        [
+          "Baseline",
+          "Enumerate index pairs",
+          "Visit every increasing pair and stop at the match.",
+          "O(n^2)",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Bisect the suffix",
+          "bisect_left searches for the complement only after the current index, without copying a slice.",
+          "O(n log n)",
+          "O(1)"
+        ],
+        [
+          "Optimized",
+          "Discard one endpoint per comparison",
+          "Use sorted order to rule out all remaining pairs that would use one endpoint.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/pointers/sorted-two-sum.py",
+      "cue": "With sorted ends, too small rules out the left endpoint; too large rules out the right.",
+      "examples": [
+        "`[-9, -4, 3, 8]`, target `-6` -> `[0, 2]`.",
+        "`[0, 2, 2, 9]`, target `4` -> `[1, 2]`.",
+        "`[2, 6, 9]`, target `4` -> `None`."
+      ],
+      "explanation": [
+        "If even the largest available partner is too small for the left value, any other partner is too small as well. The symmetric argument rules out the right endpoint when the sum is too large.",
+        "Here n is the input length, assuming constant-cost integer operations; the two-index result is constant size."
+      ],
+      "prompt": "Given a nondecreasing list of integers and a target, return the two increasing zero-based indices at distinct positions that add to the target. Assume the answer is unique if present; return None if absent."
+    },
+    "string-list-codec": {
+      "approaches": [
+        [
+          "Baseline",
+          "Append frames and scan headers",
+          "Use repeated string appends and inspect each header character manually.",
+          "Encode O(F\u00b2) conservative worst case for repeated concatenation; decode O(F)",
+          "Encode O(F) peak beyond output; decode O(H) beyond output"
+        ],
+        [
+          "Python convenience",
+          "Join frames and find separators",
+          "No direct length-frame codec; use str.join and str.find with a cursor.",
+          "Encode and decode O(F)",
+          "Encode O(F) frame copies and references; decode O(H) beyond output"
+        ],
+        [
+          "Optimized",
+          "Write frames and parse with a cursor",
+          "Keep a writer buffer without a separate list of framed strings; parse lengths without header slices.",
+          "Encode and decode O(F)",
+          "Encode O(F) writer buffer upper bound; decode O(1) beyond output"
+        ]
+      ],
+      "code_path": "worked_examples/matching/string-list-codec.py",
+      "cue": "A length prefix says how much payload to read, so separators inside payloads are ordinary characters.",
+      "examples": [
+        "`[]` \u2192 `\"\"`, while `[\"\"]` \u2192 `\"0#\"`",
+        "`[\"\u00e9\", \"#\"]` \u2192 `\"1#\u00e91##\"`",
+        "`\"3#xy\"` is rejected as truncated."
+      ],
+      "explanation": [
+        "The formats are interchangeable across approaches. A frame stores a canonical decimal character count, then #, then exactly that many Python characters.",
+        "Let F be total framed length, including headers and separators, and H the longest header. Bounds treat Python-sized offsets as machine words."
+      ],
+      "prompt": "Encode and decode a list of strings losslessly, including empty strings, delimiters and Unicode."
+    },
+    "subarray-sum": {
+      "approaches": [
+        [
+          "Baseline",
+          "Extend each starting position",
+          "Add one value at a time for every start and count exact totals.",
+          "O(n\u00b2)",
+          "O(1)"
+        ],
+        [
+          "Python convenience",
+          "Accumulate and count earlier prefixes",
+          "Generate prefix totals lazily with accumulate; Counter supplies zero for a missing key.",
+          "O(n) expected",
+          "O(u)"
+        ],
+        [
+          "Optimized",
+          "Dense prefix counts when practical",
+          "Measure the span first and index a compact list when it is small. Sparse totals fall back to Counter.",
+          "O(n+W) in dense mode; O(n) expected in sparse mode",
+          "O(W) in dense mode; O(u) in sparse mode"
+        ]
+      ],
+      "code_path": "worked_examples/prefix/subarray-sum.py",
+      "cue": "A range sums to the target when its ending prefix total minus an earlier prefix total equals the target.",
+      "examples": [
+        "`[1, -1, 0]`, target 0 \u2192 3",
+        "`[0, 0, 0]`, target 0 \u2192 6"
+      ],
+      "explanation": [
+        "Seed one empty prefix and query before counting the current prefix so empty ranges are not counted. Let u be distinct prefix totals and W their span plus one."
+      ],
+      "prompt": "Count nonempty contiguous ranges whose sum is the target. Values may be negative or zero."
+    },
+    "substring-search": {
+      "approaches": [
+        [
+          "Baseline",
+          "Check every alignment",
+          "Compare one character at a time so there are no substring copies.",
+          "O((n+1)(m+1)) worst case",
+          "O(1) beyond output"
+        ],
+        [
+          "Python convenience",
+          "Use str.find and advance one",
+          "Restart one character past each match to preserve overlaps; first match uses one find call.",
+          "Up to n+1 find calls; O((n+1)(m+1)) if each call costs O(scanned distance + m + 1)",
+          "O(1) Python-side beyond output; built-in scratch depends on runtime"
+        ],
+        [
+          "Optimized",
+          "Knuth-Morris-Pratt",
+          "Build a border table; after a match keep the largest proper border to find overlaps.",
+          "O(n+m+1) worst case",
+          "O(m+1) beyond output"
+        ]
+      ],
+      "code_path": "worked_examples/matching/substring-search.py",
+      "cue": "After a mismatch, a prefix that is also a suffix of the matched text can still be useful.",
+      "examples": [
+        "Text `\"aaaab\"`, pattern `\"aab\"` \u2192 first index 2",
+        "Text `\"aaaa\"`, pattern `\"aa\"` \u2192 starts `[0, 1, 2]`",
+        "Text `\"ab\"`, empty pattern \u2192 starts `[0, 1, 2]`"
+      ],
+      "explanation": [
+        "Let n and m be text and pattern lengths. The functions yield matches, so collecting them adds output storage, but asking only for the first can stop early."
+      ],
+      "prompt": "Find the first match or -1, and be able to enumerate all starting indices, including overlaps."
+    },
+    "three-sum": {
+      "approaches": [
+        [
+          "Baseline",
+          "Enumerate three positions",
+          "Try every increasing index triple and deduplicate matching sorted tuples.",
+          "Expected O(n^3)",
+          "O(r) for the deduplication set, excluding output"
+        ],
+        [
+          "Python",
+          "Derive a third value from a value pair",
+          "Use Counter for multiplicity, enumerate distinct value pairs, and keep only canonical triples with enough occurrences.",
+          "Expected O(n + d log d + d^2)",
+          "O(d) for frequencies and the sorted key pool, excluding output"
+        ],
+        [
+          "Optimized",
+          "Sort and scan after one anchor",
+          "Fix a value and sweep the sorted suffix from both ends, skipping duplicate matches.",
+          "O(n log n + n^2)",
+          "O(n) for the sort copy and scratch, excluding output"
+        ]
+      ],
+      "code_path": "worked_examples/pointers/three-sum.py",
+      "cue": "For a fixed anchor, the two remaining values have a fixed sum.",
+      "examples": [
+        "`[3, -2, 1, -2, 0, -1, 0, 0]` -> `[[-2, -1, 3], [-1, 0, 1], [0, 0, 0]]` in any order.",
+        "`[1, 1, -2, 1]` -> `[[-2, 1, 1]]`.",
+        "`[1, -2, -2]` -> `[]`."
+      ],
+      "explanation": [
+        "Once sorted, discard endpoints monotonically and skip a repeated anchor only after the earlier copy has already been considered.",
+        "Here n is input size, d is the number of distinct values, and r is the number of returned triples. Space excludes the result; hash lookups are expected."
+      ],
+      "prompt": "Return every distinct nondecreasing value triple totaling zero, using three different positions for each result. Result order is arbitrary. Keep the original integers in their original order."
+    },
+    "top-k-frequent": {
+      "approaches": [
+        [
+          "Baseline",
+          "Recount each distinct value",
+          "Use list.count as a sorting key; a stable sort keeps encounter order for ties.",
+          "O(nu + u log(u + 1))",
+          "O(u)"
+        ],
+        [
+          "Python",
+          "Counter.most_common",
+          "Count once and let the library select the top k in the requested tie order.",
+          "O(n + u log(k + 1)) expected for k >= 1; O(n) for k = 0",
+          "O(u), including frequency table and selection scratch"
+        ],
+        [
+          "Optimized",
+          "Bucket by frequency",
+          "Append values to frequency buckets in encounter order and scan from highest frequency.",
+          "O(n) expected",
+          "O(n)"
+        ]
+      ],
+      "code_path": "worked_examples/heap/top-k-frequent.py",
+      "cue": "A frequency is an integer from 1 to n, so it can also index a bucket.",
+      "examples": [
+        "`[5, 2, 7, 2, 7, 7, 5]`, `k = 2` returns `[7, 5]`."
+      ],
+      "explanation": [
+        "Let u be the number of distinct values. Hashing bounds are expected; output storage is excluded from auxiliary space."
+      ],
+      "prompt": "Return the k integers with highest frequency, ordered from most to least frequent. Break ties by first occurrence. Assume 0 <= k <= the number of distinct values."
+    },
+    "trapping-rain": {
+      "approaches": [
+        [
+          "Baseline",
+          "Rescan both sides",
+          "Recompute the best boundary on each side for every column without taking slices.",
+          "O(n^2)",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Accumulate directional maxima",
+          "itertools.accumulate builds running maxima. Store the reversed right-hand maxima and stream the left-hand ones.",
+          "O(n)",
+          "O(n) for right-side maxima"
+        ],
+        [
+          "Optimized",
+          "Finalize one side at a time",
+          "Use two indices and two running maxima instead of a stored sequence of maxima.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/pointers/trapping-rain.py",
+      "cue": "The lower of the highest known side boundaries lets you finalize one side.",
+      "examples": [
+        "`[6, 0, 2, 1, 4]` traps `9` units.",
+        "`[2, 0, 2, 0, 2]` traps `4` units.",
+        "`[1, 5, 3, 0]` traps `0` units."
+      ],
+      "explanation": [
+        "For each column the water level is the minimum of the two inclusive side maxima. If the known left maximum is no higher than the known right maximum, the next column from the left is either a new maximum (zero depth) or fills to the known left maximum.",
+        "Here n is the column count; all methods leave the input unchanged."
+      ],
+      "prompt": "Given nonnegative heights of unit-width columns, return the total water left above the columns after rain. An empty layout holds zero."
+    },
+    "valid-anagram": {
+      "approaches": [
+        [
+          "Baseline",
+          "Sort and compare",
+          "Sorting places equal characters in the same positions.",
+          "O(n log(n+1)) worst case",
+          "O(n) for sorted copies and scratch"
+        ],
+        [
+          "Python convenience",
+          "Compare two Counters",
+          "Counter calculates exact multiplicities for each string.",
+          "O(n) expected",
+          "O(u)"
+        ],
+        [
+          "Optimized",
+          "Consume one frequency table",
+          "Reject unequal lengths immediately; remove matched entries and reject missing ones.",
+          "O(n) expected; can reject early",
+          "O(u), storing only characters from the first string"
+        ]
+      ],
+      "code_path": "worked_examples/hash/valid-anagram.py",
+      "cue": "Membership alone misses multiplicity; each occurrence needs a counterpart.",
+      "examples": [
+        "`\"\u00c9a\u00c9\"` and `\"\u00c9\u00c9a\"` \u2192 True",
+        "`\"aaB\"` and `\"aBB\"` \u2192 False"
+      ],
+      "explanation": [
+        "Let n be the combined length and u the combined number of distinct characters."
+      ],
+      "prompt": "Decide whether two strings have exactly the same character counts. Case matters."
+    },
+    "valid-palindrome": {
+      "approaches": [
+        [
+          "Baseline",
+          "Store retained characters",
+          "Build a normalized list, then compare mirrored entries.",
+          "O(n)",
+          "O(n) normalized list"
+        ],
+        [
+          "Python",
+          "Filter with an ASCII regular expression",
+          "Remove non-alphanumerics, lowercase the result, and compare it with its reversed slice.",
+          "O(n)",
+          "O(n), including normalized and reversed copies"
+        ],
+        [
+          "Optimized",
+          "Normalize only at the two ends",
+          "Advance past ignored characters and compare without materializing the normalized string.",
+          "O(n)",
+          "O(1)"
+        ]
+      ],
+      "code_path": "worked_examples/pointers/valid-palindrome.py",
+      "cue": "Skip ignored characters before comparing the two live endpoints.",
+      "examples": [
+        "`\"R2, d_ D-2r\"` -> `True`.",
+        "`\"R2, D-3r\"` -> `False`.",
+        "`\" _!? \"` -> `True`."
+      ],
+      "explanation": [
+        "Here n is the number of ASCII characters. Do not silently generalize these methods to full Unicode case folding: a code point may fold to multiple characters."
+      ],
+      "prompt": "Check if a printable ASCII string reads the same forward and backward when you ignore non-alphanumeric characters and compare letters case-insensitively. Keep digits. An empty normalized string passes."
+    },
+    "valid-parentheses": {
+      "approaches": [
+        [
+          "Baseline",
+          "Look backward for each opener",
+          "Scan back across balanced pairs on every closing bracket, then check the first unmatched opener's type.",
+          "O(n\u00b2) worst case",
+          "O(1)"
+        ],
+        [
+          "Python",
+          "Reduce with a regex",
+          "No direct balance checker exists. Repeatedly replace adjacent matched pairs until the text is empty or no pair remains.",
+          "O(n\u00b2) worst case",
+          "O(n) for intermediate strings"
+        ],
+        [
+          "Optimized",
+          "Track unmatched openers",
+          "Push opening brackets and immediately match a closing bracket against the top of the stack.",
+          "O(n)",
+          "O(d + 1), where d is the maximum stack depth"
+        ]
+      ],
+      "code_path": "worked_examples/stack/valid-parentheses.py",
+      "cue": "A closer must match the most recent opener that has not already been matched.",
+      "examples": [
+        "`{[()()]}[]` returns `True`.",
+        "`([)]` returns `False` because the pairs cross."
+      ],
+      "explanation": [
+        "Nesting requires memory or revisiting earlier text. Count the intermediate strings when using the regex rewrite."
+      ],
+      "prompt": "Decide whether parentheses, square brackets and braces are correctly matched and nested. Empty input is valid; reject non-bracket characters."
+    },
+    "word-pattern": {
+      "approaches": [
+        [
+          "Baseline",
+          "Compare every pair of slots",
+          "Two symbols must be equal exactly when their paired words are equal.",
+          "O(T+p\u00b2(1+L)) worst case",
+          "O(T)"
+        ],
+        [
+          "Python convenience",
+          "Build canonical signatures",
+          "No direct built-in: assign IDs in first-seen order with dict.setdefault and compare signatures.",
+          "O(p+T) expected",
+          "O(p+T)"
+        ],
+        [
+          "Optimized",
+          "Check two maps as you go",
+          "Detect conflicts immediately after splitting without materializing either signature.",
+          "O(p+T) expected",
+          "O(T+u) for u distinct pattern symbols"
+        ]
+      ],
+      "code_path": "worked_examples/hash/word-pattern.py",
+      "cue": "The mapping has to work in both directions.",
+      "examples": [
+        "`\"aba\"` and `\"cat dog cat\"` \u2192 True",
+        "`\"ab\"` and `\"cat cat\"` \u2192 False"
+      ],
+      "explanation": [
+        "Let p be the pattern length, T the input text length, and L the longest word length. Splitting alone can allocate O(T) space."
+      ],
+      "prompt": "Check whether pattern characters and whitespace-separated words match one-to-one."
+    }
+  },
+  "pattern_folders": {
+    "backtracking": "backtracking",
+    "cycle": "fast-and-slow-pointers",
+    "dp": "dynamic-programming",
+    "greedy": "greedy",
+    "hash": "hash-maps-and-sets",
+    "heap": "heaps-and-top-k",
+    "linked": "linked-lists",
+    "matching": "string-matching-and-encoding",
+    "pointers": "two-pointers",
+    "prefix": "prefix-sums",
+    "search": "binary-search",
+    "sorting": "sorting",
+    "stack": "stacks-and-queues",
+    "window": "sliding-windows"
+  },
+  "removed_package_markers": [
+    "Chapter1/easy/__init__.py",
+    "Chapter2/easy/__init__.py",
+    "Chapter3/easy/__init__.py",
+    "Chapter4/easy/__init__.py",
+    "Chapter5/easy/__init__.py",
+    "Chapter6/easy/__init__.py",
+    "Chapter7/easy/__init__.py"
+  ],
+  "review_status": {
+    "array-intersection": {
+      "baseline": "Use membership scans and suppress duplicate output.",
+      "contract": "Return unique common integer values in any order. The guide's sorted-input variant additionally guarantees both inputs are sorted.",
+      "correctness": "Both Chapter2 set forms are correct; examples are printed and cover repeated, disjoint and equal inputs, but not empty. Neither the unsorted guide alias nor the sorted-pointer guide variant exists at HEAD.",
+      "difficulty": "easy",
+      "optimized": "Hash only the shorter unsorted input; for sorted inputs, use pointers and skip duplicate matches.",
+      "python": "Use set intersection.",
+      "source_difficulties": {
+        "Chapter2/easy/intersection_of_two_arrays.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "baseball-game": {
+      "baseline": "Play commands forward on an active-score stack, then sum the surviving scores.",
+      "contract": "Given a valid log of integer tokens and operations C (cancel last), D (double last), and + (sum last two), return the total of scores still on the record. Commands are guaranteed to have sufficient history.",
+      "correctness": "The single archived list-stack implementation handles valid operations, including negative scores and cancellation to empty. Underflow is outside the contract and would raise IndexError. Printed comparisons cover mixed commands, total cancellation, a singleton and addition; there are no assertions or invalid-command tests.",
+      "difficulty": "easy",
+      "optimized": "O(n) stack operations and O(n) auxiliary score slots for a read-only log. Without a fixed-width score guarantee, repeated doubling can take quadratic total bits and bit work. A running total avoids a final summation but needs the same score history; buffer reuse changes the input contract. Review only: no worthwhile three-way comparison.",
+      "python": "list.append, list.pop and sum are already the natural Python solution. A dispatch table or a deque substitution does not materially change the algorithm.",
+      "source_difficulties": {
+        "Chapter7/easy/baseball_game.py": "easy"
+      },
+      "status": "archive-only"
+    },
+    "binary-search": {
+      "baseline": "No linear reference is implemented.",
+      "contract": "For a strictly increasing list, return the zero-based target index or -1. An empty list also returns -1.",
+      "correctness": "The original inclusive-bound search handles first, last, missing, and empty cases. It does not specify which duplicate to return.",
+      "difficulty": "easy",
+      "optimized": "Iterative binary search is implemented.",
+      "python": "No list.index or bisect example is implemented.",
+      "source_difficulties": {
+        "Chapter6/easy/binary_search.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "character-replacement": {
+      "baseline": "Restart counts at each possible start and stop when that candidate can no longer be repaired: expected O(n^2) time, O(d) auxiliary space.",
+      "contract": "Return the longest contiguous length that can become all one character with at most k replacements (k >= 0); characters are case-sensitive.",
+      "correctness": "PASS for the length-only contract. Historical max_freq may overestimate the current live maximum after shrink; that cannot create a new infeasible record length, but the current window need not be a valid witness. The archived dictionary retains zero counts, so space tracks all distinct characters seen, not just live contents. Five assertions cover mixed letters, all same, empty, zero budget and distinct letters. The guide path aliases this tracked source.",
+      "difficulty": "medium",
+      "optimized": "Keep a nondecreasing historical count when only maximum length is requested: expected O(n) time, O(d) auxiliary space.",
+      "python": "Use Counter.most_common to shrink with the exact current maximum: expected O(n*d) time, O(d) auxiliary space.",
+      "source_difficulties": {
+        "data structures/strings/sliding_window/medium_character_replacement.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "concatenated-words": {
+      "baseline": "For every start, count all B word blocks anew: O(B*w + n*B*w) expected time, O(d*w) auxiliary space.",
+      "contract": "Match every occurrence of the supplied equal, positive-width words consecutively, in any order and without gaps; return zero-based starts, in any order. Overlapping matches count. Empty word input has no matches.",
+      "correctness": "PASS for equal positive widths. The archived residue-class scans cap surplus words, clear on unknown tokens and evict just one word after a match to admit overlaps. Output can be grouped by residue: the print demo for aaaaa with [aa] shows sorted expectations, but [0, 2, 1, 3] is allowed. Twelve print demos cover duplicates, swaps, overlaps, offsets, empty words list and misses. Width mismatch outside the stated contract is not validated.",
+      "difficulty": "hard",
+      "optimized": "Slide each residue class while maintaining a multiplicity cap and number of words: O((n + B)*w) expected time, O(d*w) auxiliary space; slicing and hashing a token cost O(w).",
+      "python": "Slide equal-width blocks and compare entire Counter objects for each full window: O(B*w + n*(w + d)) expected time, O(B*w) auxiliary space.",
+      "source_difficulties": {
+        "Chapter1/hard/substring_with_concatenation_of_words.py": "hard"
+      },
+      "status": "worked-edition"
+    },
+    "contains-duplicate": {
+      "baseline": "Compare pairs of distinct positions.",
+      "contract": "Return whether two distinct positions contain equal integers; empty input is false and the input is unchanged.",
+      "correctness": "The Chapter2 seen-set scan is correct, including empty/singleton inputs; five printed examples, not assertions. Both guide hash/set paths are missing.",
+      "difficulty": "easy",
+      "optimized": "Stop at the first repeat with a seen set; expected linear worst-input time.",
+      "python": "Compare len(set(values)) with len(values); consumes the full sequence.",
+      "source_difficulties": {
+        "Chapter2/easy/contains_duplicate.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "dedupe-sorted-array": {
+      "baseline": "Search the written prefix before each append-to-prefix: O(n^2) time, O(1) auxiliary space.",
+      "contract": "For a nondecreasing integer list, write distinct values in order into its own prefix and return the prefix length. The suffix is unspecified. The lesson extends the contract to empty input.",
+      "correctness": "PASS within the archived nonempty bounds. The two-pointer scan correctly compares with the last retained value; it prints indices inside the function and returns 1 for the out-of-bounds empty case. Seven print demos cover equal, distinct, singleton, negative and separated duplicate runs, not empty. The guide alias has no HEAD file.",
+      "difficulty": "easy",
+      "optimized": "Use the adjacency of equal values and compare with the last written value: O(n) time, O(1) auxiliary space.",
+      "python": "Use dict.fromkeys to keep first occurrences and overwrite the prefix: O(n) expected time, O(u) auxiliary space, not the strict constant-space solution.",
+      "source_difficulties": {
+        "Chapter1/easy/remove_duplicates_sorted_array.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "dedupe-sorted-linked-list": {
+      "baseline": "Collect the nodes, select the first node of each run, then relink only those nodes. This explicitly picks a policy and uses linear auxiliary space.",
+      "contract": "From a sorted acyclic chain, relink one existing node for each equal-value run. The original value-only contract does not specify which duplicate survives.",
+      "correctness": "Iterative splicing keeps the first node in each run, while recursive suffix deduplication keeps the last; both produce correct values, but identity is different. Iteration's printed cases cover empty/singleton, distinct, all-equal and repeated boundary runs. The single recursive sample checks only values; neither enforces an identity policy.",
+      "difficulty": "easy",
+      "optimized": "Skip duplicate successors without advancing the retained node. This yields O(n) time and O(1) auxiliary space versus O(n) recursive frames for the archived suffix solution.",
+      "python": "itertools.groupby groups adjacent equal values on an already sorted input. Promptly take each group's first node, then relink those selections without allocating replacement nodes.",
+      "source_difficulties": {
+        "Chapter3/easy/remove_duplicates_sorted_list.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "design-hashmap": {
+      "baseline": "Store key/value pairs and scan.",
+      "contract": "Put overwrites, remove of a missing key does nothing, and get returns -1 when absent; no built-in hash table. Archive keys/values are nonnegative and at most one million, with at most ten thousand calls.",
+      "correctness": "Both fixed chaining variants work, but average cost depends on load and distribution. The fixed open-addressing probe terminates under the archive operation cap; beyond it, a table with no never-used slot can loop even with tombstones. Printed demos cover insert/update/delete; linked chaining has explicit collisions, not the probing demo.",
+      "difficulty": "medium",
+      "optimized": "Rehash chained entries when occupancy grows; adversarial collisions can still cause linear operations.",
+      "python": "No compliant built-in; partition tuple pairs into list buckets.",
+      "source_difficulties": {
+        "Chapter2/medium/design_hashmap.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "first-unique-character": {
+      "baseline": "Use a fresh count for each candidate.",
+      "contract": "Return the earliest index whose case-sensitive character occurs exactly once, or -1; indices are Python character positions.",
+      "correctness": "Chapter2 frequency, Counter and first-index tracking agree; its examples are printed. The string companion verifies frequency and OrderedDict variants with empty, none and late matches. The differently named strings alias and dictionary lookup link have no file.",
+      "difficulty": "easy",
+      "optimized": "Record first positions in insertion order and mark repeats; only scan distinct keys after ingesting the text.",
+      "python": "Count once with Counter and look up indices in order.",
+      "source_difficulties": {
+        "Chapter2/easy/first_unique_character.py": "easy",
+        "data structures/strings/hashmap/easy_first_non_repeating_character.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "four-sum": {
+      "baseline": "Enumerate all increasing index quadruples and deduplicate matching sorted values: O(n^4) time, O(r) auxiliary space excluding r returned quadruplets.",
+      "contract": "Return distinct value quadruplets totaling the target, each realized at four different input positions; order of quadruplets is immaterial.",
+      "correctness": "PASS. The archived sort mutates the input; anchor and endpoint duplicate skips make each value quadruplet unique even when different positions hold the same value. Thirteen print demos include duplicate-heavy, signed, empty and too-short inputs; demo 11 gives four of the seven valid quadruplets, and demo 13 lists two impossible quadruplets needing a second zero. Python arithmetic does not overflow fixed-width sums.",
+      "difficulty": "medium",
+      "optimized": "Sort a copy, fix two anchors, and scan the suffix from both ends: O(n log n + n^3) time, O(n) auxiliary space including the copy and sorting scratch.",
+      "python": "Counter and combinations_with_replacement enumerate d distinct values, checking multiplicity: expected O(n + d log d + d^4) time, O(d) auxiliary space.",
+      "source_difficulties": {
+        "Chapter1/hard/four_sum.py": "hard"
+      },
+      "status": "worked-edition"
+    },
+    "four-sum-count": {
+      "baseline": "Enumerate all four-way choices.",
+      "contract": "Count index tuples taking exactly one value from each list; duplicates multiply the count and an empty input list yields zero.",
+      "correctness": "Original flat and verbose pair-frequency maps, Counter and four nested loops are correct. Printed examples cover repeat multiplicity and zero solutions, but do not assert agreement across every variant. Guide lookup alias is missing.",
+      "difficulty": "medium",
+      "optimized": "Count each input first and multiply occurrence weights over distinct-value pairs, reducing work on repeated values.",
+      "python": "Use Counter over all sums on one side, then look up each opposite sum.",
+      "source_difficulties": {
+        "Chapter2/medium/four_sum_ii.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "generate-parentheses": {
+      "baseline": "No exhaustive two-choice search is implemented.",
+      "contract": "For a small nonnegative n, return all well-formed strings of n pairs in lexicographic order, including [\"\"] at n=0.",
+      "correctness": "The archive prunes prefixes with too many closes or opens and its empty case is a singleton empty arrangement, not an empty list.",
+      "difficulty": "medium",
+      "optimized": "Prefix-pruned recursive generation is implemented.",
+      "python": "No direct built-in; combinations can enumerate candidate open positions.",
+      "source_difficulties": {
+        "data structures/strings/back_tracking/medium_generate_parenthesis.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "group-anagrams": {
+      "baseline": "Compare each word's counts with representative signatures of existing groups.",
+      "contract": "Group strings by character multiset; preserve occurrences, including duplicate words and empty strings. Bucket order is immaterial.",
+      "correctness": "Sorted signatures support arbitrary case-sensitive characters. The 26-bin and distinct-prime product variants are correct on lowercase ASCII only (negative indices can silently alias for out-of-domain letters); prime multiplication uses growing integers. Demos are printed; both extra guide aliases are missing.",
+      "difficulty": "medium",
+      "optimized": "Use an unordered, hashable frequency signature for all characters; a fixed array is appropriate only with a specified alphabet.",
+      "python": "Use a sorted character tuple as a defaultdict key.",
+      "source_difficulties": {
+        "Chapter2/medium/group_anagrams.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "happy-number": {
+      "baseline": "Both set variants do arithmetic digit extraction and remember visited states. Charge space per distinct state and digit work per transition.",
+      "contract": "For a positive integer in the signed 32-bit range, return whether repeated base-10 sums of squared digits reach 1. Seeing another state twice implies a cycle.",
+      "correctness": "Both chapters' set and Floyd variants are correct on the contract. Chapter 4's 1-or-4 shortcut is also correct on that domain, but hangs for zero or negatives, which are outside it. Its sequence helper is a bounded diagnostic, not another boolean solver; it appends the terminal 1 or repeated state after a step. Chapter 2 prints happy/unhappy/fixed-point samples; Chapter 4 adds the cycle sentinel, a power of ten and sequences, but not the upper bound. These are print checks.",
+      "difficulty": "easy",
+      "optimized": "Both Floyd versions use constant state for this bounded integer domain and need no knowledge of the nonhappy cycle. Do not equate the digit count with the number of transitions.",
+      "python": "No direct classifier in the stdlib. A sum over decimal characters makes the transition readable for the documented small integers; a 1-or-4 stop is specific to this digit rule.",
+      "source_difficulties": {
+        "Chapter2/easy/happy_number.py": "easy",
+        "Chapter4/easy/happy_number.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "isomorphic-strings": {
+      "baseline": "Compare equality relationships between all pairs of positions.",
+      "contract": "Return whether equally long strings are connected by a bijection on characters, or false if their lengths differ.",
+      "correctness": "Original dual dictionaries enforce both directions but zip silently truncates unequal lengths; for example empty versus nonempty incorrectly passes. Assertions cover equal-length success/conflicts and both-empty only. The guide alias resolves to this same file.",
+      "difficulty": "medium",
+      "optimized": "Check mappings or last-seen positions in lockstep after an explicit length guard.",
+      "python": "Compare canonical relabeling signatures.",
+      "source_difficulties": {
+        "data structures/strings/hashmap/medium_isomorphic_strings.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "jewels-and-stones": {
+      "baseline": "Check each stone against the jewel string.",
+      "contract": "Count stone occurrences whose case-sensitive type is a jewel; prize membership is not multiplicative.",
+      "correctness": "All three Chapter2 methods return the same results. The purported one-liner rebuilds the jewel set for each stone; the other two build it once and otherwise duplicate the strategy. Coverage is printed examples, including case sensitivity.",
+      "difficulty": "easy",
+      "optimized": "For a fixed jewel alphabet, use a small membership mask or constant-space lookup; for arbitrary strings use the set rather than rebuilding it.",
+      "python": "Build one set, then count matching occurrences with sum.",
+      "source_difficulties": {
+        "Chapter2/easy/jewel_and_stone.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "lfu-cache": {
+      "baseline": "Store frequency and access timestamp, scanning for the victim.",
+      "contract": "A get hit or overwrite counts as an access; insertions start at frequency one, misses return -1, and eviction uses lowest frequency then oldest access. Capacity zero is valid.",
+      "correctness": "Both linked-bucket and OrderedDict-bucket archive variants maintain minimum frequency and recency correctly. Linked assertions cover LFU, tied LRU, zero and one capacity; OrderedDict gets a shorter trace. Neither original trace asserts overwrite behavior.",
+      "difficulty": "hard",
+      "optimized": "Splice nodes in per-frequency doubly linked queues; expected amortized constant operations under standard dictionary assumptions.",
+      "python": "Use each OrderedDict as an LRU bucket, with a tracked minimum frequency.",
+      "source_difficulties": {
+        "Chapter2/hard/lfu_cache.py": "hard"
+      },
+      "status": "worked-edition"
+    },
+    "linked-cycle": {
+      "baseline": "Keep visited nodes in a list and scan by identity at each step. This makes the recurrence criterion explicit but costs quadratic time.",
+      "contract": "Return whether following next links from a possibly empty head revisits the same node; do not mutate links or confuse duplicate values with a cycle.",
+      "correctness": "Both chapters' Floyd and set variants are correct for their identity-equality/hash classes. Chapter 3 prints two cyclic and empty/singleton cases plus both outcomes for the set; Chapter 4 adds a self-loop and a longer stem. Neither tests equal-valued distinct nodes or asserts that links are unchanged.",
+      "difficulty": "easy",
+      "optimized": "Floyd uses two speeds and checks identity after advancing; it uses O(n) time and O(1) auxiliary space.",
+      "python": "The originals' visited set is the direct Python helper. It uses expected O(n) time and O(n) auxiliary space, where n is the number of reachable nodes.",
+      "source_difficulties": {
+        "Chapter3/easy/linked_list_cycle.py": "easy",
+        "Chapter4/easy/linked_list_cycle.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "linked-intersection": {
+      "baseline": "Compare each candidate from A against the nodes in B by identity; O(mn) worst-case time, constant auxiliary space.",
+      "contract": "Return the first shared node by identity for two acyclic chains; leave both unchanged. Matching values do not count, and absent intersection returns None.",
+      "correctness": "Head switching, a set of nodes and length alignment are correct with the archived identity-equality/hash ListNode. Prefer explicit identity tests for comparisons; hash keys must also preserve identity. The sample builder prepends an unintended extra node for skip_a or skip_b equal to zero; its zero-value sentinel is only a fixture convention. Printed cases cover shared suffixes and disjoint inputs but not equal-valued disjoint chains or a shared head.",
+      "difficulty": "easy",
+      "optimized": "Original head switching and length alignment both use O(m+n) time and O(1) auxiliary space. Switching equalizes the unshared prefixes without a counting pass.",
+      "python": "The original set approach is idiomatic on the supplied class. An identity-key set can remove any dependence on node equality or hash overrides.",
+      "source_difficulties": {
+        "Chapter3/easy/intersection_of_two_linked_lists.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "longest-common-subsequence": {
+      "baseline": "No exhaustive subsequence reference is implemented.",
+      "contract": "Return the longest shared subsequence length, which does not require adjacent characters; empty input gives 0.",
+      "correctness": "The archive uses the correct recurrence and puts the shorter string on the row axis; it allocates a fresh row at every outer step.",
+      "difficulty": "medium",
+      "optimized": "Rolling rows give O(min(m, n) + 1) auxiliary space.",
+      "python": "No direct standard-library equivalent; a full tabulation can expose the recurrence.",
+      "source_difficulties": {
+        "data structures/strings/dynamic_programmings/medium_longest_common_subsequence.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "longest-consecutive": {
+      "baseline": "Check list membership while extending from candidate starts.",
+      "contract": "Return the longest run of adjacent integer values, without relying on input order; duplicates do not extend a run.",
+      "correctness": "Original set-start, verbose, sorting and union-find versions are correct. Sorting also appears in verbose, so it misses the linear target; union-find has inverse-Ackermann amortized cost and recursive find. Printed cases cover negatives, duplicates, empty and singleton; both guide aliases are missing.",
+      "difficulty": "medium",
+      "optimized": "Use a set and only walk runs from values with no predecessor.",
+      "python": "Sort the distinct values, then count adjacent streaks.",
+      "source_difficulties": {
+        "Chapter2/medium/longest_consecutive_sequence.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "longest-duplicate-substring": {
+      "baseline": "Compare pairs of suffix starts by walking their common prefix.",
+      "contract": "Return any longest repeated substring, allowing overlaps, or the empty string if none exists.",
+      "correctness": "Archive hash candidates are verified exactly; the lowercase base can collide more outside that alphabet. Slice-set search can take cubic time and quadratic storage; sorted suffix copies use quadratic storage. Tests exercise overlap and compare rolling hash/suffix lengths on five cases; the long case checks only nonemptiness and the slice-set method is not exercised.",
+      "difficulty": "hard",
+      "optimized": "Build suffix ranks by doubling, then scan adjacent LCPs in linear time; avoids collision-dependent bounds and full suffix copies.",
+      "python": "Sort suffix strings and compare adjacent suffixes; materializing them copies a quadratic number of characters.",
+      "source_difficulties": {
+        "Chapter2/hard/longest_duplicate_substring.py": "hard"
+      },
+      "status": "worked-edition"
+    },
+    "longest-k-distinct": {
+      "baseline": "Grow each candidate from its own start and stop at k+1 distinct values: expected O(n^2) time, O(min(d, k+1)) auxiliary space for k > 0.",
+      "contract": "Return the longest contiguous string length using at most k distinct code points; empty input or k <= 0 returns zero.",
+      "correctness": "PASS. The archived counts delete zero-frequency entries so len(counts) is the distinct count; the left boundary advances until the budget holds. Five assertions cover mixed letters, repeated letters, empty, k=0 and k beyond the alphabet seen, not negative k though the guard handles it. The guide path aliases this tracked source.",
+      "difficulty": "medium",
+      "optimized": "Maintain only live frequencies and shrink as soon as the distinct limit is exceeded: expected O(n) time and O(min(d, k+1)) auxiliary space for k > 0.",
+      "python": "Use OrderedDict of last positions and evict the least recent key to jump the left boundary: expected O(n) time, O(min(d, k+1)) auxiliary space for k > 0.",
+      "source_difficulties": {
+        "data structures/strings/sliding_window/medium_longest_k_distinct.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "longest-palindromic-substring": {
+      "baseline": "No all-interval scan is implemented.",
+      "contract": "Return the leftmost longest contiguous palindrome, or the empty string for empty input.",
+      "correctness": "The archive expands odd and even centers left to right with strict best-length updates, preserving the leftmost tie. This is center expansion, not table-based DP.",
+      "difficulty": "medium",
+      "optimized": "Center expansion runs in O(n^2) time with constant auxiliary space. Linear-time Manacher is not implemented.",
+      "python": "No direct built-in; slicing can check candidates with a simpler expression.",
+      "source_difficulties": {
+        "data structures/strings/dynamic_programmings/medium_longest_palindromic_substring.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "longest-unique-substring": {
+      "baseline": "Extend a candidate per starting point and search the already-included substring for repeats: O(n^3) time, O(n) slice space.",
+      "contract": "Return the length of the longest contiguous string segment with distinct characters; spaces count, and empty returns zero. The first two archived variants and the lesson support arbitrary Python string code points.",
+      "correctness": "PASS. The primary set window shrinks through a duplicate; the last-index variant only advances past occurrences inside the window; the direct-address variant is ASCII-only and raises IndexError for code points at least 128. Seven print demos cover the primary version and three ASCII demos per alternate. The spaced example claims 4, but the true answer is 3. Both guide aliases have no HEAD source.",
+      "difficulty": "medium",
+      "optimized": "Jump the left edge forward using each character's last index: expected O(n) time and O(d) auxiliary space.",
+      "python": "Use a fresh set for each starting point to avoid rescanning its previous characters: expected O(n^2) time and O(d) auxiliary space.",
+      "source_difficulties": {
+        "Chapter2/medium/longest_substring_without_repeating.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "max-average-window": {
+      "baseline": "Recompute each exact-width sum using indices: O((n-k+1)*k) time, O(1) auxiliary space.",
+      "contract": "Return the maximum average across nonempty contiguous windows of exactly k entries for 1 <= k <= len(nums), including negative values.",
+      "correctness": "PASS for both variants on valid widths. The main rolling sum initializes via an O(k) slice; the verbose version starts with indexed addition, retains the earliest best window, then slices for display except when k equals n. Neither is strictly O(1) auxiliary over the full operation as written. Five print demos cover ordinary, equal, negative, singleton and full-width inputs; one executes the verbose variant. The guide alias has no HEAD file.",
+      "difficulty": "easy",
+      "optimized": "Initialize without slicing and exchange outgoing and incoming integers; divide once: O(n) time, O(1) auxiliary space.",
+      "python": "Build prefix totals using itertools.accumulate, then subtract adjacent-width bounds: O(n) time and O(n) auxiliary space.",
+      "source_difficulties": {
+        "Chapter5/easy/max_average_subarray.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "max-vowels-window": {
+      "baseline": "Count vowels afresh for each window using indices: O((n-k+1)*k) time for k > 0, O(1) auxiliary space.",
+      "contract": "Maximize the count of vowels in an exact-width substring. Chapter5's domain is lowercase English; the strings variant counts ASCII vowels case-insensitively and accepts empty with k=0. The lesson uses the case-insensitive ASCII-vowel rule and 0 <= k <= len(text).",
+      "correctness": "PASS. Chapter5 provides a rolling count with early exit, a rolling variant returning (count, substring, earliest index), and a sliced brute-force count. There are six count print demos, one positions demo and one brute/rolling cross-check. The strings rolling variant has six assertions including mixed case and empty width; both rolling sources slice the initial window. Neither source validates oversized k. The strings guide path aliases the second tracked source.",
+      "difficulty": "easy",
+      "optimized": "Use a rolling count without copies; stop when the count reaches k: O(n) time, O(1) auxiliary space.",
+      "python": "Use itertools.accumulate for vowel prefix counts: O(n) time, O(n) auxiliary space.",
+      "source_difficulties": {
+        "Chapter5/easy/max_vowels_in_substring.py": "easy",
+        "data structures/strings/sliding_window/easy_max_vowels_fixed_window.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "max-water-container": {
+      "baseline": "Evaluate every pair: O(n^2) time and O(1) auxiliary space.",
+      "contract": "For nonnegative line heights at consecutive indices, maximize width times the shorter endpoint height; interior heights do not affect a pair. The lesson returns zero for fewer than two lines.",
+      "correctness": "PASS. Moving the shorter endpoint rules out only narrower pairs that it would still bound; either side may move on a tie. Eight print demos cover two lines, plateaus, equally tall ends and an interior optimum; no zero-height or short input demo beyond a pair. The guide alias has no HEAD file.",
+      "difficulty": "medium",
+      "optimized": "Evaluate outside-in and move the shorter endpoint: O(n) time and O(1) auxiliary space.",
+      "python": "Sort indices by descending height, tracking the extremes among eligible lines at each height threshold: O(n log n) time and O(n) auxiliary space.",
+      "source_difficulties": {
+        "Chapter1/medium/container_with_most_water.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "merge-sorted-linked-lists": {
+      "baseline": "Materializing inputs then stable-sorting their node references is correct if the output links reuse those same nodes. It needs linear auxiliary space.",
+      "contract": "Merge two disjoint, acyclic, nondecreasing chains by splicing original nodes. Keep duplicates. Both originals choose the left input first on ties.",
+      "correctness": "Iterative and recursive merges are correct under these preconditions. Sharing a nonempty suffix can produce a cycle in the iterative method; these are not alias-safe merges. The printed iterative samples cover empty inputs, ties and a remaining tail; recursion is shown once on interleaving inputs. None check node reuse or tie order by identity.",
+      "difficulty": "easy",
+      "optimized": "Iterative two-head splicing is linear worst-case and constant auxiliary space. Recursive splicing has linear worst-case frames; the original short input bound keeps it practical.",
+      "python": "heapq.merge can lazily merge two node iterators using a value key, but it does not splice links itself. Capture each successor before yielding its node.",
+      "source_difficulties": {
+        "Chapter3/easy/merge_two_sorted_lists.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "middle-linked-list": {
+      "baseline": "Count all nodes and walk to the chosen index. This is linear time with constant auxiliary space and makes the convention explicit.",
+      "contract": "Return the original center node of an acyclic chain; pick the second middle by default and distinguish first-middle behavior for even lengths. Treat an empty extension as returning None.",
+      "correctness": "Both chapters' count-and-walk and main fast/slow variants correctly return the second middle; Chapter 4 adds a correct first-middle variant. Chapter 3's array variant indexes an empty list (outside its documented nonempty domain); Chapter 4 guards it. Both print odd/even/singleton cases; Chapter 4 prints first-middle and more lengths but does not exercise empty input.",
+      "difficulty": "easy",
+      "optimized": "Two speeds find either middle in one pass and constant auxiliary space. Starting fast one node ahead selects the first middle; starting both at the head selects the second.",
+      "python": "The array variants use list indexing after collecting references. Guard the empty case if supported and index nodes, not a copied value list.",
+      "source_difficulties": {
+        "Chapter3/easy/middle_of_linked_list.py": "easy",
+        "Chapter4/easy/middle_of_linked_list.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "minimum-score-spread": {
+      "baseline": "No exhaustive subset reference is implemented.",
+      "contract": "For 1 <= k <= len(scores), return the smallest maximum-minus-minimum among exactly k positions, without mutating scores in the worked edition.",
+      "correctness": "The endpoint scan is correct, but the original mutates its input and prints debug output. The verbose alternative copies and slices each window and is O(n log n + nk); sorting itself can use linear auxiliary storage.",
+      "difficulty": "easy",
+      "optimized": "The main original implementation uses indexed endpoints after sorting.",
+      "python": "The verbose variant uses sorted() and slices, but has debug output.",
+      "source_difficulties": {
+        "Chapter5/easy/min_difference_k_scores.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "minimum-window": {
+      "baseline": "Extend each starting point and check all required counts until it covers: expected O(m + n^2*d) time, O(d) auxiliary space.",
+      "contract": "Return the shortest case-sensitive contiguous source substring covering every target occurrence, not merely distinct characters; return empty for an empty target or impossible cover. The lesson breaks equal-length ties by earliest start.",
+      "correctness": "PASS for the Chapter1 and strings/sliding_window variants. Both count covered character types, not raw distinct window characters, and keep the first equal-length answer. Chapter1 takes a slice on every improvement, potentially quadratic time from copying, and has 14 print demos; the strings variant records bounds and slices once, with seven assertions including empty target and duplicates. Both keep count-map keys for irrelevant source characters. The strings guide path aliases the second tracked source.",
+      "difficulty": "hard",
+      "optimized": "Track outstanding required occurrences by threshold crossings; save indices and slice once: expected O(n + m) time, O(d) auxiliary space.",
+      "python": "Use Counter subtraction for a readability-first sliding cover test: expected O(m + n*d) time, O(d) auxiliary space.",
+      "source_difficulties": {
+        "Chapter1/hard/minimum_window_substring.py": "hard",
+        "data structures/strings/sliding_window/medium_minimum_window_substring.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "move-zeroes": {
+      "baseline": "Repeatedly remove an encountered zero and append it, processing exactly n original entries: O(n^2) time, O(1) algorithmic auxiliary space.",
+      "contract": "Mutate the original integer list in place, stably moving all zeroes after the nonzeroes; return None. No extra full list in the strict solution.",
+      "correctness": "PASS. The archived scan swaps the next encountered nonzero into the first hole, preserves nonzero order, and runs in O(n) time/O(1) auxiliary space. Its 12 print demos cover singletons, all/none/mixed zeroes and negatives; demo 12 declares the wrong expected list for [1, 0, 2]. The separate guide alias has no HEAD file.",
+      "difficulty": "easy",
+      "optimized": "Compact nonzero entries with a read and write index, then fill the suffix with zeroes: O(n) time, O(1) auxiliary space.",
+      "python": "Stable list.sort by the zero predicate: same result and list identity, O(n log n) time and O(n) scratch, so not the strict space solution.",
+      "source_difficulties": {
+        "Chapter1/easy/move_zeroes.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "nearby-duplicate": {
+      "baseline": "Compare only pairs within the distance limit: O(n*min(n, k) + n) time, O(1) auxiliary space.",
+      "contract": "Check for two distinct equal-valued positions whose index difference is at most k, for k >= 0. The archive also has a different API returning all qualifying pairs.",
+      "correctness": "PASS for three archived variants with nonnegative k. The bounded set checks before inserting and retains exactly the eligible prior positions; the last-index map checks the closest prior match. Pair enumeration is correct but scans every earlier equal index, with O(n^2) worst-case time even if few pairs qualify, plus O(n) bookkeeping. Six print demos cover the set, one the map and one pair enumeration, including boundary and k=0 cases. The set guide alias has no HEAD file.",
+      "difficulty": "easy",
+      "optimized": "Bound the set to the last k positions before each membership check: O(n) expected time, O(min(n, k)) auxiliary space for k > 0.",
+      "python": "Use dict.get to retrieve the latest prior position: O(n) expected time and O(d) auxiliary space.",
+      "source_difficulties": {
+        "Chapter5/easy/contains_nearby_duplicate.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "next-greater-element": {
+      "baseline": "Find the query position and scan to the first qualifying successor. O(qn) worst-case time, constant auxiliary space excluding output.",
+      "contract": "For each query value, find the first strictly larger value to its right in the reference array, or -1. Reference values are distinct and every query is present; preserve query order.",
+      "correctness": "The original brute-force and monotone-stack variants both meet the uniqueness/presence assumptions. On duplicate reference values the first occurrence chosen by index need not agree with the value-keyed precomputation, so duplicate support would need a location-based query. Only the stack is exercised in the four printed comparisons (mixed, increasing, delayed greater, singleton).",
+      "difficulty": "easy",
+      "optimized": "Resolve pending values when a strictly larger value arrives. Each value enters and leaves the stack at most once; expected O(n+q) time and O(n) auxiliary space with hash maps.",
+      "python": "Build an index dictionary once, then use next with a default over candidate positions. It avoids repeated position lookups but does not remove worst-case suffix scanning.",
+      "source_difficulties": {
+        "Chapter7/easy/next_greater_element.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "palindrome-buildable": {
+      "baseline": "No explicit pair matching is implemented.",
+      "contract": "Return the maximum length when any multiset of characters can be rearranged, with case significant.",
+      "correctness": "Pair counts and at most one odd center are correct. A stale TODO is next to the completed implementation.",
+      "difficulty": "easy",
+      "optimized": "The frequency-map solution is already expected linear; a parity set can avoid storing exact counts.",
+      "python": "The original counts manually rather than using Counter.",
+      "source_difficulties": {
+        "data structures/strings/greedy/easy_longest_palindrome_buildable.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "palindrome-linked-list": {
+      "baseline": "Chapter 4's half-stack compares the second half against stored values. It takes O(n) time and O(n) auxiliary space; recursion also consumes linear frames.",
+      "contract": "Compare values in an acyclic chain against their reverse without leaving changed links. A constant-space implementation may reverse a suffix temporarily if exclusive access is available.",
+      "correctness": "Both chapters' array, recursive and restoring half-reversal variants are correct on recursion-safe inputs; the recursive solver cannot handle the full 100,000-node limit in standard Python. Chapter 4's half-stack solver is correct for odd and even lengths. Printed coverage spans both parities, singleton and mismatches; Chapter 4 prints one successful restoration by value, not node identity or restoration after a mismatch. Empty input works in all variants but is not sampled.",
+      "difficulty": "easy",
+      "optimized": "Both chapters' two-speed split, reverse, compare and restore use O(n) time and O(1) auxiliary space. Preserve the reversed-half head, even when the comparison stops early.",
+      "python": "Materialize the values and compare with a reverse slice (another linear allocation), or compare views using reversed. Do not compare node identities for this exercise.",
+      "source_difficulties": {
+        "Chapter3/easy/palindrome_linked_list.py": "easy",
+        "Chapter4/easy/palindrome_linked_list.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "partition-labels": {
+      "baseline": "No repeated cut validation is implemented.",
+      "contract": "Return the lengths of the maximum number of contiguous parts with no character shared across parts.",
+      "correctness": "The last-occurrence scan closes each part at the earliest safe boundary. Its O(1) auxiliary space applies to a fixed alphabet; otherwise the map uses O(u) space.",
+      "difficulty": "medium",
+      "optimized": "The last-occurrence greedy scan is implemented.",
+      "python": "No set.isdisjoint cut-checking example is implemented.",
+      "source_difficulties": {
+        "Chapter1/medium/partition_labels.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "phone-letter-combinations": {
+      "baseline": "No breadth-first prefix materialization is implemented.",
+      "contract": "For a short sequence of digits 2 through 9, return all strings in keypad order. Empty input returns [].",
+      "correctness": "The archive handles repeated digits and four-letter keys; unsupported characters raise a key lookup error and are outside the contract.",
+      "difficulty": "medium",
+      "optimized": "Depth-first generation reuses one path with output-optimal time.",
+      "python": "No itertools.product comparison is implemented.",
+      "source_difficulties": {
+        "data structures/strings/back_tracking/medium_letter_combination_phone.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "remove-linked-values": {
+      "baseline": "Collect matching survivors as node references, then rewire and terminate the new tail. This separates deciding which nodes stay from changing links.",
+      "contract": "Return the possibly changed head after removing every matching node from an acyclic chain. Keep original surviving nodes in order; an emptied list returns None.",
+      "correctness": "Sentinel, manual leading-run removal and recursive filtering are correct on value/order; recursion is not safe at the documented 10,000-node limit. The recursive version can modify links on removed nodes, so don't assume removed nodes are detached. The sentinel demos print empty, all-match, head/tail runs, absent target and singletons; the other two each print one mixed example, not identity or long input.",
+      "difficulty": "easy",
+      "optimized": "The original sentinel or two-stage head handling bypasses removed nodes directly, avoiding a write for every retained node. Iteration is O(n) time with constant auxiliary space.",
+      "python": "No direct linked-list filter; Python's lazy filter can select nodes from a mutation-safe iterator and feed a relinking helper.",
+      "source_difficulties": {
+        "Chapter3/easy/remove_linked_list_elements.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "repeated-substring": {
+      "baseline": "Try each viable divisor of the length and verify it as a period.",
+      "contract": "Return true iff a nonempty string is made by repeating a shorter nonempty unit at least twice; empty and singleton are false.",
+      "correctness": "The original doubled-and-trimmed membership formula is correct, and asserts empty, singleton, repeated and nonrepeated examples. Doubling and trimming allocate linear-size strings.",
+      "difficulty": "medium",
+      "optimized": "Use the longest proper prefix/suffix and require exact divisibility by the implied period.",
+      "python": "Search the doubled input excluding its first and last alignments.",
+      "source_difficulties": {
+        "data structures/strings/prefix_suffix/medium_repeated_substring_pattern.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "reverse-linked-list": {
+      "baseline": "Repeatedly detach the remaining tail and append it to the result: O(n\u00b2) time because the list has no predecessor links, and constant auxiliary space.",
+      "contract": "Reverse next links of the original nodes of a possibly empty acyclic singly linked list; return the old tail, and terminate the new tail.",
+      "correctness": "Both original algorithms reverse links correctly when recursion completes, but the recursive variant cannot handle lists up to 5,000 on standard Python settings. Four printed samples show normal, empty and singleton iteration and a two-node recursive case; they compare values only.",
+      "difficulty": "easy",
+      "optimized": "Save each successor before reversing one link. Iteration is O(n) time and O(1) auxiliary space; recursive unwinding needs O(n) frames.",
+      "python": "There is no direct linked-list reverse method. Materialize node references, then use reversed and relink them. Reversed iteration adds no second list, but the reference list is linear auxiliary space.",
+      "source_difficulties": {
+        "Chapter3/easy/reverse_linked_list.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "reverse-string": {
+      "baseline": "Build an indexed reversed buffer and overwrite the list: O(n) time/O(n) auxiliary space, only a reference for the strict space contract.",
+      "contract": "Reverse the entries of a mutable character list in its existing storage and return None; the strict implementation must not allocate a second list.",
+      "correctness": "PASS. Opposite-end swaps stop before crossing and are safe for empty or singleton lists. Twelve print demos cover odd/even lengths, repeats, spaces, punctuation and mixed case; empty is not shown.",
+      "difficulty": "easy",
+      "optimized": "Swap symmetric entries until reaching the center: O(n) time and O(1) auxiliary space.",
+      "python": "list.reverse mutates the original list in O(n) time and O(1) auxiliary space; it implements the same underlying swap idea as the explicit version.",
+      "source_difficulties": {
+        "Chapter1/easy/reverse_string.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "search-insert-position": {
+      "baseline": "No linear reference is implemented.",
+      "contract": "Return the first index with value >= target, or the length when no such position exists.",
+      "correctness": "The original is correct for distinct values; it stops on an arbitrary match with duplicates, so the worked edition extends it to lower bounds with duplicates.",
+      "difficulty": "easy",
+      "optimized": "The original searches a sorted, distinct list in logarithmic time.",
+      "python": "No bisect_left variant is implemented.",
+      "source_difficulties": {
+        "Chapter6/easy/search_insert_position.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "short-url-codec": {
+      "baseline": "Store full URLs in a list and find existing aliases by a linear search.",
+      "contract": "Within one instance, generate stable unique aliases for distinct nonempty URLs; decode the exact issued alias or return empty for an unknown alias. No network or persistence.",
+      "correctness": "Random, decimal, truncated-MD5-with-suffix and base62 variants round-trip issued aliases. All use replace on decode, accepting bare or repeated prefixes; random retries are unbounded near exhaustion; counters are predictable, and MD5 is not a security guarantee. Printed demos lack forced collisions and malformed aliases.",
+      "difficulty": "medium",
+      "optimized": "Use a reverse URL map and dense indexed storage with compact base62 aliases; validate canonical decoding.",
+      "python": "Use two dictionaries and decimal IDs.",
+      "source_difficulties": {
+        "Chapter2/medium/encode_decode_tinyurl.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "simplify-path": {
+      "baseline": "Split on slash and track the surviving directories on a stack. Count the allocated split pieces as linear auxiliary space even when few survive.",
+      "contract": "Lexically normalize a nonempty absolute Unix path; collapse all slash runs, clamp parents at root, ignore exact dot components, and preserve other names. Never inspect symlinks or the filesystem.",
+      "correctness": "The archived split-and-stack solver is correct for absolute paths, including dot-like names. It returns an absolute result for relative/empty strings rather than rejecting them; the length constraint mentions zero despite the absolute-path requirement. Seven assertions cover root-only slash runs, excess parents, redundant slashes and exact dots, but not leading exactly two slashes followed by a name or literal dot-like names.",
+      "difficulty": "medium",
+      "optimized": "Scan backward and carry a count of unresolved parent steps. Skip canceled spans before slicing, keeping only the components that survive. This stays linear while avoiding storage proportional to canceled names.",
+      "python": "Use posixpath.normpath after collapsing all leading slashes to exactly one. Raw normpath preserves exactly two leading slashes, contrary to this contract.",
+      "source_difficulties": {
+        "data structures/strings/stack/medium_simplify_unix_path.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "sort-colors": {
+      "baseline": "No quadratic sorting example is implemented.",
+      "contract": "Mutate a list of 0, 1, and 2 into nondecreasing order; return None.",
+      "correctness": "The Dutch flag loop is correct within the three-value domain. Its last branch assumes the value is 2; it is not a general sorter.",
+      "difficulty": "medium",
+      "optimized": "One pass partitions three regions with constant auxiliary space.",
+      "python": "No list.sort comparison is implemented.",
+      "source_difficulties": {
+        "Chapter1/medium/sort_colors.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "sorted-squares": {
+      "baseline": "Insert each square into the appropriate position in the output: O(n^2) time, O(1) auxiliary space excluding output.",
+      "contract": "Given a nondecreasing integer list, return a new nondecreasing list of every square; preserve multiplicities and do not mutate the input.",
+      "correctness": "PASS. The archived scan correctly fills from the right because the greatest remaining magnitude is at an endpoint, including on an absolute-value tie. Thirteen print demos cover signs, zeros, duplicate squares, extreme magnitudes and singletons, not empty. The guide alias has no HEAD file.",
+      "difficulty": "easy",
+      "optimized": "Square the greater remaining magnitude and fill back to front: O(n) time, O(1) auxiliary space excluding output.",
+      "python": "Use sorted on a generator of squares: O(n log n) worst-case time and O(n) auxiliary sorting scratch excluding output.",
+      "source_difficulties": {
+        "Chapter1/medium/squares_of_sorted_array.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "sorted-two-sum": {
+      "baseline": "Try each increasing index pair: O(n^2) time, O(1) auxiliary space.",
+      "contract": "A nondecreasing integer list and a target have exactly one pair of distinct indices. Return those indices in increasing order and zero-based, not the values. The lesson returns None if no pair exists.",
+      "correctness": "PASS for the output contract. The archived complement map checks before storing, so it cannot reuse a position; index zero is not mistaken for absence. Despite the archived title it does not exploit sorted order and uses O(n) extra space; its no-pair result is implicit None. Five print demos cover nonadjacent pairs, negatives and index zero, not duplicate-value pairs or missing targets.",
+      "difficulty": "easy",
+      "optimized": "Discard one endpoint using the ordered sums: O(n) time, O(1) auxiliary space.",
+      "python": "bisect_left locates a complement in the strict suffix: O(n log n) time, O(1) auxiliary space, no suffix copy.",
+      "source_difficulties": {
+        "Chapter1/easy/two_sum.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "string-list-codec": {
+      "baseline": "Append length frames to an accumulating string and scan manually.",
+      "contract": "Encode a list of strings losslessly, including delimiters and empties; lengths represent Python characters, not UTF-8 bytes.",
+      "correctness": "The original length-prefixed join and decoder round-trip valid data; its bytes wording is wrong. Tests cover empty list vs empty items, separator-like payloads and controls, but not Unicode or malformed data. Original decoder assumes well-formed input and can truncate invalid input silently or throw.",
+      "difficulty": "medium",
+      "optimized": "Stream framed writes into StringIO and parse by cursor without slicing unconsumed suffixes.",
+      "python": "No dedicated standard length-frame codec; use join and offset-based str.find.",
+      "source_difficulties": {
+        "data structures/strings/prefix_suffix/medium_encode_decode_strings.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "subarray-sum": {
+      "baseline": "Accumulate totals from each start.",
+      "contract": "Count nonempty contiguous ranges that total k, allowing negative values and zero.",
+      "correctness": "Both original prefix-frequency versions seed zero and count before insertion; brute-force accumulates per start correctly. Examples are printed and cover negatives, zero, singleton and no match. Both guide aliases are missing.",
+      "difficulty": "medium",
+      "optimized": "Use a compact list of counters when the observed prefix span is suitably small, otherwise fall back to a streaming dict.",
+      "python": "Use accumulate to generate prefix totals, with Counter for previously seen totals.",
+      "source_difficulties": {
+        "Chapter2/medium/subarray_sum_equals_k.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "substring-search": {
+      "baseline": "Test candidates character by character, avoiding slice copies.",
+      "contract": "Find the first match or -1, and all starts including overlap. An empty pattern matches at all boundaries; its first match is zero.",
+      "correctness": "Easy archive slicing and both medium KMP functions are correct. The easy source understates space: substring slices can allocate O(m). Samples cover no match, empty-first, fallback and overlap; empty-all is implemented but not asserted. Exhaustive short binary strings agreed with find and startswith.",
+      "difficulty": "medium",
+      "optimized": "Use KMP's border table and resume with the longest proper border after each match.",
+      "python": "Use str.find, advancing one position after a match when gathering all.",
+      "source_difficulties": {
+        "data structures/strings/pattern_matching/easy_strstr_first_occurrence.py": "easy",
+        "data structures/strings/pattern_matching/medium_kmp_search.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "three-sum": {
+      "baseline": "Enumerate increasing index triples and deduplicate their sorted value tuples: O(n^3) time, O(r) auxiliary space excluding r returned triples.",
+      "contract": "Return distinct value triples totaling zero, using three different positions for each. Order of triples is immaterial.",
+      "correctness": "PASS. The archived sort mutates input; it skips repeated anchors and matched endpoint values without dropping triples that require two or three equal entries. Twelve print demos cover duplicates, all zeros, impossible signs and multiple results (some expectations only illustrative); no empty/too-short input demo. Neither guide alias has a HEAD file.",
+      "difficulty": "medium",
+      "optimized": "Copy and sort, then fix one anchor and scan opposite endpoints: O(n log n + n^2) time and O(n) auxiliary space including sorting scratch.",
+      "python": "Use Counter and distinct value pairs, checking that the implied third value exists with sufficient multiplicity: O(n + d log d + d^2) expected time, O(d) auxiliary space.",
+      "source_difficulties": {
+        "Chapter1/medium/three_sum.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "top-k-frequent": {
+      "baseline": "Both variants that sort distinct values after counting are implemented.",
+      "contract": "Return k items by decreasing frequency, breaking ties by first occurrence, for 0 <= k <= distinct count in the worked edition.",
+      "correctness": "The archive assumes a unique top-k set and permits any order. The manual heap returns heap order and can choose different ties. The bucket variant misses k=0 for nonempty input, which is outside the original bounds.",
+      "difficulty": "medium",
+      "optimized": "Frequency buckets provide an expected linear bound.",
+      "python": "Counter.most_common and heapq.nlargest are implemented.",
+      "source_difficulties": {
+        "Chapter2/medium/top_k_frequent_elements.py": "medium"
+      },
+      "status": "worked-edition"
+    },
+    "trapping-rain": {
+      "baseline": "Scan both boundaries independently for each column: O(n^2) time, O(1) auxiliary space without slicing.",
+      "contract": "Given nonnegative heights of unit-width columns, return total trapped water; empty and fewer than three columns trap none.",
+      "correctness": "PASS for both archived variants. The prefix/suffix version computes strict side maxima and clamps negative contributions; the endpoint scan finalizes a side with an adequate far boundary and uses constant storage. The 15 print demos cover basins, plateaus, monotone lists and short lists but exercise only the prefix/suffix variant, not the two-pointer version. The guide alias has no HEAD file.",
+      "difficulty": "hard",
+      "optimized": "Track side maxima and finalize the side whose known maximum is lower: O(n) time, O(1) auxiliary space.",
+      "python": "itertools.accumulate with max builds paired inclusive boundary sequences: O(n) time, O(n) auxiliary space.",
+      "source_difficulties": {
+        "Chapter1/hard/trapping_rain_water.py": "hard"
+      },
+      "status": "worked-edition"
+    },
+    "valid-anagram": {
+      "baseline": "Sort both strings and compare.",
+      "contract": "Compare case-sensitive character multiplicities; empty strings match and unequal lengths cannot.",
+      "correctness": "Chapter2 decrement-and-delete is correct and prints five examples; the string companion's signed defaultdict method is correct and asserts case/empty examples. The dictionary guide alias is missing. Constant auxiliary space requires a fixed alphabet.",
+      "difficulty": "easy",
+      "optimized": "Maintain one table of unmatched characters and reject impossible decrements early.",
+      "python": "Compare Counter results.",
+      "source_difficulties": {
+        "Chapter2/easy/valid_anagram.py": "easy",
+        "data structures/strings/hashmap/easy_is_anagram.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "valid-palindrome": {
+      "baseline": "Build a list of lowered characters, then compare mirrored entries: O(n) time and O(n) auxiliary space.",
+      "contract": "For printable ASCII, ignore punctuation/whitespace and letter case; digits are retained. Empty normalized text is a palindrome. The lesson also accepts empty input.",
+      "correctness": "PASS for archived printable ASCII. The scan skips non-alphanumeric endpoints and compares lowercase characters. Do not equate this with general Unicode case folding/normalization, where characters can expand. Eight print demos cover ignored characters, digits, mixed case, singleton and mismatches; no empty input demo. The normalized-palindrome guide alias has no HEAD file.",
+      "difficulty": "easy",
+      "optimized": "Skip ignored characters from the ends without making a normalized copy: O(n) time and O(1) auxiliary space.",
+      "python": "Use an ASCII regular-expression filter and compare the lowercase string with its reversed slice: O(n) time and O(n) auxiliary space.",
+      "source_difficulties": {
+        "Chapter1/easy/valid_palindrome.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "valid-parentheses": {
+      "baseline": "For each closer, search backward for the opener at its nesting depth. Repeated scanning uses O(n\u00b2) time but O(1) auxiliary space.",
+      "contract": "Check well-nested matching for (), [] and {}. An empty string is balanced; other characters are not silently ignored.",
+      "correctness": "Both archived files use the same opener-stack algorithm and are correct; a non-bracket character cannot match a valid closer and thus also forces rejection. The Chapter 7 printed cases cover crossed brackets and leading closers; the strings version uses assertions including mixed nesting and empty input, but misses those two negative cases. Neither tests deep inputs.",
+      "difficulty": "easy",
+      "optimized": "A single pass with an opener stack takes O(n) time and O(depth) auxiliary space. Reject a closer that does not match the top.",
+      "python": "A regex can repeatedly remove adjacent matching pairs, not validate arbitrary nesting in a single ordinary Python regex. Deep inputs make the repeated rewrite quadratic.",
+      "source_difficulties": {
+        "Chapter7/easy/valid_parenthesis.py": "easy",
+        "data structures/strings/stack/easy_valid_parenthesis.py": "easy"
+      },
+      "status": "worked-edition"
+    },
+    "word-pattern": {
+      "baseline": "Compare equality for every pair of corresponding positions.",
+      "contract": "Words compared case-sensitively must form a bijection with pattern characters; counts must match. split() allows arbitrary whitespace.",
+      "correctness": "The Chapter2 two-map and canonical-signature implementations and the companion two-map implementation are correct. Chapter2 prints examples; companion assertions cover both conflict directions and mismatched counts. Chapter2's single-pass name hides two signatures and their lists.",
+      "difficulty": "easy",
+      "optimized": "Check forward and reverse mappings together; reject on the first conflict.",
+      "python": "Compare canonical patterns produced by dict-based enumeration.",
+      "source_difficulties": {
+        "Chapter2/easy/word_pattern.py": "easy",
+        "data structures/strings/hashmap/medium_word_pattern.py": "medium"
+      },
+      "status": "worked-edition"
+    }
+  },
+  "source_paths": {
+    "Chapter1/easy/move_zeroes.py": "problems/two-pointers/easy/move_zeroes.py",
+    "Chapter1/easy/remove_duplicates_sorted_array.py": "problems/two-pointers/easy/remove_duplicates_sorted_array.py",
+    "Chapter1/easy/reverse_string.py": "problems/two-pointers/easy/reverse_string.py",
+    "Chapter1/easy/two_sum.py": "problems/two-pointers/easy/two_sum.py",
+    "Chapter1/easy/valid_palindrome.py": "problems/two-pointers/easy/valid_palindrome.py",
+    "Chapter1/hard/four_sum.py": "problems/two-pointers/medium/four_sum.py",
+    "Chapter1/hard/minimum_window_substring.py": "problems/sliding-windows/hard/minimum_window_substring.py",
+    "Chapter1/hard/substring_with_concatenation_of_words.py": "problems/sliding-windows/hard/substring_with_concatenation_of_words.py",
+    "Chapter1/hard/trapping_rain_water.py": "problems/two-pointers/hard/trapping_rain_water.py",
+    "Chapter1/medium/container_with_most_water.py": "problems/two-pointers/medium/container_with_most_water.py",
+    "Chapter1/medium/partition_labels.py": "problems/greedy/medium/partition_labels.py",
+    "Chapter1/medium/sort_colors.py": "problems/sorting/medium/sort_colors.py",
+    "Chapter1/medium/squares_of_sorted_array.py": "problems/two-pointers/easy/squares_of_sorted_array.py",
+    "Chapter1/medium/three_sum.py": "problems/two-pointers/medium/three_sum.py",
+    "Chapter2/easy/contains_duplicate.py": "problems/hash-maps-and-sets/easy/contains_duplicate.py",
+    "Chapter2/easy/first_unique_character.py": "problems/hash-maps-and-sets/easy/first_unique_character.py",
+    "Chapter2/easy/happy_number.py": "problems/fast-and-slow-pointers/easy/happy_number.py",
+    "Chapter2/easy/intersection_of_two_arrays.py": "problems/hash-maps-and-sets/easy/intersection_of_two_arrays.py",
+    "Chapter2/easy/jewel_and_stone.py": "problems/hash-maps-and-sets/easy/jewel_and_stone.py",
+    "Chapter2/easy/valid_anagram.py": "problems/hash-maps-and-sets/easy/valid_anagram.py",
+    "Chapter2/easy/word_pattern.py": "problems/hash-maps-and-sets/easy/word_pattern.py",
+    "Chapter2/hard/lfu_cache.py": "problems/hash-maps-and-sets/hard/lfu_cache.py",
+    "Chapter2/hard/longest_duplicate_substring.py": "problems/string-matching-and-encoding/hard/longest_duplicate_substring.py",
+    "Chapter2/medium/design_hashmap.py": "problems/hash-maps-and-sets/medium/design_hashmap.py",
+    "Chapter2/medium/encode_decode_tinyurl.py": "problems/hash-maps-and-sets/medium/encode_decode_tinyurl.py",
+    "Chapter2/medium/four_sum_ii.py": "problems/hash-maps-and-sets/medium/four_sum_ii.py",
+    "Chapter2/medium/group_anagrams.py": "problems/hash-maps-and-sets/medium/group_anagrams.py",
+    "Chapter2/medium/longest_consecutive_sequence.py": "problems/hash-maps-and-sets/medium/longest_consecutive_sequence.py",
+    "Chapter2/medium/longest_substring_without_repeating.py": "problems/sliding-windows/medium/longest_substring_without_repeating.py",
+    "Chapter2/medium/subarray_sum_equals_k.py": "problems/prefix-sums/medium/subarray_sum_equals_k.py",
+    "Chapter2/medium/top_k_frequent_elements.py": "problems/heaps-and-top-k/medium/top_k_frequent_elements.py",
+    "Chapter3/easy/intersection_of_two_linked_lists.py": "problems/linked-lists/easy/intersection_of_two_linked_lists.py",
+    "Chapter3/easy/linked_list_cycle.py": "problems/fast-and-slow-pointers/easy/linked_list_cycle.py",
+    "Chapter3/easy/merge_two_sorted_lists.py": "problems/linked-lists/easy/merge_two_sorted_lists.py",
+    "Chapter3/easy/middle_of_linked_list.py": "problems/fast-and-slow-pointers/easy/middle_of_linked_list.py",
+    "Chapter3/easy/palindrome_linked_list.py": "problems/fast-and-slow-pointers/easy/palindrome_linked_list.py",
+    "Chapter3/easy/remove_duplicates_sorted_list.py": "problems/linked-lists/easy/remove_duplicates_sorted_list.py",
+    "Chapter3/easy/remove_linked_list_elements.py": "problems/linked-lists/easy/remove_linked_list_elements.py",
+    "Chapter3/easy/reverse_linked_list.py": "problems/linked-lists/easy/reverse_linked_list.py",
+    "Chapter4/easy/happy_number.py": "problems/fast-and-slow-pointers/easy/happy_number_fast_slow.py",
+    "Chapter4/easy/linked_list_cycle.py": "problems/fast-and-slow-pointers/easy/linked_list_cycle_fast_slow.py",
+    "Chapter4/easy/middle_of_linked_list.py": "problems/fast-and-slow-pointers/easy/middle_of_linked_list_fast_slow.py",
+    "Chapter4/easy/palindrome_linked_list.py": "problems/fast-and-slow-pointers/easy/palindrome_linked_list_fast_slow.py",
+    "Chapter5/easy/contains_nearby_duplicate.py": "problems/sliding-windows/easy/contains_nearby_duplicate.py",
+    "Chapter5/easy/max_average_subarray.py": "problems/sliding-windows/easy/max_average_subarray.py",
+    "Chapter5/easy/max_vowels_in_substring.py": "problems/sliding-windows/easy/max_vowels_in_substring.py",
+    "Chapter5/easy/min_difference_k_scores.py": "problems/sorting/easy/min_difference_k_scores.py",
+    "Chapter6/easy/binary_search.py": "problems/binary-search/easy/binary_search.py",
+    "Chapter6/easy/search_insert_position.py": "problems/binary-search/easy/search_insert_position.py",
+    "Chapter7/easy/baseball_game.py": "problems/stacks-and-queues/easy/baseball_game.py",
+    "Chapter7/easy/next_greater_element.py": "problems/stacks-and-queues/easy/next_greater_element.py",
+    "Chapter7/easy/valid_parenthesis.py": "problems/stacks-and-queues/easy/valid_parenthesis.py",
+    "data structures/strings/back_tracking/medium_generate_parenthesis.py": "problems/backtracking/medium/generate_parenthesis.py",
+    "data structures/strings/back_tracking/medium_letter_combination_phone.py": "problems/backtracking/medium/letter_combination_phone.py",
+    "data structures/strings/dynamic_programmings/medium_longest_common_subsequence.py": "problems/dynamic-programming/medium/longest_common_subsequence.py",
+    "data structures/strings/dynamic_programmings/medium_longest_palindromic_substring.py": "problems/dynamic-programming/medium/longest_palindromic_substring.py",
+    "data structures/strings/greedy/easy_longest_palindrome_buildable.py": "problems/greedy/easy/longest_palindrome_buildable.py",
+    "data structures/strings/hashmap/easy_first_non_repeating_character.py": "problems/hash-maps-and-sets/easy/first_non_repeating_character.py",
+    "data structures/strings/hashmap/easy_is_anagram.py": "problems/hash-maps-and-sets/easy/is_anagram_string_guide.py",
+    "data structures/strings/hashmap/medium_isomorphic_strings.py": "problems/hash-maps-and-sets/medium/isomorphic_strings.py",
+    "data structures/strings/hashmap/medium_word_pattern.py": "problems/hash-maps-and-sets/easy/word_pattern_string_guide.py",
+    "data structures/strings/pattern_matching/easy_strstr_first_occurrence.py": "problems/string-matching-and-encoding/easy/strstr_first_occurrence.py",
+    "data structures/strings/pattern_matching/medium_kmp_search.py": "problems/string-matching-and-encoding/medium/kmp_search.py",
+    "data structures/strings/prefix_suffix/medium_encode_decode_strings.py": "problems/string-matching-and-encoding/medium/encode_decode_strings.py",
+    "data structures/strings/prefix_suffix/medium_repeated_substring_pattern.py": "problems/string-matching-and-encoding/medium/repeated_substring_pattern.py",
+    "data structures/strings/sliding_window/easy_max_vowels_fixed_window.py": "problems/sliding-windows/easy/max_vowels_fixed_window.py",
+    "data structures/strings/sliding_window/medium_character_replacement.py": "problems/sliding-windows/medium/character_replacement.py",
+    "data structures/strings/sliding_window/medium_longest_k_distinct.py": "problems/sliding-windows/medium/longest_k_distinct.py",
+    "data structures/strings/sliding_window/medium_minimum_window_substring.py": "problems/sliding-windows/hard/minimum_window_substring_string_guide.py",
+    "data structures/strings/stack/easy_valid_parenthesis.py": "problems/stacks-and-queues/easy/valid_parenthesis_string_guide.py",
+    "data structures/strings/stack/medium_simplify_unix_path.py": "problems/stacks-and-queues/medium/simplify_unix_path.py"
+  },
+  "source_revision": "8ae4b8540769f0d0e5ec0ca3867bb698d18b9df1",
+  "tutorial_paths": {
+    "data structures/arrays.py": "tutorials/arrays.py",
+    "data structures/collections.py": "tutorials/collections.py",
+    "data structures/dictionary.py": "tutorials/dictionary.py",
+    "data structures/heaps.py": "tutorials/heaps.py",
+    "data structures/lists.py": "tutorials/lists.py",
+    "data structures/sets.py": "tutorials/sets.py",
+    "data structures/strings.py": "tutorials/strings.py",
+    "data structures/tuples.py": "tutorials/tuples.py",
+    "python_basics/strings.py": "tutorials/python_basics/strings.py"
+  }
+}
