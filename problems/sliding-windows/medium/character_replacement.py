@@ -1,71 +1,76 @@
-"""=============================================================================
-MEDIUM (Sliding Window): Longest Repeating Character Replacement
-=============================================================================
+"""Character Replacement
 
-You are given a string `s` and an integer `k`.
-
-You can choose any character in the string and change it to any other character
-at most `k` times.
-
-Return the length of the longest substring you can obtain that contains the
-same character after at most `k` replacements.
+Problem:
+Given a string and a nonnegative integer k, find the longest substring you can
+turn into a single repeated character by changing at most k characters.
+Uppercase and lowercase are different. Return its length.
 
 Examples:
-    s = "ABAB", k = 2 -> 4  (make all 'A' or all 'B')
-    s = "AABABBA", k = 1 -> 4
+- "AAAABXYZ", k=1 -> 5.
+- "BBAABBB", k=2 -> 7.
+- "aAa", k=0 -> 1.
 
-Constraints (assume):
-    - 0 <= len(s) <= 200_000
-
-Target:
-    - Time:  O(n)
-    - Space: O(k)
-
-Hints:
-    - Sliding window.
-    - Track counts of chars in the window.
-    - Keep `max_freq` = maximum frequency of any single char in the window.
-    - Window is valid if: (window_len - max_freq) <= k
-
------------------------------------------------------------------------------
-YOUR TASK
------------------------------------------------------------------------------
-Implement `character_replacement(s: str, k: int) -> int`.
+Approaches:
+- Baseline: Restart from every left edge.
+- Python / standard library: Ask Counter for the live mode.
+- Optimized: Track a historical peak.
 """
 
-from __future__ import annotations
+from collections import Counter
 
 
-def character_replacement(s: str, k: int) -> int:
-    """Return longest length after at most k replacements to make all chars same."""
-
-    counts: dict[str, int] = {}
-    left = 0
-    max_freq = 0
+def baseline(text, k):
+    """Expected O(n²) time and O(d) auxiliary space for d distinct characters."""
     best = 0
-    for right, ch in enumerate(s):
-        counts[ch] = counts.get(ch, 0) + 1
-        max_freq = max(max_freq, counts[ch])
+    for left in range(len(text)):
+        counts = {}
+        most = 0
+        for right in range(left, len(text)):
+            char = text[right]
+            counts[char] = counts.get(char, 0) + 1
+            most = max(most, counts[char])
+            width = right - left + 1
+            if width - most > k:
+                break
+            best = max(best, width)
+    return best
 
-        # If we need to replace more than k chars, shrink the window.
-        while (right - left + 1) - max_freq > k:
-            counts[s[left]] -= 1
+
+def pythonic(text, k):
+    """Expected O(n*d) time, O(d) auxiliary space: recompute the live mode."""
+    counts = Counter()
+    left = best = 0
+    for right, char in enumerate(text):
+        counts[char] += 1
+        while right - left + 1 - counts.most_common(1)[0][1] > k:
+            outgoing = text[left]
+            counts[outgoing] -= 1
+            if counts[outgoing] == 0:
+                del counts[outgoing]
             left += 1
-
         best = max(best, right - left + 1)
     return best
 
 
-def _run_samples() -> None:
-    assert character_replacement("ABAB", 2) == 4
-    assert character_replacement("AABABBA", 1) == 4
-
-    # Edge cases
-    assert character_replacement("", 5) == 0
-    assert character_replacement("AAAA", 0) == 4
-    assert character_replacement("ABCDE", 1) == 2
+def optimized(text, k):
+    """Expected O(n) time, O(d) auxiliary space: keep the historical mode count."""
+    counts = {}
+    left = best = peak = 0
+    for right, char in enumerate(text):
+        counts[char] = counts.get(char, 0) + 1
+        peak = max(peak, counts[char])
+        # A stale peak may keep an invalid window, but cannot grow the record.
+        while right - left + 1 - peak > k:
+            counts[text[left]] -= 1
+            left += 1
+        best = max(best, right - left + 1)
+    return best
 
 
 if __name__ == "__main__":
-    _run_samples()
-    print("All sample tests passed.")
+    for solve in (baseline, pythonic, optimized):
+        assert solve("AAAABXYZ", 1) == 5
+        assert solve("BBAABBB", 2) == 7
+        assert solve("XAYZZZ", 0) == 3
+        assert solve("aAa", 0) == 1
+        assert solve("", 4) == 0

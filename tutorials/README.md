@@ -210,7 +210,7 @@ Specialized container data types that extend the built-in containers with additi
 
 ## Practice Problems
 
-These tables are the historical practice roadmap, not a list of published files. A plain filename is a guide-only entry. A **related source** link means the repository contains an exercise for that idea; it may not implement the exact variant described here. See the [category index](../README.md#categories) for original source variants and worked editions.
+These tables are the historical practice roadmap, not a list of published files. A plain filename is a guide-only entry. A **related source** link points to the current exercise for that idea; it may not implement the exact variant described here. See the [category index](../README.md#categories) for the current exercise files.
 
 ### Lists Practice
 
@@ -304,8 +304,8 @@ These tables are the historical practice roadmap, not a list of published files.
 #### `pattern_matching/`
 | File | Difficulty | Topic |
 |------|-----------|-------|
-| `easy_strstr_first_occurrence.py` ([related source](../problems/string-matching-and-encoding/easy/strstr_first_occurrence.py)) | Easy | Naive O(n·m) substring search |
-| `medium_kmp_search.py` ([related source](../problems/string-matching-and-encoding/easy/strstr_first_occurrence.py)) | Medium | KMP — O(n + m) LPS-table search |
+| `easy_strstr_first_occurrence.py` ([related source](../problems/string-matching-and-encoding/medium/kmp_search.py)) | Easy | Naive O(n·m) substring search |
+| `medium_kmp_search.py` ([related source](../problems/string-matching-and-encoding/medium/kmp_search.py)) | Medium | KMP — O(n + m) LPS-table search |
 
 #### `prefix_suffix/`
 | File | Difficulty | Topic |
@@ -443,14 +443,14 @@ These tables are the historical practice roadmap, not a list of published files.
 
 ## How to Run
 
-Run tutorials or legacy practice sources from the repository root. The legacy exercises use Python 3.9+ annotations:
+Run tutorials or exercises from the repository root:
 
 ```bash
 # Tutorials
 python3 tutorials/lists.py
 python3 tutorials/heaps.py
 
-# Legacy practice source
+# Practice exercise
 python3 problems/two-pointers/easy/move_zeroes.py
 ```
 

@@ -1,39 +1,39 @@
 # Data structures and algorithms in Python
 
-Use the [worked editions](worked_examples/) to compare a baseline, a Python or standard-library approach, and an optimized approach under the same problem contract. Some problems have no direct built-in solution; their editions say so and show an idiomatic helper instead.
-
-The [source archive](problems/) preserves the original programs, including multiple versions of some exercises. These are historical references: they can differ in return values, input assumptions, or complexity claims. Use [the manifest](practice_manifest.json) to find the reviewed edition and caveats for a particular exercise.
+Start in [`problems/`](problems/). There is **one file per exercise**, grouped by topic and difficulty. Each file starts with the problem statement and input/output examples. The worked files then put the baseline, Python or standard-library approach, and optimized approach together. When there is no direct built-in, the Python approach demonstrates a useful helper or a straightforward alternative.
 
 ## Categories
 
-| Category | Original sources | Worked editions |
-|---|---|---|
-| Two pointers | [Compaction, reversal, and n-sum](problems/two-pointers/) | [Compare approaches](worked_examples/pointers/) |
-| Sliding windows | [Fixed and variable windows](problems/sliding-windows/) | [Compare approaches](worked_examples/window/) |
-| Hash maps and sets | [Membership, counting, and design](problems/hash-maps-and-sets/) | [Compare approaches](worked_examples/hash/) |
-| Prefix sums | [Count subarrays summing to k](problems/prefix-sums/) | [Compare approaches](worked_examples/prefix/) |
-| String matching and encoding | [Search, repeated patterns, and codecs](problems/string-matching-and-encoding/) | [Compare approaches](worked_examples/matching/) |
-| Sorting | [Categorical sort and score ranges](problems/sorting/) | [Compare approaches](worked_examples/sorting/) |
-| Binary search | [Exact search and insertion point](problems/binary-search/) | [Compare approaches](worked_examples/search/) |
-| Linked lists | [Traversal, merging, and rewiring](problems/linked-lists/) | [Compare approaches](worked_examples/linked/) |
-| Fast and slow pointers | [Cycles, middle nodes, and palindromes](problems/fast-and-slow-pointers/) | [Compare approaches](worked_examples/cycle/) |
-| Stacks and queues | [Bracket matching, scoring, and path cleanup](problems/stacks-and-queues/) | [Compare approaches](worked_examples/stack/) |
-| Heaps and top-k | [Most frequent elements](problems/heaps-and-top-k/) | [Compare approaches](worked_examples/heap/) |
-| Greedy algorithms | [Partition labels and buildable palindrome](problems/greedy/) | [Compare approaches](worked_examples/greedy/) |
-| Backtracking | [Parentheses and phone keypad combinations](problems/backtracking/) | [Compare approaches](worked_examples/backtracking/) |
-| Dynamic programming | [Common subsequences and palindromic substrings](problems/dynamic-programming/) | [Compare approaches](worked_examples/dp/) |
+| Category | Exercises |
+|---|---|
+| Two pointers | [Compaction, reversal, and n-sum](problems/two-pointers/) |
+| Sliding windows | [Fixed and variable windows](problems/sliding-windows/) |
+| Hash maps and sets | [Membership, counting, and design](problems/hash-maps-and-sets/) |
+| Prefix sums | [Count subarrays summing to k](problems/prefix-sums/) |
+| String matching and encoding | [Search, repeated patterns, and codecs](problems/string-matching-and-encoding/) |
+| Sorting | [Categorical sort and score ranges](problems/sorting/) |
+| Binary search | [Exact search and insertion point](problems/binary-search/) |
+| Linked lists | [Traversal, merging, and rewiring](problems/linked-lists/) |
+| Fast and slow pointers | [Cycles, middle nodes, and palindromes](problems/fast-and-slow-pointers/) |
+| Stacks and queues | [Bracket matching, scoring, and path cleanup](problems/stacks-and-queues/) |
+| Heaps and top-k | [Most frequent elements](problems/heaps-and-top-k/) |
+| Greedy algorithms | [Partition labels and buildable palindrome](problems/greedy/) |
+| Backtracking | [Parentheses and phone keypad combinations](problems/backtracking/) |
+| Dynamic programming | [Common subsequences and palindromic substrings](problems/dynamic-programming/) |
 
-Within each category, the source files are grouped by difficulty. The manifest records the reviewed difficulty for each exercise. Python container walkthroughs and embedded demos live separately in the [tutorials](tutorials/README.md).
+Python container walkthroughs and embedded demos live separately in the [tutorials](tutorials/README.md).
 
-## Running a worked edition
+## Running an exercise
 
-Use Python 3.8 or later and run the `code_path` listed in `practice_manifest.json` directly. Each worked program uses only the standard library and runs its assertions when executed, for example:
+Use Python 3.8 or later. Each worked program uses only the standard library and runs its assertions when executed, for example:
 
 ```shell
-python3 worked_examples/search/binary-search.py
+python3 problems/backtracking/medium/generate_parenthesis.py
 ```
 
-In the manifest, `source_revision` identifies the original snapshot used by `source_paths`. `legacy_exercises` associates stable IDs with their original variant paths. `review_status` records difficulty, contract, correctness caveats, and approach coverage in the archive. `lessons` lists only validated standalone editions, keyed by those same IDs; `code_path` is relative to the repository root. [Baseball scoring](problems/stacks-and-queues/easy/baseball_game.py) remains archive-only: the single-pass stack is already the natural solution, and a library wrapper would not add a useful comparison.
+[Baseball scoring](problems/stacks-and-queues/easy/baseball_game.py) has one stack solution rather than three artificial variations.
+
+The [practice manifest](practice_manifest.json) records reviewed difficulty and historical caveats in `review_status`, and detailed approach comparisons and `code_path` in `lessons`. Its `source_paths` maps each original path at `source_revision` to the current exercise file; multiple historical variants can map to the same file. The originals remain in the [Git snapshot](https://github.com/srinugsr2020/dsa_problems/tree/8ae4b8540769f0d0e5ec0ca3867bb698d18b9df1).
 
 ## Recommended next exercises (not published here)
 

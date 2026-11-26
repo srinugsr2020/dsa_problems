@@ -1,77 +1,93 @@
-"""=============================================================================
-MEDIUM (Backtracking): Generate Parentheses
-=============================================================================
+"""Generate Parentheses
 
-Given n pairs of parentheses, generate all combinations of well-formed
-(valid) parentheses.
+Problem:
+For a small nonnegative integer n, list every well-formed string made from
+exactly n pairs of parentheses in lexicographic order.
 
 Examples:
-    n = 1  ->  ["()"]
-    n = 2  ->  ["(())", "()()"]
-    n = 3  ->  ["((()))", "(()())", "(())()", "()(())", "()()()"]
+- n = 2 returns ["(())", "()()"].
+- n = 0 returns [""].
 
-Constraints:
-    - 1 <= n <= 8
+Approaches:
+- Brute force: Try every sequence, then check balance.
+- Python / standard library: Choose opening positions with itertools.combinations.
+- Optimized: Backtrack and prune invalid prefixes.
 
-Target:
-    - Time:  O(4^n / sqrt(n))   (Catalan number)
-    - Space: O(n)               (recursion depth)
-
-Hints:
-    - At each step, you can add '(' if open_count < n
-    - You can add ')' if close_count < open_count
-    - Backtrack when the current string reaches length 2*n
-
------------------------------------------------------------------------------
-YOUR TASK
------------------------------------------------------------------------------
-Implement `generate_parentheses(n: int) -> list[str]`.
+Python has no built-in that generates balanced parentheses directly.
 """
 
 from __future__ import annotations
 
+from itertools import combinations
+from typing import Iterable
 
-def generate_parentheses(n: int) -> list[str]:
-    """Return all valid combinations of n pairs of parentheses."""
 
-    result: list[str] = []
+def balanced(chars: Iterable[str]) -> bool:
+    depth = 0
+    for char in chars:
+        depth += 1 if char == "(" else -1
+        if depth < 0:
+            return False
+    return depth == 0
 
-    def _backtrack(current: list[str], open_count: int, close_count: int) -> None:
-        # Base case: we've placed all 2*n characters
-        if len(current) == 2 * n:
-            result.append("".join(current))
+
+def baseline(n: int) -> list[str]:
+    answer = []
+    path = []
+
+    def try_all() -> None:
+        if len(path) == 2 * n:
+            if balanced(path):
+                answer.append("".join(path))
             return
+        for choice in "()":
+            path.append(choice)
+            try_all()
+            path.pop()
 
-        # Choice 1: place '(' if we haven't used all n opens
-        if open_count < n:
-            current.append("(")
-            _backtrack(current, open_count + 1, close_count)
-            current.pop()  # backtrack
-
-        # Choice 2: place ')' if it won't create an invalid prefix
-        if close_count < open_count:
-            current.append(")")
-            _backtrack(current, open_count, close_count + 1)
-            current.pop()  # backtrack
-
-    _backtrack([], 0, 0)
-    return result
+    try_all()
+    return answer
 
 
-def _run_samples() -> None:
-    assert generate_parentheses(1) == ["()"]
-    assert generate_parentheses(2) == ["(())", "()()"]
-    assert generate_parentheses(3) == [
-        "((()))",
-        "(()())",
-        "(())()",
-        "()(())",
-        "()()()",
-    ]
-    # n = 0 edge case
-    assert generate_parentheses(0) == [""]
+def python_combinations(n: int) -> list[str]:
+    answer = []
+    for opens in combinations(range(2 * n), n):
+        path = [")"] * (2 * n)
+        for index in opens:
+            path[index] = "("
+        if balanced(path):
+            answer.append("".join(path))
+    return answer
+
+
+def optimized(n: int) -> list[str]:
+    answer = []
+    path = []
+
+    def build(opens: int, closes: int) -> None:
+        if closes == n:
+            answer.append("".join(path))
+            return
+        if opens < n:
+            path.append("(")
+            build(opens + 1, closes)
+            path.pop()
+        if closes < opens:
+            path.append(")")
+            build(opens, closes + 1)
+            path.pop()
+
+    build(0, 0)
+    return answer
+
+
+generate_parentheses = optimized
 
 
 if __name__ == "__main__":
-    _run_samples()
-    print("All sample tests passed.")
+    for generate in baseline, python_combinations, generate_parentheses:
+        assert generate(0) == [""]
+        assert generate(3) == ["((()))", "(()())", "(())()", "()(())", "()()()"]
+        result = generate(4)
+        assert len(result) == len(set(result)) == 14
+        assert all(len(value) == 8 and balanced(value) for value in result)

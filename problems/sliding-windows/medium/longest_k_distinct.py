@@ -1,83 +1,77 @@
-"""=============================================================================
-MEDIUM (Sliding Window): Longest Substring with At Most K Distinct Characters
-=============================================================================
+"""Longest Substring with at Most k Distinct Characters
 
-Given a string `s` and an integer `k`, return the length of the longest
-substring that contains at most `k` distinct characters.
+Problem:
+Find the longest substring containing at most k different characters. A
+substring must be contiguous. Return its length, or zero when the input string
+is empty or k is not positive.
 
 Examples:
-    s = "eceba", k = 2 -> 3  ("ece")
-    s = "aa", k = 1    -> 2  ("aa")
+- "aabaacc", k=2 -> 5.
+- "abcbbba", k=2 -> 5.
+- "abc", k=0 -> 0.
 
-Constraints (assume):
-    - 0 <= len(s) <= 200_000
-    - 0 <= k <= 200_000
-
-Target:
-    - Time:  O(n)
-    - Space: O(k)
-
-Hints:
-    - Sliding window with counts of characters.
-    - Expand right; while distinct_count > k, shrink left.
-
------------------------------------------------------------------------------
-YOUR TASK
------------------------------------------------------------------------------
-Implement `longest_substring_at_most_k_distinct(s: str, k: int) -> int`.
+Approaches:
+- Baseline: Restart the set at every left edge.
+- Python / standard library: Evict the least recent last occurrence.
+- Optimized: Shrink a frequency window.
 """
 
-from __future__ import annotations
+from collections import OrderedDict
 
 
-def _dec_count(counts: dict[str, int], ch: str) -> None:
-    """Decrement counts[ch] and delete the key when its count reaches 0."""
-
-    counts[ch] -= 1
-    if counts[ch] == 0:
-        del counts[ch]
-
-
-def longest_substring_at_most_k_distinct(s: str, k: int) -> int:
-    """Return the max length of a substring with <= k distinct chars."""
-
-    # If k == 0, no characters are allowed in the window.
-    if k <= 0 or not s:
+def baseline(text, k):
+    """Expected O(n²) time and O(min(d,k+1)) auxiliary space for k > 0."""
+    if k <= 0:
         return 0
-
-    # Sliding window [left..right]
-    # `counts` stores character frequencies inside the current window.
-    counts: dict[str, int] = {}
-    left = 0
     best = 0
-
-    for right, ch in enumerate(s):
-        # Expand the window to include s[right].
-        counts[ch] = counts.get(ch, 0) + 1
-
-        # If we have too many distinct characters, shrink from the left
-        # until the window becomes valid again.
-        while len(counts) > k:
-            left_ch = s[left]
-            _dec_count(counts, left_ch)
-            left += 1
-
-        # Window is valid here: update the best length.
-        best = max(best, right - left + 1)
-
+    for left in range(len(text)):
+        seen = set()
+        for right in range(left, len(text)):
+            seen.add(text[right])
+            if len(seen) > k:
+                break
+            best = max(best, right - left + 1)
     return best
 
 
-def _run_samples() -> None:
-    assert longest_substring_at_most_k_distinct("eceba", 2) == 3
-    assert longest_substring_at_most_k_distinct("aa", 1) == 2
+def pythonic(text, k):
+    """Expected O(n) time and O(min(d,k+1)) auxiliary space for k > 0."""
+    if k <= 0:
+        return 0
+    last_seen = OrderedDict()
+    left = best = 0
+    for right, char in enumerate(text):
+        last_seen[char] = right
+        last_seen.move_to_end(char)
+        if len(last_seen) > k:
+            _, last_index = last_seen.popitem(last=False)
+            left = last_index + 1
+        best = max(best, right - left + 1)
+    return best
 
-    # Edge cases
-    assert longest_substring_at_most_k_distinct("", 2) == 0
-    assert longest_substring_at_most_k_distinct("abc", 0) == 0
-    assert longest_substring_at_most_k_distinct("abc", 10) == 3
+
+def optimized(text, k):
+    """Expected O(n) time and O(min(d,k+1)) auxiliary space for k > 0."""
+    if k <= 0:
+        return 0
+    counts = {}
+    left = best = 0
+    for right, char in enumerate(text):
+        counts[char] = counts.get(char, 0) + 1
+        while len(counts) > k:
+            outgoing = text[left]
+            counts[outgoing] -= 1
+            if counts[outgoing] == 0:
+                del counts[outgoing]
+            left += 1
+        best = max(best, right - left + 1)
+    return best
 
 
 if __name__ == "__main__":
-    _run_samples()
-    print("All sample tests passed.")
+    for solve in (baseline, pythonic, optimized):
+        assert solve("aabaacc", 2) == 5
+        assert solve("abcbbba", 2) == 5
+        assert solve("😀😀ββ", 1) == 2
+        assert solve("abc", 9) == 3
+        assert solve("abc", 0) == solve("abc", -1) == solve("", 2) == 0

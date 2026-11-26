@@ -1,68 +1,51 @@
-"""=============================================================================
-MEDIUM (Hash Map): Isomorphic Strings
-=============================================================================
+"""Isomorphic Strings
 
-Two strings `s` and `t` are isomorphic if the characters in `s` can be replaced
-to get `t`, with these rules:
-
-    - Each character in `s` maps to exactly one character in `t`.
-    - No two different characters in `s` may map to the same character in `t`.
+Problem:
+Decide whether one string can become the other by consistently renaming its
+characters. Each character must always map to the same character, and two
+different characters cannot map to the same one. Strings of different lengths
+return False.
 
 Examples:
-    s = "egg", t = "add"   -> True
-    s = "foo", t = "bar"   -> False
-    s = "paper", t = "title" -> True
+- "ååb" and "雪雪s" -> True
+- "ab" and "abb" -> False
+- "ab" and "aa" -> False
 
-Constraints (assume):
-    - 0 <= len(s), len(t) <= 200_000
-
-Target:
-    - Time:  O(n)
-    - Space: O(k)
-
-Hints:
-    - Maintain two maps to enforce one-to-one mapping:
-        s_to_t and t_to_s
-
------------------------------------------------------------------------------
-YOUR TASK
------------------------------------------------------------------------------
-Implement `is_isomorphic(s: str, t: str) -> bool`.
+Approaches:
+- Baseline: Compare pairwise equality.
+- Python / standard library: Compare canonical IDs.
+- Optimized: Compare last-seen indices.
 """
 
-from __future__ import annotations
+
+def baseline(first, second):
+    return len(first) == len(second) and all(
+        (first[i] == first[j]) == (second[i] == second[j])
+        for j in range(len(first)) for i in range(j)
+    )
 
 
-def is_isomorphic(s: str, t: str) -> bool:
-    """Return True if s and t are isomorphic."""
+def pythonic(first, second):
+    def signature(text):
+        ids = {}
+        return [ids.setdefault(c, len(ids)) for c in text]
 
-    # TODO: Implement.
-    s_to_t = {}
-    t_to_s = {}
-    for ch_s, ch_t in zip(s, t):
-        if ch_s in s_to_t:
-            if s_to_t[ch_s] != ch_t:
-                return False
-        else:
-            s_to_t[ch_s] = ch_t
-        if ch_t in t_to_s:
-            if t_to_s[ch_t] != ch_s:
-                return False
-        else:
-            t_to_s[ch_t] = ch_s
+    return signature(first) == signature(second)
+
+
+def optimized(first, second):
+    if len(first) != len(second):
+        return False
+    seen_first, seen_second = {}, {}
+    for i, (a, b) in enumerate(zip(first, second)):
+        if seen_first.get(a) != seen_second.get(b):
+            return False
+        seen_first[a] = seen_second[b] = i
     return True
 
 
-def _run_samples() -> None:
-    assert is_isomorphic("egg", "add") is True
-    assert is_isomorphic("foo", "bar") is False
-    assert is_isomorphic("paper", "title") is True
-
-    # Edge cases
-    assert is_isomorphic("", "") is True
-    assert is_isomorphic("ab", "aa") is False
-
-
 if __name__ == "__main__":
-    _run_samples()
-    print("All sample tests passed.")
+    for solve in (baseline, pythonic, optimized):
+        assert solve("ååb", "雪雪s") and solve("", "")
+        assert not solve("", "x") and not solve("ab", "abb")
+        assert not solve("abb", "ccc") and not solve("xx", "xy")

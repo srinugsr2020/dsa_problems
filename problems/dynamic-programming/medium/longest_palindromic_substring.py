@@ -1,74 +1,64 @@
-"""=============================================================================
-MEDIUM (Dynamic Programming): Longest Palindromic Substring
-=============================================================================
+"""Longest Palindromic Substring
 
-Given a string s, return the longest substring that is a palindrome.
+Problem:
+Find the longest substring that reads the same forward and backward. The
+characters must be consecutive. Return the leftmost match if several have the
+same maximum length, or an empty string if the input is empty.
 
 Examples:
-    s = "babad"  ->  "bab"  (or "aba" — both valid)
-    s = "cbbd"   ->  "bb"
-    s = "a"      ->  "a"
+- "cabbad" returns "abba", which reads the same forward and backward.
+- "abacdc" returns "aba": "cdc" has the same length but starts later.
 
-Constraints:
-    - 1 <= len(s) <= 1000
-
-Target (expand-around-centre approach):
-    - Time:  O(n^2)
-    - Space: O(1)
-
-Hints:
-    - A palindrome mirrors around its centre
-    - Centres can be between characters (even-length) or on characters (odd)
-    - Expand outward while characters match
-
------------------------------------------------------------------------------
-YOUR TASK
------------------------------------------------------------------------------
-Implement `longest_palindrome(s: str) -> str`.
+Approaches:
+- Baseline: Check substring intervals.
+- Python / standard library: Compare slices against their reverse.
+- Optimized: Expand around odd and even centers.
 """
 
-from __future__ import annotations
+
+def is_palindrome(text: str, left: int, right: int) -> bool:
+    while left < right:
+        if text[left] != text[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
 
 
-def longest_palindrome(s: str) -> str:
-    """Return the longest palindromic substring of s."""
-
-    if len(s) <= 1:
-        return s
-
-    start = 0
-    max_len = 1
-
-    def _expand(left: int, right: int) -> None:
-        """Expand around centre and update best result."""
-        nonlocal start, max_len
-        while left >= 0 and right < len(s) and s[left] == s[right]:
-            length = right - left + 1
-            if length > max_len:
-                start = left
-                max_len = length
-            left -= 1
-            right += 1
-
-    for i in range(len(s)):
-        # Odd-length palindromes (single char centre)
-        _expand(i, i)
-        # Even-length palindromes (gap centre)
-        _expand(i, i + 1)
-
-    return s[start : start + max_len]
+def baseline(text: str) -> str:
+    best_start = best_length = 0
+    for start in range(len(text)):
+        for stop in range(start + 1, len(text) + 1):
+            if stop - start > best_length and is_palindrome(text, start, stop - 1):
+                best_start, best_length = start, stop - start
+    return text[best_start:best_start + best_length]
 
 
-def _run_samples() -> None:
-    assert longest_palindrome("babad") in ("bab", "aba")
-    assert longest_palindrome("cbbd") == "bb"
-    assert longest_palindrome("a") == "a"
-    assert longest_palindrome("ac") in ("a", "c")
-    assert longest_palindrome("racecar") == "racecar"
-    assert longest_palindrome("aacabdkacaa") == "aca"
-    assert longest_palindrome("") == ""
+def python_reverse(text: str) -> str:
+    for length in range(len(text), 0, -1):
+        for start in range(len(text) - length + 1):
+            candidate = text[start:start + length]
+            if candidate == candidate[::-1]:
+                return candidate
+    return ""
+
+
+def optimized(text: str) -> str:
+    best_start = best_length = 0
+    for center in range(len(text)):
+        for left, right in ((center, center), (center, center + 1)):
+            while left >= 0 and right < len(text) and text[left] == text[right]:
+                if right - left + 1 > best_length:
+                    best_start, best_length = left, right - left + 1
+                left -= 1
+                right += 1
+    return text[best_start:best_start + best_length]
 
 
 if __name__ == "__main__":
-    _run_samples()
-    print("All sample tests passed.")
+    for longest in baseline, python_reverse, optimized:
+        assert longest("xyz") == "x"
+        assert longest("cabbad") == "abba"
+        assert longest("abacdc") == "aba"
+        assert longest("aaaa") == "aaaa"
+        assert longest("") == ""

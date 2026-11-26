@@ -1,79 +1,79 @@
-"""
-Valid Parentheses (LeetCode #20)
+"""Valid Parentheses
 
 Problem:
-Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
-determine if the input string is valid.
-
-An input string is valid if:
-1. Open brackets must be closed by the same type of brackets.
-2. Open brackets must be closed in the correct order.
-3. Every close bracket has a corresponding open bracket of the same type.
+Decide whether parentheses, square brackets and braces are correctly matched and
+nested. Empty input is valid; reject non-bracket characters.
 
 Examples:
-    Input: s = "()"
-    Output: True
-    
-    Input: s = "()[]{}"
-    Output: True
-    
-    Input: s = "(]"
-    Output: False
-    
-    Input: s = "([])"
-    Output: True
+- {[()()]}[] returns True.
+- ([)] returns False because the pairs cross.
 
-Constraints:
-    - 1 <= s.length <= 10^4
-    - s consists of parentheses only '()[]{}'
+Approaches:
+- Baseline: Look backward for each opener.
+- Python / standard library: Reduce with a regex.
+- Optimized: Track unmatched openers.
 """
 
-from typing import List
+import re
 
 
-def is_valid(s: str) -> bool:
-    """
-    Check if parentheses are valid using a stack.
-    
-    Approach:
-    - Use stack to track opening brackets
-    - For closing bracket, check if it matches top of stack
-    - Valid if stack is empty at the end
-    
-    Time Complexity: O(n)
-    Space Complexity: O(n)
-    """
-    stack = []
-    mapping = {')': '(', '}': '{', ']': '['}
-    
-    for char in s:
-        if char in mapping:
-            # Closing bracket
-            if not stack or stack[-1] != mapping[char]:
+OPENERS = "([{"
+CLOSERS = {")": "(", "]": "[", "}": "{"}
+PAIR = re.compile(r"\(\)|\[\]|\{\}")
+
+
+def valid_by_looking_back(text):
+    depth = 0
+    for i, char in enumerate(text):
+        if char in OPENERS:
+            depth += 1
+        elif char in CLOSERS:
+            if not depth:
                 return False
-            stack.pop()
+            depth -= 1
+            skipped = 0
+            for j in range(i - 1, -1, -1):
+                previous = text[j]
+                if previous in CLOSERS:
+                    skipped += 1
+                elif skipped:
+                    skipped -= 1
+                else:
+                    if previous != CLOSERS[char]:
+                        return False
+                    break
         else:
-            # Opening bracket
-            stack.append(char)
-    
-    return len(stack) == 0
+            return False
+    return depth == 0
 
 
-# Test cases
+def valid_by_rewriting(text):
+    while text:
+        text, removed = PAIR.subn("", text)
+        if not removed:
+            return False
+    return True
+
+
+def valid_by_stack(text):
+    opened = []
+    for char in text:
+        if char in OPENERS:
+            opened.append(char)
+        elif char not in CLOSERS or not opened or opened.pop() != CLOSERS[char]:
+            return False
+    return not opened
+
+
 if __name__ == "__main__":
-    test_cases = [
-        ("()", True),
-        ("()[]{}", True),
-        ("(]", False),
-        ("([])", True),
-        ("([)]", False),
-        ("{[]}", True),
-        ("", True),
-        ("(", False),
-        (")", False),
-    ]
-    
-    for i, (s, expected) in enumerate(test_cases):
-        result = is_valid(s)
-        status = "✓" if result == expected else "✗"
-        print(f"Test {i + 1}: {status} is_valid('{s}') = {result}, expected {expected}")
+    for solve in (valid_by_looking_back, valid_by_rewriting, valid_by_stack):
+        assert solve("")
+        assert solve("{[()()]}[]")
+        assert not solve("([)]")
+        assert not solve("([]}")
+        assert not solve(")()(")
+        assert not solve("[[]")
+        assert not solve("([a])")
+        assert not solve("( )")
+    assert valid_by_stack("(" * 4096 + ")" * 4096)
+    assert not valid_by_stack("(" * 4096 + ")" * 4095 + "]")

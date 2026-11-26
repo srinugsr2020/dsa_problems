@@ -1,71 +1,63 @@
-"""=============================================================================
-MEDIUM (Dynamic Programming): Longest Common Subsequence
-=============================================================================
+"""Longest Common Subsequence
 
-Given two strings text1 and text2, return the length of their longest
-common subsequence (LCS). A subsequence is a sequence that can be derived
-by deleting zero or more characters without changing the relative order.
+Problem:
+Return the length of the longest subsequence shared by two strings. Keep
+relative character order but allow gaps.
 
 Examples:
-    text1 = "abcde", text2 = "ace"   ->  3   ("ace")
-    text1 = "abc",   text2 = "abc"   ->  3   ("abc")
-    text1 = "abc",   text2 = "def"   ->  0
+- "axbycx" and "abc" return 3: both contain "abc" in order, even though its
+  letters are not adjacent in the first string.
+- "acb" and "abc" return 2: "ab" is shared, but all three letters cannot match
+  in order.
 
-Constraints:
-    - 1 <= len(text1), len(text2) <= 1000
-
-Target:
-    - Time:  O(m * n)
-    - Space: O(min(m, n))  with space-optimised DP
-
-Hints:
-    - dp[i][j] = LCS of text1[:i] and text2[:j]
-    - If text1[i-1] == text2[j-1]: dp[i][j] = dp[i-1][j-1] + 1
-    - Else: dp[i][j] = max(dp[i-1][j], dp[i][j-1])
-
------------------------------------------------------------------------------
-YOUR TASK
------------------------------------------------------------------------------
-Implement `longest_common_subsequence(text1: str, text2: str) -> int`.
+Approaches:
+- Baseline: Try subsequences longest first.
+- Python / standard library: Build a prefix-length table.
+- Optimized: Overwrite one row.
 """
 
-from __future__ import annotations
+from itertools import combinations
 
 
-def longest_common_subsequence(text1: str, text2: str) -> int:
-    """Return the length of the longest common subsequence."""
+def baseline(first: str, second: str) -> int:
+    short, long = sorted((first, second), key=len)
+    for length in range(len(short), 0, -1):
+        for candidate in combinations(short, length):
+            remaining = iter(long)
+            if all(char in remaining for char in candidate):
+                return length
+    return 0
 
-    # Ensure text2 is the shorter string for space optimisation
-    if len(text1) < len(text2):
-        text1, text2 = text2, text1
 
-    m, n = len(text1), len(text2)
-
-    # Only need two rows: previous and current
-    prev = [0] * (n + 1)
-    curr = [0] * (n + 1)
-
-    for i in range(1, m + 1):
-        for j in range(1, n + 1):
-            if text1[i - 1] == text2[j - 1]:
-                curr[j] = prev[j - 1] + 1
+def python_table(first: str, second: str) -> int:
+    table = [[0] * (len(second) + 1) for _ in range(len(first) + 1)]
+    for i, char in enumerate(first, 1):
+        for j, other in enumerate(second, 1):
+            if char == other:
+                table[i][j] = table[i - 1][j - 1] + 1
             else:
-                curr[j] = max(prev[j], curr[j - 1])
-        # Swap rows
-        prev, curr = curr, [0] * (n + 1)
-
-    return prev[n]
+                table[i][j] = max(table[i - 1][j], table[i][j - 1])
+    return table[-1][-1]
 
 
-def _run_samples() -> None:
-    assert longest_common_subsequence("abcde", "ace") == 3
-    assert longest_common_subsequence("abc", "abc") == 3
-    assert longest_common_subsequence("abc", "def") == 0
-    assert longest_common_subsequence("", "abc") == 0
-    assert longest_common_subsequence("oxcpqrsvwf", "shmtulqrypy") == 2
-    assert longest_common_subsequence("abcba", "abcbcba") == 5
+def optimized(first: str, second: str) -> int:
+    short, long = sorted((first, second), key=len)
+    if not short:
+        return 0
+    row = [0] * (len(short) + 1)
+    for char in long:
+        northwest = 0
+        for col, other in enumerate(short, 1):
+            north = row[col]
+            row[col] = northwest + 1 if char == other else max(north, row[col - 1])
+            northwest = north
+    return row[-1]
 
 
 if __name__ == "__main__":
-    _run_samples()
-    print("All sample tests passed.")
+    for lcs in baseline, python_table, optimized:
+        assert lcs("axbycx", "abc") == lcs("abc", "axbycx") == 3
+        assert lcs("acb", "abc") == 2
+        assert lcs("aaaa", "aa") == 2
+        assert lcs("xyz", "abc") == 0
+        assert lcs("abc", "") == 0

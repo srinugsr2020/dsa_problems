@@ -1,71 +1,75 @@
-"""=============================================================================
-MEDIUM (Stack): Simplify Unix Path
-=============================================================================
+"""Simplify Path
 
-Given an absolute Unix-style path, simplify it.
-
-Rules:
-    - "/." means current directory -> ignore
-    - "/.." means parent directory -> pop one directory if possible
-    - Multiple slashes are treated as a single slash
-    - The result must:
-        - start with '/'
-        - not end with '/' (unless the result is '/')
+Problem:
+Lexically simplify a nonempty absolute Unix path without reading the filesystem.
+Collapse all slash runs, ignore exact dot components, and let each exact double
+dot cancel one directory without going above root.
 
 Examples:
-    path = "/home/"            -> "/home"
-    path = "/../"              -> "/"
-    path = "/home//foo/"       -> "/home/foo"
-    path = "/a/./b/../../c/"   -> "/c"
+- //srv//./share/ becomes /srv/share.
+- /a/../../.../.hidden becomes /.../.hidden.
 
-Constraints (assume):
-    - 0 <= len(path) <= 200_000
-
-Target:
-    - Time:  O(n)
-    - Space: O(n)
-
-Hints:
-    - Split by '/'
-    - Use a stack for directory names
-
------------------------------------------------------------------------------
-YOUR TASK
------------------------------------------------------------------------------
-Implement `simplify_path(path: str) -> str`.
+Approaches:
+- Baseline: Split then stack.
+- Python / standard library: Adapt posixpath.normpath.
+- Optimized: Count parents scanning backward.
 """
 
-from __future__ import annotations
+import posixpath
 
 
-def simplify_path(path: str) -> str:
-    """Return the simplified canonical path."""
-
-    # TODO: Implement.
+def simplify_by_splitting(path):
+    if not path.startswith("/"):
+        raise ValueError("expected an absolute path")
     stack = []
-    for part in path.split('/'):
-        if part == '' or part == '.':
-            continue
-        elif part == '..':
+    for part in path.split("/"):
+        if part == "..":
             if stack:
                 stack.pop()
-        else:
+        elif part not in ("", "."):
             stack.append(part)
-    return '/' + '/'.join(stack)
+    return "/" + "/".join(stack)
 
 
-def _run_samples() -> None:
-    assert simplify_path("/home/") == "/home"
-    assert simplify_path("/../") == "/"
-    assert simplify_path("/home//foo/") == "/home/foo"
-    assert simplify_path("/a/./b/../../c/") == "/c"
+def simplify_with_posixpath(path):
+    if not path.startswith("/"):
+        raise ValueError("expected an absolute path")
+    return posixpath.normpath("/" + path.lstrip("/"))
 
-    # Edge cases
-    assert simplify_path("/") == "/"
-    assert simplify_path("////") == "/"
-    assert simplify_path("/a/../../b/../c//.//") == "/c"
+
+def simplify_by_scanning_backward(path):
+    if not path.startswith("/"):
+        raise ValueError("expected an absolute path")
+    kept = []
+    parents = 0
+    end = len(path)
+    while end:
+        start = path.rfind("/", 0, end) + 1
+        size = end - start
+        if size == 2 and path[start] == "." and path[start + 1] == ".":
+            parents += 1
+        elif size and not (size == 1 and path[start] == "."):
+            if parents:
+                parents -= 1
+            else:
+                kept.append(path[start:end])
+        end = start - 1
+    return "/" + "/".join(reversed(kept))
 
 
 if __name__ == "__main__":
-    _run_samples()
-    print("All sample tests passed.")
+    for solve in (simplify_by_splitting, simplify_with_posixpath, simplify_by_scanning_backward):
+        assert solve("//srv//./share/") == "/srv/share"
+        assert solve("/../a/./b/../../c//") == "/c"
+        assert solve("/.../.hidden/a../.") == "/.../.hidden/a.."
+        assert solve("/a/../../b") == "/b"
+        assert solve("/a/../..////") == "/"
+        assert solve("////") == "/"
+        assert solve("/" + "large" * 2048 + "/../kept") == "/kept"
+        for path in ("", "a/../b"):
+            try:
+                solve(path)
+            except ValueError:
+                pass
+            else:
+                raise AssertionError(f"Accepted a non-absolute path: {path!r}")

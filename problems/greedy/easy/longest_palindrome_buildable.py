@@ -1,68 +1,53 @@
-"""=============================================================================
-EASY (Greedy/Hashing): Longest Palindrome You Can Build
-=============================================================================
+"""Longest Palindrome You Can Build
 
-Given a string `s`, return the length of the longest palindrome that can be
-built with the letters of `s`.
-
-You can reorder letters arbitrarily.
+Problem:
+Return the length of the longest palindrome that can be assembled by rearranging
+any of the input characters. Uppercase and lowercase are different.
 
 Examples:
-    s = "abccccdd" -> 7  ("dccaccd")
-    s = "a"        -> 1
+- abbccd returns 5.
+- Xx returns 1.
 
-Constraints (assume):
-    - 0 <= len(s) <= 200_000
-
-Target:
-    - Time:  O(n)
-    - Space: O(k)
-
-Hint:
-    - Pairs of characters contribute fully.
-    - At most one character with odd count can sit in the center.
-
------------------------------------------------------------------------------
-YOUR TASK
------------------------------------------------------------------------------
-Implement `longest_palindrome_length(s: str) -> int`.
+Approaches:
+- Baseline: Match an unmatched list.
+- Python / standard library: Count with Counter.
+- Optimized: Track parity only.
 """
 
-from __future__ import annotations
+from collections import Counter
 
 
-def longest_palindrome_length(s: str) -> int:
-    """Return the length of the longest palindrome buildable from s."""
-
-    # TODO: Implement.
-    counts: dict[str, int] = {}
-    for ch in s:
-        counts[ch] = counts.get(ch, 0) + 1
-
-    length = 0
-    odd_found = False
-    for count in counts.values():
-        if count % 2 == 0:
-            length += count
+def baseline(text: str) -> int:
+    unmatched = []
+    pairs = 0
+    for char in text:
+        if char in unmatched:
+            unmatched.remove(char)
+            pairs += 1
         else:
-            length += count - 1
-            odd_found = True
-
-    if odd_found:
-        length += 1
-
-    return length
+            unmatched.append(char)
+    return 2 * pairs + bool(unmatched)
 
 
-def _run_samples() -> None:
-    assert longest_palindrome_length("abccccdd") == 7
-    assert longest_palindrome_length("a") == 1
-    assert longest_palindrome_length("") == 0
+def python_counter(text: str) -> int:
+    counts = Counter(text)
+    unpaired = sum(count % 2 for count in counts.values())
+    return len(text) - unpaired + bool(unpaired)
 
-    # Case-sensitive
-    assert longest_palindrome_length("Aa") == 1
+
+def optimized(text: str) -> int:
+    odd = set()
+    for char in text:
+        if char in odd:
+            odd.remove(char)
+        else:
+            odd.add(char)
+    return len(text) - len(odd) + bool(odd)
 
 
 if __name__ == "__main__":
-    _run_samples()
-    print("All sample tests passed.")
+    for max_length in baseline, python_counter, optimized:
+        assert max_length("abbccd") == 5
+        assert max_length("abcabc") == 6
+        assert max_length("Xx") == 1
+        assert max_length("") == 0

@@ -1,56 +1,53 @@
-"""=============================================================================
-MEDIUM (Prefix/Suffix Trick): Repeated Substring Pattern
-=============================================================================
+"""Repeated Substring
 
-Given a string `s`, return True if it can be constructed by taking a substring
-of it and appending multiple copies of the substring together.
+Problem:
+Decide whether a string consists of at least two copies of a shorter, nonempty
+string.
 
 Examples:
-    s = "abab"      -> True   ("ab" + "ab")
-    s = "aba"       -> False
-    s = "abcabcabc" -> True   ("abc" repeated)
+- "é🙂é🙂é🙂" -> True
+- "ababa" -> False
+- "" and "a" -> False
 
-Constraints (assume):
-    - 0 <= len(s) <= 200_000
-
-Target:
-    - Time:  O(n)
-    - Space: O(n)
-
-Hints:
-    - Classic trick: if s is a repeated pattern, then s is a substring of
-      (s + s)[1:-1].
-    - Careful with small strings.
-
------------------------------------------------------------------------------
-YOUR TASK
------------------------------------------------------------------------------
-Implement `repeated_substring_pattern(s: str) -> bool`.
+Approaches:
+- Baseline: Try divisor periods.
+- Python / standard library: Search in the doubled string.
+- Optimized: Use the longest proper border.
 """
 
-from __future__ import annotations
+
+def baseline(text):
+    n = len(text)
+    for width in range(1, n // 2 + 1):
+        if n % width == 0 and all(text[i] == text[i % width] for i in range(width, n)):
+            return True
+    return False
 
 
-def repeated_substring_pattern(s: str) -> bool:
-    """Return True if s is made by repeating some non-empty substring."""
-
-    if not s:
+def pythonic(text):
+    if not text:
         return False
-    ss = s + s
-    return s in ss[1:-1]
+    n = len(text)
+    return (text + text).find(text, 1, 2 * n - 1) != -1
 
 
-def _run_samples() -> None:
-    assert repeated_substring_pattern("abab") is True
-    assert repeated_substring_pattern("aba") is False
-    assert repeated_substring_pattern("abcabcabc") is True
-
-    # Edge cases
-    assert repeated_substring_pattern("") is False
-    assert repeated_substring_pattern("a") is False
-    assert repeated_substring_pattern("aaaa") is True
+def optimized(text):
+    n = len(text)
+    if n < 2:
+        return False
+    borders = [0] * n
+    matched = 0
+    for i in range(1, n):
+        while matched and text[i] != text[matched]:
+            matched = borders[matched - 1]
+        if text[i] == text[matched]:
+            matched += 1
+        borders[i] = matched
+    return matched > 0 and n % (n - matched) == 0
 
 
 if __name__ == "__main__":
-    _run_samples()
-    print("All sample tests passed.")
+    for solve in (baseline, pythonic, optimized):
+        assert solve("é🙂é🙂é🙂") and solve("aaaa")
+        assert not solve("ababa") and not solve("abcabcab")
+        assert not solve("a") and not solve("")

@@ -1,112 +1,118 @@
-"""Medium (Prefix / Encoding): Encode and Decode a List of Strings
+"""Encode and Decode a List of Strings
 
 Problem:
-Design two functions:
-    encode(words)  -> single string
-    decode(s)      -> original list of strings
+Implement an encoder that turns a list of strings into one string and a decoder
+that restores the exact original list. Empty strings, Unicode and separator
+characters must survive. In this format each item is its character count, then
+#, then its contents. Reject malformed data.
 
-The encoding must be lossless — `decode(encode(words)) == words` for any list
-of strings, including strings that contain spaces, newlines, or any delimiter.
+Examples:
+- [] -> "", while [""] -> "0#"
+- ["é", "#"] -> "1#é1##"
+- "3#xy" is rejected as truncated.
 
-This is a classic distributed-systems interview question because it mirrors
-how data is serialized when passing a list of field values through a single
-channel (e.g., Kafka message body, S3 object name, URL query string).
-
-Example:
-    words = ["lint", "co|de", "love", "you"]
-    encode(words) -> some opaque string
-    decode(encode(words)) == ["lint", "co|de", "love", "you"]
-
-Pattern:
-- Length-prefix encoding: store `len(word)#` before each word.
-  This makes the delimiter unambiguous regardless of the word's content.
-
-Why NOT a simple delimiter (e.g., '|' or '\n')?
-- If any word contains the delimiter, splitting on it will corrupt the output.
-
-Data Engineering angle:
-- Exactly how Parquet / Arrow / Protocol Buffers encode variable-length string
-  columns: length-prefix so readers know how many bytes to consume per field.
-- Also used in Redis RESP protocol and in row-based binary formats.
+Approaches:
+- Baseline: Append frames and scan headers.
+- Python / standard library: Join frames and find separators.
+- Optimized: Write frames and parse with a cursor.
 """
 
-from __future__ import annotations
-
-from typing import List
+from io import StringIO
 
 
-# ---------------------------------------------------------------------------
-# Length-prefix codec
-# ---------------------------------------------------------------------------
+def _read_frame(data, start, separator):
+    header = data[start:separator]
+    if (not header or not header.isascii() or not header.isdecimal()
+            or (len(header) > 1 and header[0] == "0")
+            or len(header) > len(str(len(data)))):
+        raise ValueError("invalid length")
+    stop = separator + 1 + int(header)
+    if stop > len(data):
+        raise ValueError("truncated payload")
+    return data[separator + 1:stop], stop
 
-def encode(words: List[str]) -> str:
-    """Encode a list of strings into a single string using length-prefix format.
 
-    Format per word: "<length>#<word_bytes>"
-    '#' is the separator between the length integer and the word body.
-    It is safe because we always read exactly `length` bytes after '#'.
-
-    Time:  O(total characters)
-    Space: O(total characters)
-    """
-
-    parts: List[str] = []
+def encode_baseline(words):
+    result = ""
     for word in words:
-        # Prefix the word with its byte length so the decoder knows how far to read.
-        parts.append(f"{len(word)}#{word}")
-    return "".join(parts)
+        result += f"{len(word)}#{word}"
+    return result
 
 
-def decode(s: str) -> List[str]:
-    """Decode a length-prefix-encoded string back into the original list.
-
-    Time:  O(total characters)
-    Space: O(total characters)
-    """
-
-    words: List[str] = []
-    i = 0
-
-    while i < len(s):
-        # Find the '#' separator to extract the length.
-        j = i
-        while s[j] != "#":
-            j += 1
-
-        length = int(s[i:j])   # Number of characters in the next word
-
-        # Slice exactly `length` characters after the '#'.
-        word = s[j + 1 : j + 1 + length]
-        words.append(word)
-
-        # Advance past the length prefix, '#', and the word body.
-        i = j + 1 + length
-
-    return words
+def decode_baseline(data):
+    result = []
+    start = 0
+    while start < len(data):
+        separator = start
+        while separator < len(data) and data[separator] != "#":
+            separator += 1
+        if separator == len(data):
+            raise ValueError("missing separator")
+        word, start = _read_frame(data, start, separator)
+        result.append(word)
+    return result
 
 
-def _run_tests() -> None:
-    def roundtrip(words: List[str]) -> None:
-        """Assert that encode -> decode is lossless."""
-        assert decode(encode(words)) == words, (
-            f"Roundtrip failed for: {words!r}"
-        )
+def encode_pythonic(words):
+    return "".join(f"{len(word)}#{word}" for word in words)
 
-    roundtrip([])                                   # Empty list
-    roundtrip([""])                                 # Single empty string
-    roundtrip(["", ""])                             # Multiple empty strings
-    roundtrip(["hello", "world"])                   # Basic case
-    roundtrip(["lint", "co|de", "love", "you"])    # Contains pipe (non-safe delimiter)
-    roundtrip(["a#b", "c#d"])                       # Contains '#' inside words
-    roundtrip(["line1\nline2", "tab\there"])        # Newlines and tabs
-    roundtrip(["one"])                              # Single word
-    roundtrip(["12#abc", "5#xyz"])                  # Word looks like a length prefix
 
-    # Verify the encoded format uses length prefixes
-    encoded = encode(["ab", "cde"])
-    assert encoded == "2#ab3#cde", f"Unexpected format: {encoded!r}"
+def decode_pythonic(data):
+    result = []
+    start = 0
+    while start < len(data):
+        separator = data.find("#", start)
+        if separator == -1:
+            raise ValueError("missing separator")
+        word, start = _read_frame(data, start, separator)
+        result.append(word)
+    return result
+
+
+def encode_optimized(words):
+    writer = StringIO()
+    for word in words:
+        writer.write(f"{len(word)}#")
+        writer.write(word)
+    return writer.getvalue()
+
+
+def decode_optimized(data):
+    result = []
+    pos = 0
+    while pos < len(data):
+        start = pos
+        length = 0
+        while pos < len(data) and "0" <= data[pos] <= "9":
+            length = 10 * length + ord(data[pos]) - ord("0")
+            if length > len(data):
+                raise ValueError("impossible length")
+            pos += 1
+        if (pos == start or pos == len(data) or data[pos] != "#"
+                or (pos - start > 1 and data[start] == "0")):
+            raise ValueError("invalid header")
+        pos += 1
+        if pos + length > len(data):
+            raise ValueError("truncated payload")
+        result.append(data[pos:pos + length])
+        pos += length
+    return result
 
 
 if __name__ == "__main__":
-    _run_tests()
-    print("OK - medium_encode_decode_strings")
+    encoders = (encode_baseline, encode_pythonic, encode_optimized)
+    decoders = (decode_baseline, decode_pythonic, decode_optimized)
+    for encode in encoders:
+        for decode in decoders:
+            words = ["", "#02", "🙂é\n", "a" * 11, ""]
+            encoded = encode(iter(words))
+            assert encoded == "0#3##023#🙂é\n11#" + "a" * 11 + "0#"
+            assert decode(encoded) == words
+            assert decode(encode([])) == [] and decode(encode([""])) == [""]
+    for decode in decoders:
+        for invalid in ("#", "3#xy", "1", "-1#", "01#a", "２#ab", "0#x"):
+            try:
+                decode(invalid)
+            except ValueError:
+                continue
+            raise AssertionError(f"accepted malformed input {invalid!r}")

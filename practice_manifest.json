@@ -401,7 +401,7 @@
           "O(min(a,b)) besides output"
         ]
       ],
-      "code_path": "worked_examples/hash/array-intersection.py",
+      "code_path": "problems/hash-maps-and-sets/easy/intersection_of_two_arrays.py",
       "cue": "A common value should be emitted once, not once for every matching position.",
       "examples": [
         "`[9, 3, 3]` and `[5, 3, 9, 9]` \u2192 `[3, 9]` in any order",
@@ -436,7 +436,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/search/binary-search.py",
+      "code_path": "problems/binary-search/easy/binary_search.py",
       "cue": "Sorted and indexed input lets one midpoint comparison discard half the remaining positions.",
       "examples": [
         "`[-4, 0, 7, 11]`, target `7` returns `2`.",
@@ -468,7 +468,7 @@
           "O(d)"
         ]
       ],
-      "code_path": "worked_examples/window/character-replacement.py",
+      "code_path": "problems/sliding-windows/medium/character_replacement.py",
       "cue": "Replacing everything except the most frequent character costs the window width minus its highest count.",
       "examples": [
         "`\"AAAABXYZ\"`, `k=1` -> `5`.",
@@ -479,7 +479,7 @@
         "An exact live maximum gives a valid current window. A historical maximum may become stale: once that happens the width cannot set a new record unless the peak is raised by actual counts. Use the historical version for lengths, not for returning the current window as a witness.",
         "Here n is text length and d is the number of distinct code points. Counter and dictionary timings assume ordinary expected behavior."
       ],
-      "prompt": "Find the longest contiguous length that can be made all one character by replacing at most k positions, for k >= 0. Keep case distinctions."
+      "prompt": "Given a string and a nonnegative integer k, find the longest substring you can turn into a single repeated character by changing at most k characters. Uppercase and lowercase are different. Return its length."
     },
     "concatenated-words": {
       "approaches": [
@@ -505,7 +505,7 @@
           "O(d*w) including token copies, excluding output"
         ]
       ],
-      "code_path": "worked_examples/window/concatenated-words.py",
+      "code_path": "problems/sliding-windows/hard/substring_with_concatenation_of_words.py",
       "cue": "Start one independent word-step scan for each possible offset modulo the word width.",
       "examples": [
         "`\"aaaaa\"`, `['aa', 'aa']` -> `[0, 1]` in either order.",
@@ -516,7 +516,7 @@
         "Unknown words reset a residue-class window, while a surplus removes words from its left until the cap holds. Once all counts are bounded, the desired number of words forces every required count to match.",
         "Here n is text length, B is the number of words, w is their common width, and d is the number of distinct words. Token slices and their hashing cost O(w); assume ordinary expected dictionary performance. Space excludes the list of starts."
       ],
-      "prompt": "Return all zero-based starts whose substring is formed by using every supplied word occurrence consecutively and in any order. Matches may overlap; result order is arbitrary. Words must share a positive width; an empty word list has no matches."
+      "prompt": "Given a string and a list of words of the same nonzero length, find substrings made by joining all the words in any order, with no gaps. If a word appears twice in the list, use it twice. Return the zero-based start indices in any order. Matches can overlap; an empty word list has no matches."
     },
     "contains-duplicate": {
       "approaches": [
@@ -542,7 +542,7 @@
           "O(u) worst case"
         ]
       ],
-      "code_path": "worked_examples/hash/contains-duplicate.py",
+      "code_path": "problems/hash-maps-and-sets/easy/contains_duplicate.py",
       "cue": "This only asks about membership among earlier values; you do not need indices or counts.",
       "examples": [
         "`[7, -1, 0, -1]` \u2192 True",
@@ -574,7 +574,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/pointers/dedupe-sorted-array.py",
+      "code_path": "problems/two-pointers/easy/remove_duplicates_sorted_array.py",
       "cue": "Sorted input puts equal values side by side.",
       "examples": [
         "`[-5, -5, -2, 3, 3, 9]` returns `4` and leaves `[-5, -2, 3, 9]` in the first four positions.",
@@ -610,7 +610,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/linked/dedupe-sorted-linked-list.py",
+      "code_path": "problems/linked-lists/easy/remove_duplicates_sorted_list.py",
       "cue": "Sorted input puts all copies of a value next to each other. Do not remove the entire run.",
       "examples": [
         "`1 \u2192 1 \u2192 2 \u2192 3 \u2192 3` becomes `1 \u2192 2 \u2192 3`, keeping the first `1` and first `3`.",
@@ -645,15 +645,16 @@
           "O(n+1) state and O(n+1) temporary space during a resize"
         ]
       ],
-      "code_path": "worked_examples/hash/design-hashmap.py",
+      "code_path": "problems/hash-maps-and-sets/medium/design_hashmap.py",
       "cue": "Keys sharing a bucket are not necessarily equal; compare the actual keys.",
       "examples": [
-        "Put (1, 0) and (105, 91), update 105 to 5, remove 1 \u2192 get(1) is -1 and get(105) is 5."
+        "`put(1, 0)`, `put(105, 91)`, `put(105, 5)`, `remove(1)`: now `get(1)` returns `-1` and `get(105)` returns `5`.",
+        "On an empty map, `remove(4)` does nothing and `get(4)` returns `-1`."
       ],
       "explanation": [
         "A get miss returns -1; remove on a miss does nothing. Here n denotes stored keys and B is the bucket count. Distribution assumptions are about the keys, not a guarantee of modulo hashing."
       ],
-      "prompt": "Build an integer-key map with put, get, and remove, without using a built-in hash table."
+      "prompt": "Implement a map from integer keys to integer values without using a built-in hash table. put(key, value) inserts or updates an entry. get(key) returns its value or -1 if the key is missing. remove(key) deletes an entry if present."
     },
     "first-unique-character": {
       "approaches": [
@@ -679,7 +680,7 @@
           "O(u)"
         ]
       ],
-      "code_path": "worked_examples/hash/first-unique-character.py",
+      "code_path": "problems/hash-maps-and-sets/easy/first_unique_character.py",
       "cue": "Count over the whole string before committing to a position.",
       "examples": [
         "`\"\u00e9\u00e9Aaa\"` \u2192 2",
@@ -714,7 +715,7 @@
           "O(n) including the sorted copy and sorting scratch, excluding output"
         ]
       ],
-      "code_path": "worked_examples/pointers/four-sum.py",
+      "code_path": "problems/two-pointers/medium/four_sum.py",
       "cue": "Fix two sorted values and solve a sorted pair problem on the suffix.",
       "examples": [
         "`[4, -2, 0, 5, -2, 1]`, target `1` -> `[[-2, -2, 0, 5], [-2, -2, 1, 4]]` in either order.",
@@ -750,7 +751,7 @@
           "O(ua+ub+uc+ud+s), including product pools; s is stored distinct sums"
         ]
       ],
-      "code_path": "worked_examples/hash/four-sum-count.py",
+      "code_path": "problems/hash-maps-and-sets/medium/four_sum_ii.py",
       "cue": "Split the sum into two pairs, and look up how many ways to form the negation of the other pair's sum.",
       "examples": [
         "`[1, 1, 1]`, `[-1, -1]`, `[0, 0]`, `[0]` \u2192 12 index choices",
@@ -785,7 +786,7 @@
           "O(n + 1), including recursion"
         ]
       ],
-      "code_path": "worked_examples/backtracking/generate-parentheses.py",
+      "code_path": "problems/backtracking/medium/generate_parenthesis.py",
       "cue": "A valid prefix never has more closing than opening parentheses.",
       "examples": [
         "`n = 2` returns `[\"(())\", \"()()\"]`.",
@@ -820,15 +821,16 @@
           "O(w+T) upper bound besides output, including stored count signatures"
         ]
       ],
-      "code_path": "worked_examples/hash/group-anagrams.py",
+      "code_path": "problems/hash-maps-and-sets/medium/group_anagrams.py",
       "cue": "Build one order-independent signature for each character multiset.",
       "examples": [
-        "`[\"\u00e9a\", \"\u00e9\", \"a\u00e9\", \"\", \"\u00e9a\"]` \u2192 `[[\"\u00e9a\", \"a\u00e9\", \"\u00e9a\"], [\"\u00e9\"], [\"\"]]` in any group order."
+        "`[\"eat\", \"tea\", \"tan\", \"ate\"]` can return `[[\"eat\", \"tea\", \"ate\"], [\"tan\"]]`.",
+        "`[\"a\", \"A\", \"a\", \"\"]` can return `[[\"a\", \"a\"], [\"A\"], [\"\"]]`: case matters and duplicates are kept."
       ],
       "explanation": [
         "Let w be the number of words, L the maximum length, T the total character count, and g the number of groups."
       ],
-      "prompt": "Group words by their case-sensitive character multiplicities. Keep duplicate words."
+      "prompt": "Group strings that can be rearranged into one another. Each group contains strings with exactly the same characters and counts. Keep duplicates and empty strings, treat uppercase and lowercase as different, and return groups in any order."
     },
     "happy-number": {
       "approaches": [
@@ -854,17 +856,18 @@
           "O(1) bounded integers"
         ]
       ],
-      "code_path": "worked_examples/cycle/happy-number.py",
+      "code_path": "problems/fast-and-slow-pointers/easy/happy_number.py",
       "cue": "Each number determines exactly one successor, like a next pointer you can compute.",
       "examples": [
-        "`13 \u2192 10 \u2192 1` returns `True`.",
-        "`16` returns `False`: its orbit returns to `16` without seeing `1`."
+        "`13` returns `True`: `1*1 + 3*3 = 10`, then `1*1 + 0*0 = 1`.",
+        "`16` returns `False`: `16 -> 37 -> 58 -> 89 -> 145 -> 42 -> 20 -> 4 -> 16` repeats without reaching `1`.",
+        "`1` returns `True` immediately."
       ],
       "explanation": [
         "Let d be the starting digit count and s the number of distinct orbit states. After the first step, every state is at most 810, so later steps inspect at most three digits.",
         "For this base-10 rule, every nonhappy orbit reaches 4. Checking the finite range 1 through 810 suffices for the stated input bound; Floyd needs no such rule."
       ],
-      "prompt": "Starting with a positive signed 32-bit integer, keep replacing it with the sum of its squared decimal digits. Return whether the sequence reaches 1."
+      "prompt": "Given a positive signed 32-bit integer, square each decimal digit and add the squares. Replace the number with that sum and repeat. Return True if you reach 1, or False if a number repeats first."
     },
     "isomorphic-strings": {
       "approaches": [
@@ -890,7 +893,7 @@
           "O(u)"
         ]
       ],
-      "code_path": "worked_examples/hash/isomorphic-strings.py",
+      "code_path": "problems/hash-maps-and-sets/medium/isomorphic_strings.py",
       "cue": "Two equal positions in one string have to be equal in the other, and vice versa.",
       "examples": [
         "`\"\u00e5\u00e5b\"` and `\"\u96ea\u96eas\"` \u2192 True",
@@ -900,7 +903,7 @@
       "explanation": [
         "Check length before relying on zip. Let n be the combined length and u the combined distinct character count."
       ],
-      "prompt": "Check whether a bijective renaming of characters transforms the first string into the second."
+      "prompt": "Decide whether one string can become the other by consistently renaming its characters. Each character must always map to the same character, and two different characters cannot map to the same one. Strings of different lengths return False."
     },
     "jewels-and-stones": {
       "approaches": [
@@ -926,7 +929,7 @@
           "O(1) for ASCII jewels; O(u) otherwise"
         ]
       ],
-      "code_path": "worked_examples/hash/jewels-and-stones.py",
+      "code_path": "problems/hash-maps-and-sets/easy/jewel_and_stone.py",
       "cue": "Repeated stones count separately; repeated jewel declarations change nothing.",
       "examples": [
         "`\"aAz\"` and `\"aAAZZzz\"` \u2192 5",
@@ -961,18 +964,18 @@
           "O(C) cache state; O(1) explicit temporary state"
         ]
       ],
-      "code_path": "worked_examples/hash/lfu-cache.py",
+      "code_path": "problems/hash-maps-and-sets/hard/lfu_cache.py",
       "cue": "Track recency within each frequency, not globally.",
       "examples": [
-        "Capacity 0: put(1, 10), then get(1) \u2192 -1",
-        "Capacity 2: put(2, 20), put(1, 10), get(1), put(2, 22), put(3, 30) \u2192 key 1 is evicted."
+        "With capacity `0`, `put(1, 10)` followed by `get(1)` returns `-1`.",
+        "With capacity `2`, `put(2, 20)`, `put(1, 10)`, `get(1)`, and `put(2, 22)` leave both keys used twice. `put(3, 30)` evicts key `1` because it was accessed less recently."
       ],
       "explanation": [
         "A successful get and a put that overwrites both increment frequency; new keys start at one. A miss returns -1 without changing recency.",
         "If a promotion empties the minimum bucket, the new minimum is exactly one higher. Insertion resets it to one.",
         "Let C be capacity; the bounds treat key hashes and frequency/timestamp arithmetic as unit-cost."
       ],
-      "prompt": "Build a bounded cache with get and put. Evict by lowest frequency, breaking ties by oldest access."
+      "prompt": "Implement a cache with a fixed capacity. get(key) returns the value or -1 if absent. put(key, value) inserts or updates an entry. New entries start at one access; reads that find a key and updates add one access. When inserting into a full cache, evict the least-used key, breaking ties by oldest access. A cache with capacity zero stores nothing."
     },
     "linked-cycle": {
       "approaches": [
@@ -998,7 +1001,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/cycle/linked-cycle.py",
+      "code_path": "problems/fast-and-slow-pointers/easy/linked_list_cycle.py",
       "cue": "The condition is repeated identity, even when many nodes store identical values.",
       "examples": [
         "`A \u2192 B \u2192 C`, with `C.next` equal to `B`, returns `True`.",
@@ -1033,7 +1036,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/linked/linked-intersection.py",
+      "code_path": "problems/linked-lists/easy/intersection_of_two_linked_lists.py",
       "cue": "Compare nodes with is, not their values. If the lists join, the rest of the tail is shared.",
       "examples": [
         "`7 \u2192 X \u2192 4` and `8 \u2192 9 \u2192 X \u2192 4` share the same node `X`; return `X`.",
@@ -1068,11 +1071,11 @@
           "O(s + 1)"
         ]
       ],
-      "code_path": "worked_examples/dp/longest-common-subsequence.py",
+      "code_path": "problems/dynamic-programming/medium/longest_common_subsequence.py",
       "cue": "If two prefix-ending characters match, extend a shorter common subsequence; otherwise try skipping one end.",
       "examples": [
-        "`axbycx` and `abc` return `3`.",
-        "`acb` and `abc` return `2`."
+        "`\"axbycx\"` and `\"abc\"` return `3`: both contain `\"abc\"` in order, even though its letters are not adjacent in the first string.",
+        "`\"acb\"` and `\"abc\"` return `2`: `\"ab\"` is shared, but all three letters cannot match in order."
       ],
       "explanation": [
         "Let s and l be the shorter and longer input lengths; m and n are the two input lengths in their original order."
@@ -1103,7 +1106,7 @@
           "O(u)"
         ]
       ],
-      "code_path": "worked_examples/hash/longest-consecutive.py",
+      "code_path": "problems/hash-maps-and-sets/medium/longest_consecutive_sequence.py",
       "cue": "The beginning of a run has no predecessor in the collection.",
       "examples": [
         "`[-1, 2, -3, 0, -1, -2]` \u2192 4 for the run from -3 to 0",
@@ -1138,7 +1141,7 @@
           "O(n) including sort keys and scratch"
         ]
       ],
-      "code_path": "worked_examples/matching/longest-duplicate-substring.py",
+      "code_path": "problems/string-matching-and-encoding/hard/longest_duplicate_substring.py",
       "cue": "Suffixes with a shared prefix form a consecutive block in sorted suffix order.",
       "examples": [
         "`\"tanana\"` \u2192 `\"ana\"` at positions 1 and 3",
@@ -1174,7 +1177,7 @@
           "O(1 + min(d,k+1)) for k > 0"
         ]
       ],
-      "code_path": "worked_examples/window/longest-k-distinct.py",
+      "code_path": "problems/sliding-windows/medium/longest_k_distinct.py",
       "cue": "When one character type too many arrives, advance until an entire type is gone.",
       "examples": [
         "`\"aabaacc\"`, `k=2` -> `5`.",
@@ -1185,7 +1188,7 @@
         "In the counting window, a zero count is not a live key. In the recency variant, jumping after the least recent last occurrence removes exactly that character type.",
         "Here n is text length and d is its number of distinct code points. For k > 0 each implementation holds at most k+1 live keys; nonpositive k exits immediately."
       ],
-      "prompt": "Return the longest contiguous substring length using at most k distinct code points. Empty text and nonpositive k both return zero."
+      "prompt": "Find the longest substring containing at most k different characters. A substring must be contiguous. Return its length, or zero when the input string is empty or k is not positive."
     },
     "longest-palindromic-substring": {
       "approaches": [
@@ -1211,13 +1214,13 @@
           "O(1) excluding the result"
         ]
       ],
-      "code_path": "worked_examples/dp/longest-palindromic-substring.py",
+      "code_path": "problems/dynamic-programming/medium/longest_palindromic_substring.py",
       "cue": "Every palindrome has an odd or even center; examine those centers instead of every interval.",
       "examples": [
-        "`cabbad` returns `abba`.",
-        "`abacdc` returns `aba`."
+        "`\"cabbad\"` returns `\"abba\"`, which reads the same forward and backward.",
+        "`\"abacdc\"` returns `\"aba\"`: `\"cdc\"` has the same length but starts later."
       ],
-      "prompt": "Find the longest contiguous palindrome in a string. Return the leftmost one if several have the same maximum length."
+      "prompt": "Find the longest substring that reads the same forward and backward. The characters must be consecutive. Return the leftmost match if several have the same maximum length, or an empty string if the input is empty."
     },
     "longest-unique-substring": {
       "approaches": [
@@ -1243,7 +1246,7 @@
           "O(d)"
         ]
       ],
-      "code_path": "worked_examples/window/longest-unique-substring.py",
+      "code_path": "problems/sliding-windows/medium/longest_substring_without_repeating.py",
       "cue": "After seeing a duplicate inside the window, jump just past its previous position.",
       "examples": [
         "`\"abba\"` -> `2`.",
@@ -1253,7 +1256,7 @@
       "explanation": [
         "A last-seen position that is already left of the window must not move the boundary backward. Here n is text length and d is the number of distinct code points."
       ],
-      "prompt": "Return the length of the longest contiguous portion of a string with no repeated Python code point. Spaces count and empty text returns zero."
+      "prompt": "Find the longest substring in which no character occurs twice. The characters must be consecutive; spaces count like any other character. Return the length, or zero if the input is empty."
     },
     "max-average-window": {
       "approaches": [
@@ -1279,7 +1282,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/window/max-average-window.py",
+      "code_path": "problems/sliding-windows/easy/max_average_subarray.py",
       "cue": "All candidates have the same denominator, so maximize the sum first.",
       "examples": [
         "`[6, -8, 11, 0, 9]`, `k=3` -> `20/3`.",
@@ -1314,7 +1317,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/window/max-vowels-window.py",
+      "code_path": "problems/sliding-windows/easy/max_vowels_in_substring.py",
       "cue": "The count changes only at the entering and leaving positions.",
       "examples": [
         "`\"bxAIox\"`, `k=3` -> `3`.",
@@ -1350,7 +1353,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/pointers/max-water-container.py",
+      "code_path": "problems/two-pointers/medium/container_with_most_water.py",
       "cue": "A narrower pair using the current shorter line cannot beat the current area.",
       "examples": [
         "`[1, 9, 2, 7, 1]` -> `14`, using indices `1` and `3`.",
@@ -1386,7 +1389,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/linked/merge-sorted-linked-lists.py",
+      "code_path": "problems/linked-lists/easy/merge_two_sorted_lists.py",
       "cue": "The smaller current head can be appended without looking farther down either chain.",
       "examples": [
         "`1 \u2192 2` merged with `2 \u2192 6` becomes `1 \u2192 2 \u2192 2 \u2192 6`, with the left `2` first.",
@@ -1395,7 +1398,7 @@
       "explanation": [
         "Let N be the total number of nodes. With a lazy traversal, save the next link before yielding a node for the caller to rewire."
       ],
-      "prompt": "Splice two disjoint, acyclic, nondecreasing chains into one sorted chain. Reuse the original nodes and take left nodes first on equal values."
+      "prompt": "Merge two sorted linked lists and return the head of the result. The input lists contain no cycles and share no nodes. Relink the original nodes in sorted order; when both lists offer the same value next, use the node from the left list first."
     },
     "middle-linked-list": {
       "approaches": [
@@ -1421,7 +1424,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/cycle/middle-linked-list.py",
+      "code_path": "problems/fast-and-slow-pointers/easy/middle_of_linked_list.py",
       "cue": "For an even length there are two valid conventions. Make the tie rule explicit.",
       "examples": [
         "`1 \u2192 2 \u2192 3 \u2192 4` returns the node holding `3` by default, or `2` when choosing the first middle.",
@@ -1456,7 +1459,7 @@
           "O(n), including the sorted copy"
         ]
       ],
-      "code_path": "worked_examples/sorting/minimum-score-spread.py",
+      "code_path": "problems/sorting/easy/min_difference_k_scores.py",
       "cue": "After sorting, any chosen k scores span at least as wide a range as some contiguous k-score group.",
       "examples": [
         "`[8, 2, 5, 2]`, `k = 2` returns `0`.",
@@ -1488,7 +1491,7 @@
           "O(d) excluding output"
         ]
       ],
-      "code_path": "worked_examples/window/minimum-window.py",
+      "code_path": "problems/sliding-windows/hard/minimum_window_substring.py",
       "cue": "Once all required occurrences are present, advance left until one becomes missing.",
       "examples": [
         "`\"xcaabyybaca\"`, target `\"aac\"` -> `\"caa\"`.",
@@ -1525,7 +1528,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/pointers/move-zeroes.py",
+      "code_path": "problems/two-pointers/easy/move_zeroes.py",
       "cue": "The number of nonzero entries read is the next position to fill.",
       "examples": [
         "`[0, 4, 0, -2, 4, 0, 1]` becomes `[4, -2, 4, 1, 0, 0, 0]`.",
@@ -1561,7 +1564,7 @@
           "O(1 + min(n,k))"
         ]
       ],
-      "code_path": "worked_examples/window/nearby-duplicate.py",
+      "code_path": "problems/sliding-windows/easy/contains_nearby_duplicate.py",
       "cue": "Before checking index i, only the preceding k positions are eligible.",
       "examples": [
         "`[7, -1, 2, 7]`, `k=3` -> `True`; `k=2` -> `False`.",
@@ -1596,7 +1599,7 @@
           "O(n) excluding output"
         ]
       ],
-      "code_path": "worked_examples/stack/next-greater-element.py",
+      "code_path": "problems/stacks-and-queues/easy/next_greater_element.py",
       "cue": "Find the first greater value, not the greatest value in the suffix.",
       "examples": [
         "With reference `[2, 1, 3, 5, 4]`, queries `[4, 2, 3]` return `[-1, 3, 5]`.",
@@ -1631,7 +1634,7 @@
           "O(u) worst case"
         ]
       ],
-      "code_path": "worked_examples/greedy/palindrome-buildable.py",
+      "code_path": "problems/greedy/easy/longest_palindrome_buildable.py",
       "cue": "All positions except an optional center must come in matching pairs.",
       "examples": [
         "`abbccd` returns `5`.",
@@ -1663,7 +1666,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/cycle/palindrome-linked-list.py",
+      "code_path": "problems/fast-and-slow-pointers/easy/palindrome_linked_list.py",
       "cue": "Compare the first half forward with the second half backward. An odd-length center has no partner.",
       "examples": [
         "`2 \u2192 4 \u2192 9 \u2192 4 \u2192 2` returns `True`.",
@@ -1698,11 +1701,11 @@
           "O(u) for u distinct characters"
         ]
       ],
-      "code_path": "worked_examples/greedy/partition-labels.py",
+      "code_path": "problems/greedy/medium/partition_labels.py",
       "cue": "A part cannot end before the last occurrence of any character already in it.",
       "examples": [
-        "`abacdd` returns `[3, 1, 2]`.",
-        "`abcbca` returns `[6]`."
+        "`\"abacdd\"` returns `[3, 1, 2]`: split it into `\"aba\"`, `\"c\"`, and `\"dd\"`.",
+        "`\"abcbca\"` returns `[6]`: the first and last `\"a\"` must stay in the same part."
       ],
       "prompt": "Split a string into as many contiguous parts as possible without using any character in two different parts. Return the lengths."
     },
@@ -1730,7 +1733,7 @@
           "O(n) including recursion"
         ]
       ],
-      "code_path": "worked_examples/backtracking/phone-letter-combinations.py",
+      "code_path": "problems/backtracking/medium/letter_combination_phone.py",
       "cue": "Each digit is an independent choice; only the full strings belong in the output.",
       "examples": [
         "`\"23\"` returns `[\"ad\", \"ae\", \"af\", \"bd\", \"be\", \"bf\", \"cd\", \"ce\", \"cf\"]`.",
@@ -1765,7 +1768,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/linked/remove-linked-values.py",
+      "code_path": "problems/linked-lists/easy/remove_linked_list_elements.py",
       "cue": "Removing a node does not advance the previous surviving node. The same link may need to skip a whole run.",
       "examples": [
         "Removing `0` from `0 \u2192 0 \u2192 4 \u2192 0 \u2192 9 \u2192 0` returns the original `4 \u2192 9` nodes.",
@@ -1797,7 +1800,7 @@
           "O(n) for the border table"
         ]
       ],
-      "code_path": "worked_examples/matching/repeated-substring.py",
+      "code_path": "problems/string-matching-and-encoding/medium/repeated_substring_pattern.py",
       "cue": "A repeat unit must divide the length and make every character agree with its phase.",
       "examples": [
         "`\"\u00e9\ud83d\ude42\u00e9\ud83d\ude42\u00e9\ud83d\ude42\"` \u2192 True",
@@ -1830,7 +1833,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/linked/reverse-linked-list.py",
+      "code_path": "problems/linked-lists/easy/reverse_linked_list.py",
       "cue": "Before overwriting a next link, keep a reference to the original successor.",
       "examples": [
         "`4 \u2192 8 \u2192 4` returns the old final `4` as head, then `8`, then the old first `4`.",
@@ -1862,7 +1865,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/pointers/reverse-string.py",
+      "code_path": "problems/two-pointers/easy/reverse_string.py",
       "cue": "The position paired with index i is n minus one minus i.",
       "examples": [
         "`['x', '!', 'y', '?']` becomes `['?', 'y', '!', 'x']`.",
@@ -1897,7 +1900,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/search/search-insert-position.py",
+      "code_path": "problems/binary-search/easy/search_insert_position.py",
       "cue": "Search for a boundary, not just for equality.",
       "examples": [
         "`[2, 4, 4, 8]`, target `4` returns `1`.",
@@ -1929,7 +1932,7 @@
           "O(N) references plus retained URLs; O(A) encode scratch and O(1) decode scratch"
         ]
       ],
-      "code_path": "worked_examples/hash/short-url-codec.py",
+      "code_path": "problems/hash-maps-and-sets/medium/encode_decode_tinyurl.py",
       "cue": "Separate the reverse lookup contract from how the opaque code is generated.",
       "examples": [
         "Encoding `https://example.org/\u00e9` twice returns the same alias; decoding it returns the original URL.",
@@ -1939,7 +1942,7 @@
         "The alias spelling can differ between implementations. This is an in-memory mapping, not a network service, and its predictable IDs are not secrets.",
         "Let N be the number of URLs, U the input URL length, and A the alias length. Lookup bounds allow hashing the input text and treat index arithmetic as constant-cost."
       ],
-      "prompt": "Issue stable, distinct short aliases for nonempty URLs and decode the exact issued alias within the same instance."
+      "prompt": "Build an in-memory URL shortener with encode(url) and decode(alias). Encoding the same nonempty URL twice gives the same alias, and different URLs get different aliases. Decode only a complete alias issued by this instance; return an empty string for anything else."
     },
     "simplify-path": {
       "approaches": [
@@ -1965,7 +1968,7 @@
           "O(r + 1), including surviving slices and the intermediate join"
         ]
       ],
-      "code_path": "worked_examples/stack/simplify-path.py",
+      "code_path": "problems/stacks-and-queues/medium/simplify_unix_path.py",
       "cue": "Only entire components named . or .. are special. Three dots and other dot-prefixed names survive.",
       "examples": [
         "`//srv//./share/` becomes `/srv/share`.",
@@ -2000,10 +2003,11 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/sorting/sort-colors.py",
+      "code_path": "problems/sorting/medium/sort_colors.py",
       "cue": "The small, fixed value domain means a general comparison sort is unnecessary.",
       "examples": [
-        "`[2, 0, 2, 1, 0]` becomes `[0, 0, 1, 2, 2]`."
+        "`[2, 0, 2, 1, 0]` becomes `[0, 0, 1, 2, 2]` in the same list.",
+        "`[1, 1, 1]` stays unchanged."
       ],
       "prompt": "Sort a mutable list containing only 0, 1, and 2. Modify the original list and return None."
     },
@@ -2031,7 +2035,7 @@
           "O(1) excluding output"
         ]
       ],
-      "code_path": "worked_examples/pointers/sorted-squares.py",
+      "code_path": "problems/two-pointers/easy/squares_of_sorted_array.py",
       "cue": "The largest remaining square must come from an endpoint.",
       "examples": [
         "`[-7, -4, 0, 4, 5]` -> `[0, 16, 16, 25, 49]`.",
@@ -2066,7 +2070,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/pointers/sorted-two-sum.py",
+      "code_path": "problems/two-pointers/easy/two_sum.py",
       "cue": "With sorted ends, too small rules out the left endpoint; too large rules out the right.",
       "examples": [
         "`[-9, -4, 3, 8]`, target `-6` -> `[0, 2]`.",
@@ -2103,7 +2107,7 @@
           "Encode O(F) writer buffer upper bound; decode O(1) beyond output"
         ]
       ],
-      "code_path": "worked_examples/matching/string-list-codec.py",
+      "code_path": "problems/string-matching-and-encoding/medium/encode_decode_strings.py",
       "cue": "A length prefix says how much payload to read, so separators inside payloads are ordinary characters.",
       "examples": [
         "`[]` \u2192 `\"\"`, while `[\"\"]` \u2192 `\"0#\"`",
@@ -2114,7 +2118,7 @@
         "The formats are interchangeable across approaches. A frame stores a canonical decimal character count, then #, then exactly that many Python characters.",
         "Let F be total framed length, including headers and separators, and H the longest header. Bounds treat Python-sized offsets as machine words."
       ],
-      "prompt": "Encode and decode a list of strings losslessly, including empty strings, delimiters and Unicode."
+      "prompt": "Implement an encoder that turns a list of strings into one string and a decoder that restores the exact original list. Empty strings, Unicode and separator characters must survive. In this format each item is its character count, then #, then its contents. Reject malformed data."
     },
     "subarray-sum": {
       "approaches": [
@@ -2140,7 +2144,7 @@
           "O(W) in dense mode; O(u) in sparse mode"
         ]
       ],
-      "code_path": "worked_examples/prefix/subarray-sum.py",
+      "code_path": "problems/prefix-sums/medium/subarray_sum_equals_k.py",
       "cue": "A range sums to the target when its ending prefix total minus an earlier prefix total equals the target.",
       "examples": [
         "`[1, -1, 0]`, target 0 \u2192 3",
@@ -2175,7 +2179,7 @@
           "O(m+1) beyond output"
         ]
       ],
-      "code_path": "worked_examples/matching/substring-search.py",
+      "code_path": "problems/string-matching-and-encoding/medium/kmp_search.py",
       "cue": "After a mismatch, a prefix that is also a suffix of the matched text can still be useful.",
       "examples": [
         "Text `\"aaaab\"`, pattern `\"aab\"` \u2192 first index 2",
@@ -2185,7 +2189,7 @@
       "explanation": [
         "Let n and m be text and pattern lengths. The functions yield matches, so collecting them adds output storage, but asking only for the first can stop early."
       ],
-      "prompt": "Find the first match or -1, and be able to enumerate all starting indices, including overlaps."
+      "prompt": "Given a text string and a pattern, find the zero-based start of the first exact match, or -1 if there is none. Also support finding every match, including overlapping ones. An empty pattern matches at every boundary, including the end."
     },
     "three-sum": {
       "approaches": [
@@ -2211,7 +2215,7 @@
           "O(n) for the sort copy and scratch, excluding output"
         ]
       ],
-      "code_path": "worked_examples/pointers/three-sum.py",
+      "code_path": "problems/two-pointers/medium/three_sum.py",
       "cue": "For a fixed anchor, the two remaining values have a fixed sum.",
       "examples": [
         "`[3, -2, 1, -2, 0, -1, 0, 0]` -> `[[-2, -1, 3], [-1, 0, 1], [0, 0, 0]]` in any order.",
@@ -2248,10 +2252,11 @@
           "O(n)"
         ]
       ],
-      "code_path": "worked_examples/heap/top-k-frequent.py",
+      "code_path": "problems/heaps-and-top-k/medium/top_k_frequent_elements.py",
       "cue": "A frequency is an integer from 1 to n, so it can also index a bucket.",
       "examples": [
-        "`[5, 2, 7, 2, 7, 7, 5]`, `k = 2` returns `[7, 5]`."
+        "`[5, 2, 7, 2, 7, 7, 5]`, `k = 2` returns `[7, 5]`: `7` occurs three times; `5` and `2` occur twice, but `5` appears first.",
+        "`[3, 3, 2]`, `k = 0` returns `[]`."
       ],
       "explanation": [
         "Let u be the number of distinct values. Hashing bounds are expected; output storage is excluded from auxiliary space."
@@ -2282,7 +2287,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/pointers/trapping-rain.py",
+      "code_path": "problems/two-pointers/hard/trapping_rain_water.py",
       "cue": "The lower of the highest known side boundaries lets you finalize one side.",
       "examples": [
         "`[6, 0, 2, 1, 4]` traps `9` units.",
@@ -2319,7 +2324,7 @@
           "O(u), storing only characters from the first string"
         ]
       ],
-      "code_path": "worked_examples/hash/valid-anagram.py",
+      "code_path": "problems/hash-maps-and-sets/easy/valid_anagram.py",
       "cue": "Membership alone misses multiplicity; each occurrence needs a counterpart.",
       "examples": [
         "`\"\u00c9a\u00c9\"` and `\"\u00c9\u00c9a\"` \u2192 True",
@@ -2354,7 +2359,7 @@
           "O(1)"
         ]
       ],
-      "code_path": "worked_examples/pointers/valid-palindrome.py",
+      "code_path": "problems/two-pointers/easy/valid_palindrome.py",
       "cue": "Skip ignored characters before comparing the two live endpoints.",
       "examples": [
         "`\"R2, d_ D-2r\"` -> `True`.",
@@ -2390,7 +2395,7 @@
           "O(d + 1), where d is the maximum stack depth"
         ]
       ],
-      "code_path": "worked_examples/stack/valid-parentheses.py",
+      "code_path": "problems/stacks-and-queues/easy/valid_parenthesis.py",
       "cue": "A closer must match the most recent opener that has not already been matched.",
       "examples": [
         "`{[()()]}[]` returns `True`.",
@@ -2425,7 +2430,7 @@
           "O(T+u) for u distinct pattern symbols"
         ]
       ],
-      "code_path": "worked_examples/hash/word-pattern.py",
+      "code_path": "problems/hash-maps-and-sets/easy/word_pattern.py",
       "cue": "The mapping has to work in both directions.",
       "examples": [
         "`\"aba\"` and `\"cat dog cat\"` \u2192 True",
@@ -2434,7 +2439,7 @@
       "explanation": [
         "Let p be the pattern length, T the input text length, and L the longest word length. Splitting alone can allocate O(T) space."
       ],
-      "prompt": "Check whether pattern characters and whitespace-separated words match one-to-one."
+      "prompt": "Split the input text into words on whitespace. Each pattern character must match exactly one word, and different characters must match different words. Return False if the pattern and word counts differ."
     }
   },
   "pattern_folders": {
@@ -3235,10 +3240,10 @@
     "Chapter3/easy/remove_duplicates_sorted_list.py": "problems/linked-lists/easy/remove_duplicates_sorted_list.py",
     "Chapter3/easy/remove_linked_list_elements.py": "problems/linked-lists/easy/remove_linked_list_elements.py",
     "Chapter3/easy/reverse_linked_list.py": "problems/linked-lists/easy/reverse_linked_list.py",
-    "Chapter4/easy/happy_number.py": "problems/fast-and-slow-pointers/easy/happy_number_fast_slow.py",
-    "Chapter4/easy/linked_list_cycle.py": "problems/fast-and-slow-pointers/easy/linked_list_cycle_fast_slow.py",
-    "Chapter4/easy/middle_of_linked_list.py": "problems/fast-and-slow-pointers/easy/middle_of_linked_list_fast_slow.py",
-    "Chapter4/easy/palindrome_linked_list.py": "problems/fast-and-slow-pointers/easy/palindrome_linked_list_fast_slow.py",
+    "Chapter4/easy/happy_number.py": "problems/fast-and-slow-pointers/easy/happy_number.py",
+    "Chapter4/easy/linked_list_cycle.py": "problems/fast-and-slow-pointers/easy/linked_list_cycle.py",
+    "Chapter4/easy/middle_of_linked_list.py": "problems/fast-and-slow-pointers/easy/middle_of_linked_list.py",
+    "Chapter4/easy/palindrome_linked_list.py": "problems/fast-and-slow-pointers/easy/palindrome_linked_list.py",
     "Chapter5/easy/contains_nearby_duplicate.py": "problems/sliding-windows/easy/contains_nearby_duplicate.py",
     "Chapter5/easy/max_average_subarray.py": "problems/sliding-windows/easy/max_average_subarray.py",
     "Chapter5/easy/max_vowels_in_substring.py": "problems/sliding-windows/easy/max_vowels_in_substring.py",
@@ -3253,19 +3258,19 @@
     "data structures/strings/dynamic_programmings/medium_longest_common_subsequence.py": "problems/dynamic-programming/medium/longest_common_subsequence.py",
     "data structures/strings/dynamic_programmings/medium_longest_palindromic_substring.py": "problems/dynamic-programming/medium/longest_palindromic_substring.py",
     "data structures/strings/greedy/easy_longest_palindrome_buildable.py": "problems/greedy/easy/longest_palindrome_buildable.py",
-    "data structures/strings/hashmap/easy_first_non_repeating_character.py": "problems/hash-maps-and-sets/easy/first_non_repeating_character.py",
-    "data structures/strings/hashmap/easy_is_anagram.py": "problems/hash-maps-and-sets/easy/is_anagram_string_guide.py",
+    "data structures/strings/hashmap/easy_first_non_repeating_character.py": "problems/hash-maps-and-sets/easy/first_unique_character.py",
+    "data structures/strings/hashmap/easy_is_anagram.py": "problems/hash-maps-and-sets/easy/valid_anagram.py",
     "data structures/strings/hashmap/medium_isomorphic_strings.py": "problems/hash-maps-and-sets/medium/isomorphic_strings.py",
-    "data structures/strings/hashmap/medium_word_pattern.py": "problems/hash-maps-and-sets/easy/word_pattern_string_guide.py",
-    "data structures/strings/pattern_matching/easy_strstr_first_occurrence.py": "problems/string-matching-and-encoding/easy/strstr_first_occurrence.py",
+    "data structures/strings/hashmap/medium_word_pattern.py": "problems/hash-maps-and-sets/easy/word_pattern.py",
+    "data structures/strings/pattern_matching/easy_strstr_first_occurrence.py": "problems/string-matching-and-encoding/medium/kmp_search.py",
     "data structures/strings/pattern_matching/medium_kmp_search.py": "problems/string-matching-and-encoding/medium/kmp_search.py",
     "data structures/strings/prefix_suffix/medium_encode_decode_strings.py": "problems/string-matching-and-encoding/medium/encode_decode_strings.py",
     "data structures/strings/prefix_suffix/medium_repeated_substring_pattern.py": "problems/string-matching-and-encoding/medium/repeated_substring_pattern.py",
-    "data structures/strings/sliding_window/easy_max_vowels_fixed_window.py": "problems/sliding-windows/easy/max_vowels_fixed_window.py",
+    "data structures/strings/sliding_window/easy_max_vowels_fixed_window.py": "problems/sliding-windows/easy/max_vowels_in_substring.py",
     "data structures/strings/sliding_window/medium_character_replacement.py": "problems/sliding-windows/medium/character_replacement.py",
     "data structures/strings/sliding_window/medium_longest_k_distinct.py": "problems/sliding-windows/medium/longest_k_distinct.py",
-    "data structures/strings/sliding_window/medium_minimum_window_substring.py": "problems/sliding-windows/hard/minimum_window_substring_string_guide.py",
-    "data structures/strings/stack/easy_valid_parenthesis.py": "problems/stacks-and-queues/easy/valid_parenthesis_string_guide.py",
+    "data structures/strings/sliding_window/medium_minimum_window_substring.py": "problems/sliding-windows/hard/minimum_window_substring.py",
+    "data structures/strings/stack/easy_valid_parenthesis.py": "problems/stacks-and-queues/easy/valid_parenthesis.py",
     "data structures/strings/stack/medium_simplify_unix_path.py": "problems/stacks-and-queues/medium/simplify_unix_path.py"
   },
   "source_revision": "8ae4b8540769f0d0e5ec0ca3867bb698d18b9df1",
